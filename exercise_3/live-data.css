@@ -1,0 +1,23 @@
+﻿/* SUB-TASK T-03B: Live Data State */
+.data-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.data-item {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.metadata-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.badge {
+  background: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}

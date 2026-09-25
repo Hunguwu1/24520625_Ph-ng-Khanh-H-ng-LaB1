@@ -1,0 +1,36 @@
+/* ================================================================
+   T-02B: RESPONSIVE 2D GRID LAYOUT
+   ----------------------------------------------------------------
+   CONTRACT RULES:
+   ✅ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      for Project Cards — auto-responsive, no Media Queries needed
+   ✅ Skills Matrix also uses auto-fill grid
+   ✅ Renders at 375px with zero horizontal scroll
+   ✅ All values reference tokens from T-02A (var())
+   ================================================================ */
+
+/* ── Skills Matrix Grid ── */
+.skills-grid {
+  display: grid;
+  /* auto-fill: keeps empty columns; minmax makes it responsive */
+  grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
+  gap: var(--sp-4);
+}
+
+/* ── Projects 2D Grid ──
+   auto-fit collapses empty columns, minmax(280px, 1fr) snaps to
+   single column at 375px automatically — no breakpoints needed.  */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--sp-6);
+  /* Align cards to stretch vertically so equal height */
+  align-items: stretch;
+}
+
+/* ── Tag list inside project card ── */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
