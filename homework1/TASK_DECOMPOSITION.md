@@ -2,7 +2,7 @@ HW1 Task Decomposition
 
 ## Goal
 
-Complete a responsive personal portfolio using vanilla HTML, CSS, and JavaScript, then verify the four HW1 milestones. Define tasks before using AI; all tasks below are initially **Planned**.
+Complete a responsive personal portfolio using vanilla HTML, CSS, and JavaScript, then verify the four HW1 milestones. Define tasks before using AI. Current status is recorded in the Progress section.
 
 ## Foundation
 
@@ -41,7 +41,7 @@ Include source files, required assets, these documents, a README with run instru
 - HTML foundation: completed.
 - CSS reset and grid foundation: completed.
 - Theme and form: verified in Chrome with keyboard input at both tested viewport sizes and themes.
-- Portfolio content and layout: pending.
+- Portfolio content and layout: completed; introduction, portrait, skills, project cards, and contact form are present. Responsive layout was verified at 375px and 1280px in light and dark themes.
 - M1 accessibility: documented source/browser checks pass; Lighthouse Accessibility is 100/100; Narrator spoken-output verification is pending.
 - M2 keyboard navigation: completed for the checks documented in the audit.
 - M3 CSP: completed for the checks in docs/audits/m3-security.md; verified in Chrome on 2026-10-07.
