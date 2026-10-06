@@ -40,9 +40,9 @@ Include source files, required assets, these documents, a README with run instru
 
 - HTML foundation: completed.
 - CSS reset and grid foundation: completed.
-- Theme and form: implemented; verification pending.
+- Theme and form: verified in Chrome with keyboard input at both tested viewport sizes and themes.
 - Portfolio content and layout: pending.
-- M1 accessibility: pending.
-- M2 keyboard navigation: pending.
+- M1 accessibility: documented source/browser checks pass; Lighthouse Accessibility is 100/100; Narrator spoken-output verification is pending.
+- M2 keyboard navigation: completed for the checks documented in the audit.
 - M3 CSP: pending.
 - M4 performance: pending.
