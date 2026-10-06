@@ -45,4 +45,4 @@ Include source files, required assets, these documents, a README with run instru
 - M1 accessibility: documented source/browser checks pass; Lighthouse Accessibility is 100/100; Narrator spoken-output verification is pending.
 - M2 keyboard navigation: completed for the checks documented in the audit.
 - M3 CSP: completed for the checks in docs/audits/m3-security.md; verified in Chrome on 2026-10-07.
-- M4 performance: pending.
+- M4 performance: verified for the targets in docs/audits/m4-performance.md on 2026-10-07; Performance 100 under standard Lighthouse configurations, observed Slow 4G LCP below 2 seconds, and CLS 0. Other category scores and test limits are recorded separately.

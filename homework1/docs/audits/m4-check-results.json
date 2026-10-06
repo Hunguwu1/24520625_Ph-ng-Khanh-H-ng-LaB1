@@ -1,0 +1,2850 @@
+{
+  "date": "2026-10-07",
+  "timezone": "Asia/Saigon",
+  "url": "http://127.0.0.1:5504/",
+  "source": {
+    "index.html": {
+      "bytes": 6795,
+      "sha256": "b799e261209da3547f38495164e5479433e11a1d287a69730cd19fac32c28b53"
+    },
+    "style.css": {
+      "bytes": 2819,
+      "sha256": "99ff9c1a7a4bb3efcf7f6c73633c696ad4a8443f63340e1659641f2a91064edb"
+    },
+    "theme.js": {
+      "bytes": 942,
+      "sha256": "2e6b1da2fa8a8022d0ee42987d15fa80f6e52c0fc4733862546ba7bcc7946e0e"
+    },
+    "contact.js": {
+      "bytes": 422,
+      "sha256": "cce7ebd64d0f30476e3d7613553874147fce8e3c2fddcf64e3706f67cce47fd3"
+    },
+    "assets/images.jpg": {
+      "bytes": 28189,
+      "sha256": "b47a7a042a5eb0b95dbad634f5201a7527424d0ab026400e2b8525b9fb32d2c6"
+    }
+  },
+  "observed": [
+    {
+      "width": 375,
+      "theme": "light",
+      "run": 1,
+      "lcpMs": 1508,
+      "lcpEntries": [
+        {
+          "startTime": 1356,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1508,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "run": 2,
+      "lcpMs": 1448,
+      "lcpEntries": [
+        {
+          "startTime": 1440,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1448,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "run": 3,
+      "lcpMs": 1384,
+      "lcpEntries": [
+        {
+          "startTime": 1344,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1384,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "run": 1,
+      "lcpMs": 1400,
+      "lcpEntries": [
+        {
+          "startTime": 1332,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1400,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "run": 2,
+      "lcpMs": 1436,
+      "lcpEntries": [
+        {
+          "startTime": 1396,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1436,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "run": 3,
+      "lcpMs": 1424,
+      "lcpEntries": [
+        {
+          "startTime": 1364,
+          "size": 35360,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        },
+        {
+          "startTime": 1424,
+          "size": 72206,
+          "tag": "IMG",
+          "id": "",
+          "url": "http://127.0.0.1:5504/assets/images.jpg"
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "run": 1,
+      "lcpMs": 1376,
+      "lcpEntries": [
+        {
+          "startTime": 1376,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "run": 2,
+      "lcpMs": 1360,
+      "lcpEntries": [
+        {
+          "startTime": 1360,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "run": 3,
+      "lcpMs": 1316,
+      "lcpEntries": [
+        {
+          "startTime": 1316,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "run": 1,
+      "lcpMs": 1356,
+      "lcpEntries": [
+        {
+          "startTime": 1356,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "run": 2,
+      "lcpMs": 1368,
+      "lcpEntries": [
+        {
+          "startTime": 1368,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "run": 3,
+      "lcpMs": 1376,
+      "lcpEntries": [
+        {
+          "startTime": 1376,
+          "size": 107781,
+          "tag": "H1",
+          "id": "",
+          "url": ""
+        }
+      ],
+      "cls": 0,
+      "shifts": [],
+      "overflow": false,
+      "imageLoaded": true,
+      "runtimeErrors": [],
+      "pass": true
+    }
+  ],
+  "lighthouse": [
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "light",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1207.3959,
+          "display": "1.2 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 757.3959,
+          "display": "0.8 s"
+        },
+        "speed-index": {
+          "value": 757.3959,
+          "display": "0.8 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 375,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 3 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 3,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                  },
+                  {
+                    "key": "reflowTime",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Total reflow time"
+                  }
+                ],
+                "items": [
+                  {
+                    "source": {
+                      "type": "text",
+                      "value": "[unattributed]"
+                    },
+                    "reflowTime": 36.342
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 325,
+                    "bottom": 626,
+                    "left": 16,
+                    "right": 256,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "checklist",
+                "items": {
+                  "priorityHinted": {
+                    "label": "fetchpriority=high should be applied",
+                    "value": false
+                  },
+                  "requestDiscoverable": {
+                    "label": "Request is discoverable in initial document",
+                    "value": true
+                  },
+                  "eagerlyLoaded": {
+                    "label": "LCP resources should not use loading=lazy",
+                    "value": true
+                  }
+                }
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-IMG",
+                "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                "selector": "body > main#main-content > section#about > img.avatar",
+                "boundingRect": {
+                  "top": 325,
+                  "bottom": 626,
+                  "left": 16,
+                  "right": 256,
+                  "width": 240,
+                  "height": 301
+                },
+                "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+              }
+            ]
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "CEE607F729B6BDA479F110BD0C69D903": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 19,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "25356.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 24,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 24
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 50 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005,
+                "wastedMs": 154
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-375-light.html",
+      "json": "m4-lighthouse-375-light.json"
+    },
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "dark",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1204.7614,
+          "display": "1.2 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 754.7614000000001,
+          "display": "0.8 s"
+        },
+        "speed-index": {
+          "value": 754.7614000000001,
+          "display": "0.8 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 375,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 1 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 1,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                  },
+                  {
+                    "key": "reflowTime",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Total reflow time"
+                  }
+                ],
+                "items": [
+                  {
+                    "source": {
+                      "type": "text",
+                      "value": "[unattributed]"
+                    },
+                    "reflowTime": 43.18
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 325,
+                    "bottom": 626,
+                    "left": 16,
+                    "right": 256,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "checklist",
+                "items": {
+                  "priorityHinted": {
+                    "label": "fetchpriority=high should be applied",
+                    "value": false
+                  },
+                  "requestDiscoverable": {
+                    "label": "Request is discoverable in initial document",
+                    "value": true
+                  },
+                  "eagerlyLoaded": {
+                    "label": "LCP resources should not use loading=lazy",
+                    "value": true
+                  }
+                }
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-IMG",
+                "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                "selector": "body > main#main-content > section#about > img.avatar",
+                "boundingRect": {
+                  "top": 325,
+                  "bottom": 626,
+                  "left": 16,
+                  "right": 256,
+                  "width": 240,
+                  "height": 301
+                },
+                "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+              }
+            ]
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "887DA9460E0C30E2D03C4C6006FB1EA1": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 18,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "37832.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 21,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 21
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005,
+                "wastedMs": 152
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-375-dark.html",
+      "json": "m4-lighthouse-375-dark.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 291.3456,
+          "display": "0.3 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 211.3456,
+          "display": "0.2 s"
+        },
+        "speed-index": {
+          "value": 211.3456,
+          "display": "0.2 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1280,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 2 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 2,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-1-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 330,
+                    "bottom": 631,
+                    "left": 99,
+                    "right": 339,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "68EEC3C96874F8534553119EA00B1B2B": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 23,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "19396.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 30,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 30
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-1280-light.html",
+      "json": "m4-lighthouse-1280-light.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 292.3109,
+          "display": "0.3 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 212.3109,
+          "display": "0.2 s"
+        },
+        "speed-index": {
+          "value": 212.3109,
+          "display": "0.2 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1280,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 4 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 4,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                  },
+                  {
+                    "key": "reflowTime",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Total reflow time"
+                  }
+                ],
+                "items": [
+                  {
+                    "source": {
+                      "type": "text",
+                      "value": "[unattributed]"
+                    },
+                    "reflowTime": 43.989
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-1-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 330,
+                    "bottom": 631,
+                    "left": 99,
+                    "right": 339,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "B5B0464F2D2057DA0608CBD26E2DF1C8": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 29,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "11388.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 32,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 32
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-1280-dark.html",
+      "json": "m4-lighthouse-1280-dark.json"
+    }
+  ],
+  "observedConditions": {
+    "method": "Chrome DevTools Protocol Network.emulateNetworkConditions",
+    "preset": "DevTools Slow 4G (formerly Fast 3G)",
+    "nominalDownMbps": 1.6,
+    "nominalUpKbps": 750,
+    "nominalRTTms": 150,
+    "adjustedCDPParameters": {
+      "offline": false,
+      "latency": 562.5,
+      "downloadThroughput": 180000,
+      "uploadThroughput": 84375,
+      "connectionType": "cellular3g"
+    },
+    "cacheDisabled": true,
+    "cpuThrottlingRate": 1,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "settleAfterLoadMs": 2000,
+    "lcp": "Last buffered largest-contentful-paint entry before interaction",
+    "cls": "Largest session-window sum of layout shifts excluding recent input"
+  },
+  "chromeVersion": "154.0.8037.98",
+  "additionalDesktopMobileThrottling": [
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1209.1867,
+          "display": "1.2 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 759.1867,
+          "display": "0.8 s"
+        },
+        "speed-index": {
+          "value": 759.1867,
+          "display": "0.8 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1280,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.96,
+          "displayValue": "0.8 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.2 s"
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "displayValue": "0.8 s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.95,
+          "displayValue": "110 ms"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 3 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 3,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                  },
+                  {
+                    "key": "reflowTime",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Total reflow time"
+                  }
+                ],
+                "items": [
+                  {
+                    "source": {
+                      "type": "text",
+                      "value": "[unattributed]"
+                    },
+                    "reflowTime": 43.466
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-1-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 330,
+                    "bottom": 631,
+                    "left": 99,
+                    "right": 339,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "A3840A081AAE83A44A94A6F9FF653A7A": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 27,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "35208.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 31,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 31
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 30 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005,
+                "wastedMs": 155
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-1280-light.html",
+      "json": "m4-lighthouse-1280-light.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 83
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1213.4642,
+          "display": "1.2 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "first-contentful-paint": {
+          "value": 763.4641999999999,
+          "display": "0.8 s"
+        },
+        "speed-index": {
+          "value": 763.4641999999999,
+          "display": "0.8 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        }
+      },
+      "lighthouseVersion": "13.5.0",
+      "cacheClearedBeforeAudit": true,
+      "configSettings": {
+        "output": [
+          "html",
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1280,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "warnings": [],
+      "failed": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.96,
+          "displayValue": "0.8 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.2 s"
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "displayValue": "0.8 s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.92,
+          "displayValue": "120 ms"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document does not have a meta description",
+          "score": 0
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is not valid",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "displayValue": "Est savings of 32 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 28378,
+                "wastedBytes": 28378
+              },
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3005,
+                "wastedBytes": 3005
+              },
+              {
+                "url": "http://127.0.0.1:5504/theme.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 1134,
+                "wastedBytes": 1134
+              },
+              {
+                "url": "http://127.0.0.1:5504/contact.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 614,
+                "wastedBytes": 614
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 33131
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 3 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 3,
+              "uncompressedResponseBytes": 4553,
+              "wastedBytes": 4553
+            }
+          }
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                  },
+                  {
+                    "key": "reflowTime",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Total reflow time"
+                  }
+                ],
+                "items": [
+                  {
+                    "source": {
+                      "type": "text",
+                      "value": "[unattributed]"
+                    },
+                    "reflowTime": 47.624
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 18 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": ""
+              },
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL",
+                "subItemsHeading": {
+                  "key": "reason",
+                  "valueType": "text"
+                }
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Resource Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "label": "Est Savings",
+                "subItemsHeading": {
+                  "key": "wastedBytes",
+                  "valueType": "bytes"
+                }
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-1-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,IMG",
+                  "selector": "body > main#main-content > section#about > img.avatar",
+                  "boundingRect": {
+                    "top": 330,
+                    "bottom": 631,
+                    "left": 99,
+                    "right": 339,
+                    "width": 240,
+                    "height": 301
+                  },
+                  "snippet": "<img class=\"avatar\" src=\"assets/images.jpg\" alt=\"Ảnh chân dung Phung Khanh Hung\" width=\"399\" height=\"501\">",
+                  "nodeLabel": "Ảnh chân dung Phung Khanh Hung"
+                },
+                "url": "http://127.0.0.1:5504/assets/images.jpg",
+                "totalBytes": 28189,
+                "wastedBytes": 17990,
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    {
+                      "reason": "This image file is larger than it needs to be (399x501) for its displayed dimensions (240x301). Use responsive images to reduce the image download size.",
+                      "wastedBytes": 17990
+                    }
+                  ]
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 17990
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "B8C980AA61BD2756D59C4DEDDD6C688E": {
+                      "url": "http://127.0.0.1:5504/",
+                      "navStartToEndTime": 25,
+                      "transferSize": 6982,
+                      "isLongest": true,
+                      "children": {
+                        "34832.2": {
+                          "url": "http://127.0.0.1:5504/style.css",
+                          "navStartToEndTime": 28,
+                          "transferSize": 3005,
+                          "isLongest": true,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 28
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5,
+          "displayValue": "Est savings of 20 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5504/style.css",
+                "totalBytes": 3005,
+                "wastedMs": 157
+              }
+            ]
+          }
+        }
+      ],
+      "html": "m4-lighthouse-1280-dark.html",
+      "json": "m4-lighthouse-1280-dark.json"
+    }
+  ]
+}
