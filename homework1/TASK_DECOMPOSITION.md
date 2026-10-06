@@ -1,4 +1,4 @@
-W1 Task Decomposition
+HW1 Task Decomposition
 
 ## Goal
 
@@ -35,3 +35,14 @@ Keep at least four separate milestone commits in addition to foundation work.
 3. Record results, commit related changes, and update task status.
 
 Include source files, required assets, these documents, a README with run instructions and limitations, and audit evidence in `docs/audits/`. Exclude secrets and temporary files. Report Lighthouse categories separately because the assignment does not specify which category must score 100. If an audit finds no defect, commit its evidence rather than inventing a fix.
+
+## Progress
+
+- HTML foundation: completed.
+- CSS reset and grid foundation: completed.
+- Theme and form: implemented; verification pending.
+- Portfolio content and layout: pending.
+- M1 accessibility: pending.
+- M2 keyboard navigation: pending.
+- M3 CSP: pending.
+- M4 performance: pending.
