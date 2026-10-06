@@ -3,11 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Security-Policy" content="
+            default-src 'none';
+            script-src
+                'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='
+                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=';
+            style-src 'self';
+            img-src 'self';
+            object-src 'none';
+            base-uri 'none';
+            form-action 'none';
+        ">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHUNG KHANH HUNG — Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="theme.js" defer></script>
+
+    <script src="theme.js" integrity="sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=" defer></script>
+
+    <script src="contact.js" integrity="sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=" defer></script>
 </head>
 
 <body>
@@ -155,7 +171,7 @@
     <footer>
         <p>© 2026 PHUNG KHANH HUNG</p>
     </footer>
-    <script src="contact.js" defer></script>
+
 </body>
 
 </html>

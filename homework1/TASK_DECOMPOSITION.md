@@ -44,5 +44,5 @@ Include source files, required assets, these documents, a README with run instru
 - Portfolio content and layout: pending.
 - M1 accessibility: documented source/browser checks pass; Lighthouse Accessibility is 100/100; Narrator spoken-output verification is pending.
 - M2 keyboard navigation: completed for the checks documented in the audit.
-- M3 CSP: pending.
+- M3 CSP: completed for the checks in docs/audits/m3-security.md; verified in Chrome on 2026-10-07.
 - M4 performance: pending.
