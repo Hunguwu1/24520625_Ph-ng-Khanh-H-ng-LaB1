@@ -35,7 +35,7 @@
     <main id="main-content" tabindex="-1">
         <section id="about">
             <h2>Giới thiệu</h2>
-            <img class="avatar" src="assets/avatar.webp" alt="Ảnh chân dung Phung Khanh Hung" width="400" height="400">
+            <img class="avatar" src="assets/images.jpg" alt="Ảnh chân dung Phung Khanh Hung" width="400" height="400">
             <p>
                 Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin.
                 Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.
@@ -43,14 +43,85 @@
             <!-- Ảnh và phần giới thiệu -->
         </section>
 
-        <section id="skills">
+        <section id="skills" class="skills-grid">
             <h2>Kỹ năng</h2>
-            <!-- Danh sách kỹ năng -->
+
+            <article>
+                <h3>HTML và CSS</h3>
+                <ul>
+                    <li>Đang học cách xây dựng trang bằng HTML semantic.</li>
+                    <li>Thực hành bố cục responsive với Flexbox và Grid.</li>
+                    <li>Sử dụng biến CSS để quản lý màu sáng và tối.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>JavaScript cơ bản</h3>
+                <ul>
+                    <li>Thực hành xử lý sự kiện với addEventListener.</li>
+                    <li>Cập nhật nội dung và trạng thái trên trang.</li>
+                    <li>Lưu lựa chọn theme bằng localStorage.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Công cụ phát triển</h3>
+                <ul>
+                    <li>Viết và chỉnh sửa mã trong Visual Studio Code.</li>
+                    <li>Thực hành quản lý phiên bản với Git và GitHub.</li>
+                    <li>Kiểm tra giao diện và lỗi bằng Chrome DevTools.</li>
+                </ul>
+            </article>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="project-grid">
             <h2>Dự án</h2>
-            <!-- Mỗi dự án dùng article và h3 -->
+
+            <article class="project-card">
+                <header>
+                    <h3>Personal Portfolio</h3>
+                    <p><strong>Trạng thái:</strong> Đang hoàn thiện — HW1.</p>
+                    <p><span>HTML</span> · <span>CSS</span> · <span>JavaScript</span></p>
+                </header>
+                <p>
+                    Website giới thiệu bản thân, kỹ năng và dự án học tập.
+                    Có chế độ sáng/tối, lưu lựa chọn theme và form liên hệ demo.
+                </p>
+                <footer>
+                    <a href="#about">Xem phần giới thiệu của Personal Portfolio</a>
+                </footer>
+            </article>
+
+            <article class="project-card">
+                <header>
+                    <h3>Study Planner</h3>
+                    <p><strong>Trạng thái:</strong> Ý tưởng dự án, chưa triển khai.</p>
+                    <p><span>HTML</span> · <span>CSS Grid</span> · <span>JavaScript</span></p>
+                </header>
+                <p>
+                    Dự kiến xây dựng trang quản lý việc học: thêm bài tập,
+                    đặt hạn nộp và đánh dấu công việc đã hoàn thành.
+                    Danh sách sẽ được lưu trên trình duyệt bằng localStorage.
+                </p>
+                <footer>
+                    <a href="#contact">Trao đổi về ý tưởng Study Planner</a>
+                </footer>
+            </article>
+
+            <article class="project-card">
+                <header>
+                    <h3>Interactive Drum Kit</h3>
+                    <p><strong>Trạng thái:</strong> Dự kiến thực hiện — HW2.</p>
+                    <p><span>HTML</span> · <span>CSS</span> · <span>Web Audio</span></p>
+                </header>
+                <p>
+                    Dự kiến xây dựng bộ trống tương tác bằng chuột và bàn phím,
+                    cho phép phát nhiều âm thanh đồng thời và ghi lại nhịp đánh.
+                </p>
+                <footer>
+                    <a href="#contact">Trao đổi về dự án Interactive Drum Kit</a>
+                </footer>
+            </article>
         </section>
 
         <section id="contact">
