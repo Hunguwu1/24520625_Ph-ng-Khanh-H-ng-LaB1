@@ -1,0 +1,1043 @@
+{
+  "date": "2026-10-06",
+  "timezone": "Asia/Saigon",
+  "browser": "Chrome 154.0.8037.98",
+  "url": "http://127.0.0.1:5504/index.html",
+  "runs": [
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "light",
+      "axe": {
+        "version": "4.14.0",
+        "passes": 26,
+        "violations": [],
+        "incomplete": []
+      },
+      "documentInfo": {
+        "lang": "vi",
+        "theme": "light",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin"
+          },
+          {
+            "level": "H2",
+            "text": "Giới thiệu"
+          },
+          {
+            "level": "H2",
+            "text": "Kỹ năng"
+          },
+          {
+            "level": "H3",
+            "text": "HTML và CSS"
+          },
+          {
+            "level": "H3",
+            "text": "JavaScript cơ bản"
+          },
+          {
+            "level": "H3",
+            "text": "Công cụ phát triển"
+          },
+          {
+            "level": "H2",
+            "text": "Dự án"
+          },
+          {
+            "level": "H3",
+            "text": "Personal Portfolio"
+          },
+          {
+            "level": "H3",
+            "text": "Study Planner"
+          },
+          {
+            "level": "H3",
+            "text": "Interactive Drum Kit"
+          },
+          {
+            "level": "H2",
+            "text": "Liên hệ"
+          }
+        ],
+        "image": [
+          {
+            "src": "assets/images.jpg",
+            "alt": "Ảnh chân dung Phung Khanh Hung",
+            "naturalWidth": 399,
+            "naturalHeight": 501,
+            "declaredWidth": "399",
+            "declaredHeight": "501"
+          }
+        ],
+        "horizontalOverflow": false,
+        "labelAssociations": [
+          {
+            "id": "contact-name",
+            "labels": [
+              "Họ và tên"
+            ]
+          },
+          {
+            "id": "contact-email",
+            "labels": [
+              "Email"
+            ]
+          },
+          {
+            "id": "contact-message",
+            "labels": [
+              "Tin nhắn"
+            ]
+          }
+        ]
+      },
+      "accessibilityTree": "- link \"Bỏ qua điều hướng, đến nội dung\":\n  - /url: \"#main-content\"\n- banner:\n  - heading \"PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\" [level=1]\n  - navigation \"Điều hướng chính\":\n    - list:\n      - listitem:\n        - link \"Giới thiệu\":\n          - /url: \"#about\"\n      - listitem:\n        - link \"Kỹ năng\":\n          - /url: \"#skills\"\n      - listitem:\n        - link \"Dự án\":\n          - /url: \"#projects\"\n      - listitem:\n        - link \"Liên hệ\":\n          - /url: \"#contact\"\n  - button \"Chuyển sang chế độ tối 🌙\"\n- main:\n  - heading \"Giới thiệu\" [level=2]\n  - img \"Ảnh chân dung Phung Khanh Hung\"\n  - paragraph: Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin. Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.\n  - heading \"Kỹ năng\" [level=2]\n  - article:\n    - heading \"HTML và CSS\" [level=3]\n    - list:\n      - listitem: Đang học cách xây dựng trang bằng HTML semantic.\n      - listitem: Thực hành bố cục responsive với Flexbox và Grid.\n      - listitem: Sử dụng biến CSS để quản lý màu sáng và tối.\n  - article:\n    - heading \"JavaScript cơ bản\" [level=3]\n    - list:\n      - listitem: Thực hành xử lý sự kiện với addEventListener.\n      - listitem: Cập nhật nội dung và trạng thái trên trang.\n      - listitem: Lưu lựa chọn theme bằng localStorage.\n  - article:\n    - heading \"Công cụ phát triển\" [level=3]\n    - list:\n      - listitem: Viết và chỉnh sửa mã trong Visual Studio Code.\n      - listitem: Thực hành quản lý phiên bản với Git và GitHub.\n      - listitem: Kiểm tra giao diện và lỗi bằng Chrome DevTools.\n  - heading \"Dự án\" [level=2]\n  - article:\n    - heading \"Personal Portfolio\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Đang hoàn thiện — HW1.\n    - paragraph: HTML · CSS · JavaScript\n    - paragraph: Website giới thiệu bản thân, kỹ năng và dự án học tập. Có chế độ sáng/tối, lưu lựa chọn theme và form liên hệ demo.\n    - link \"Xem phần giới thiệu của Personal Portfolio\":\n      - /url: \"#about\"\n  - article:\n    - heading \"Study Planner\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Ý tưởng dự án, chưa triển khai.\n    - paragraph: HTML · CSS Grid · JavaScript\n    - paragraph: \"Dự kiến xây dựng trang quản lý việc học: thêm bài tập, đặt hạn nộp và đánh dấu công việc đã hoàn thành. Danh sách sẽ được lưu trên trình duyệt bằng localStorage.\"\n    - link \"Trao đổi về ý tưởng Study Planner\":\n      - /url: \"#contact\"\n  - article:\n    - heading \"Interactive Drum Kit\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Dự kiến thực hiện — HW2.\n    - paragraph: HTML · CSS · Web Audio\n    - paragraph: Dự kiến xây dựng bộ trống tương tác bằng chuột và bàn phím, cho phép phát nhiều âm thanh đồng thời và ghi lại nhịp đánh.\n    - link \"Trao đổi về dự án Interactive Drum Kit\":\n      - /url: \"#contact\"\n  - heading \"Liên hệ\" [level=2]\n  - paragraph: Đây là form demo, chưa gửi tin nhắn.\n  - paragraph:\n    - text: Họ và tên\n    - textbox \"Họ và tên\"\n  - paragraph:\n    - text: Email\n    - textbox \"Email\"\n  - paragraph:\n    - text: Tin nhắn\n    - textbox \"Tin nhắn\"\n  - button \"Kiểm tra thông tin\"\n  - status\n- contentinfo:\n  - paragraph: © 2026 PHUNG KHANH HUNG",
+      "screenshot": "m1-375-light.png",
+      "focusScreenshot": "m1-focus-375-light.png",
+      "skipFocused": {
+        "focused": true,
+        "top": 8,
+        "outline": "solid"
+      },
+      "skipTargetFocused": true,
+      "focusSequence": [
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về ý tưởng Study Planner",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về dự án Interactive Drum Kit",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-name",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-email",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "TEXTAREA",
+          "id": "contact-message",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Kiểm tra thông tin",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BODY",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung\n    \n\n    \n        PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\n",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(23, 32, 51)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Giới thiệu",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Kỹ năng",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Dự án",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Liên hệ",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "theme-btn",
+          "text": "Chuyển sang chế độ tối 🌙",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        }
+      ],
+      "labelsClickable": [
+        {
+          "id": "contact-name",
+          "focused": true
+        },
+        {
+          "id": "contact-email",
+          "focused": true
+        },
+        {
+          "id": "contact-message",
+          "focused": true
+        }
+      ],
+      "invalidForm": {
+        "valid": false,
+        "focused": "contact-name",
+        "status": ""
+      },
+      "validForm": {
+        "valid": true,
+        "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+        "role": "status"
+      },
+      "toggledTheme": {
+        "theme": "dark",
+        "pressed": "true",
+        "text": "Chuyển sang chế độ sáng ☀️",
+        "saved": "dark"
+      },
+      "restoredTheme": "dark",
+      "errors": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "location": {
+            "url": "http://127.0.0.1:5504/favicon.ico",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "failedResponses": []
+    },
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "dark",
+      "axe": {
+        "version": "4.14.0",
+        "passes": 26,
+        "violations": [],
+        "incomplete": []
+      },
+      "documentInfo": {
+        "lang": "vi",
+        "theme": "dark",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin"
+          },
+          {
+            "level": "H2",
+            "text": "Giới thiệu"
+          },
+          {
+            "level": "H2",
+            "text": "Kỹ năng"
+          },
+          {
+            "level": "H3",
+            "text": "HTML và CSS"
+          },
+          {
+            "level": "H3",
+            "text": "JavaScript cơ bản"
+          },
+          {
+            "level": "H3",
+            "text": "Công cụ phát triển"
+          },
+          {
+            "level": "H2",
+            "text": "Dự án"
+          },
+          {
+            "level": "H3",
+            "text": "Personal Portfolio"
+          },
+          {
+            "level": "H3",
+            "text": "Study Planner"
+          },
+          {
+            "level": "H3",
+            "text": "Interactive Drum Kit"
+          },
+          {
+            "level": "H2",
+            "text": "Liên hệ"
+          }
+        ],
+        "image": [
+          {
+            "src": "assets/images.jpg",
+            "alt": "Ảnh chân dung Phung Khanh Hung",
+            "naturalWidth": 399,
+            "naturalHeight": 501,
+            "declaredWidth": "399",
+            "declaredHeight": "501"
+          }
+        ],
+        "horizontalOverflow": false,
+        "labelAssociations": [
+          {
+            "id": "contact-name",
+            "labels": [
+              "Họ và tên"
+            ]
+          },
+          {
+            "id": "contact-email",
+            "labels": [
+              "Email"
+            ]
+          },
+          {
+            "id": "contact-message",
+            "labels": [
+              "Tin nhắn"
+            ]
+          }
+        ]
+      },
+      "accessibilityTree": "- link \"Bỏ qua điều hướng, đến nội dung\":\n  - /url: \"#main-content\"\n- banner:\n  - heading \"PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\" [level=1]\n  - navigation \"Điều hướng chính\":\n    - list:\n      - listitem:\n        - link \"Giới thiệu\":\n          - /url: \"#about\"\n      - listitem:\n        - link \"Kỹ năng\":\n          - /url: \"#skills\"\n      - listitem:\n        - link \"Dự án\":\n          - /url: \"#projects\"\n      - listitem:\n        - link \"Liên hệ\":\n          - /url: \"#contact\"\n  - button \"Chuyển sang chế độ sáng ☀️\" [pressed]\n- main:\n  - heading \"Giới thiệu\" [level=2]\n  - img \"Ảnh chân dung Phung Khanh Hung\"\n  - paragraph: Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin. Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.\n  - heading \"Kỹ năng\" [level=2]\n  - article:\n    - heading \"HTML và CSS\" [level=3]\n    - list:\n      - listitem: Đang học cách xây dựng trang bằng HTML semantic.\n      - listitem: Thực hành bố cục responsive với Flexbox và Grid.\n      - listitem: Sử dụng biến CSS để quản lý màu sáng và tối.\n  - article:\n    - heading \"JavaScript cơ bản\" [level=3]\n    - list:\n      - listitem: Thực hành xử lý sự kiện với addEventListener.\n      - listitem: Cập nhật nội dung và trạng thái trên trang.\n      - listitem: Lưu lựa chọn theme bằng localStorage.\n  - article:\n    - heading \"Công cụ phát triển\" [level=3]\n    - list:\n      - listitem: Viết và chỉnh sửa mã trong Visual Studio Code.\n      - listitem: Thực hành quản lý phiên bản với Git và GitHub.\n      - listitem: Kiểm tra giao diện và lỗi bằng Chrome DevTools.\n  - heading \"Dự án\" [level=2]\n  - article:\n    - heading \"Personal Portfolio\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Đang hoàn thiện — HW1.\n    - paragraph: HTML · CSS · JavaScript\n    - paragraph: Website giới thiệu bản thân, kỹ năng và dự án học tập. Có chế độ sáng/tối, lưu lựa chọn theme và form liên hệ demo.\n    - link \"Xem phần giới thiệu của Personal Portfolio\":\n      - /url: \"#about\"\n  - article:\n    - heading \"Study Planner\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Ý tưởng dự án, chưa triển khai.\n    - paragraph: HTML · CSS Grid · JavaScript\n    - paragraph: \"Dự kiến xây dựng trang quản lý việc học: thêm bài tập, đặt hạn nộp và đánh dấu công việc đã hoàn thành. Danh sách sẽ được lưu trên trình duyệt bằng localStorage.\"\n    - link \"Trao đổi về ý tưởng Study Planner\":\n      - /url: \"#contact\"\n  - article:\n    - heading \"Interactive Drum Kit\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Dự kiến thực hiện — HW2.\n    - paragraph: HTML · CSS · Web Audio\n    - paragraph: Dự kiến xây dựng bộ trống tương tác bằng chuột và bàn phím, cho phép phát nhiều âm thanh đồng thời và ghi lại nhịp đánh.\n    - link \"Trao đổi về dự án Interactive Drum Kit\":\n      - /url: \"#contact\"\n  - heading \"Liên hệ\" [level=2]\n  - paragraph: Đây là form demo, chưa gửi tin nhắn.\n  - paragraph:\n    - text: Họ và tên\n    - textbox \"Họ và tên\"\n  - paragraph:\n    - text: Email\n    - textbox \"Email\"\n  - paragraph:\n    - text: Tin nhắn\n    - textbox \"Tin nhắn\"\n  - button \"Kiểm tra thông tin\"\n  - status\n- contentinfo:\n  - paragraph: © 2026 PHUNG KHANH HUNG",
+      "screenshot": "m1-375-dark.png",
+      "focusScreenshot": "m1-focus-375-dark.png",
+      "skipFocused": {
+        "focused": true,
+        "top": 8,
+        "outline": "solid"
+      },
+      "skipTargetFocused": true,
+      "focusSequence": [
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về ý tưởng Study Planner",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về dự án Interactive Drum Kit",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-name",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-email",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "TEXTAREA",
+          "id": "contact-message",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Kiểm tra thông tin",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BODY",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung\n    \n\n    \n        PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\n",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(248, 250, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Giới thiệu",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Kỹ năng",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Dự án",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Liên hệ",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "theme-btn",
+          "text": "Chuyển sang chế độ sáng ☀️",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        }
+      ],
+      "labelsClickable": [
+        {
+          "id": "contact-name",
+          "focused": true
+        },
+        {
+          "id": "contact-email",
+          "focused": true
+        },
+        {
+          "id": "contact-message",
+          "focused": true
+        }
+      ],
+      "invalidForm": {
+        "valid": false,
+        "focused": "contact-name",
+        "status": ""
+      },
+      "validForm": {
+        "valid": true,
+        "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+        "role": "status"
+      },
+      "toggledTheme": {
+        "theme": "light",
+        "pressed": "false",
+        "text": "Chuyển sang chế độ tối 🌙",
+        "saved": "light"
+      },
+      "restoredTheme": "light",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "axe": {
+        "version": "4.14.0",
+        "passes": 26,
+        "violations": [],
+        "incomplete": []
+      },
+      "documentInfo": {
+        "lang": "vi",
+        "theme": "light",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin"
+          },
+          {
+            "level": "H2",
+            "text": "Giới thiệu"
+          },
+          {
+            "level": "H2",
+            "text": "Kỹ năng"
+          },
+          {
+            "level": "H3",
+            "text": "HTML và CSS"
+          },
+          {
+            "level": "H3",
+            "text": "JavaScript cơ bản"
+          },
+          {
+            "level": "H3",
+            "text": "Công cụ phát triển"
+          },
+          {
+            "level": "H2",
+            "text": "Dự án"
+          },
+          {
+            "level": "H3",
+            "text": "Personal Portfolio"
+          },
+          {
+            "level": "H3",
+            "text": "Study Planner"
+          },
+          {
+            "level": "H3",
+            "text": "Interactive Drum Kit"
+          },
+          {
+            "level": "H2",
+            "text": "Liên hệ"
+          }
+        ],
+        "image": [
+          {
+            "src": "assets/images.jpg",
+            "alt": "Ảnh chân dung Phung Khanh Hung",
+            "naturalWidth": 399,
+            "naturalHeight": 501,
+            "declaredWidth": "399",
+            "declaredHeight": "501"
+          }
+        ],
+        "horizontalOverflow": false,
+        "labelAssociations": [
+          {
+            "id": "contact-name",
+            "labels": [
+              "Họ và tên"
+            ]
+          },
+          {
+            "id": "contact-email",
+            "labels": [
+              "Email"
+            ]
+          },
+          {
+            "id": "contact-message",
+            "labels": [
+              "Tin nhắn"
+            ]
+          }
+        ]
+      },
+      "accessibilityTree": "- link \"Bỏ qua điều hướng, đến nội dung\":\n  - /url: \"#main-content\"\n- banner:\n  - heading \"PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\" [level=1]\n  - navigation \"Điều hướng chính\":\n    - list:\n      - listitem:\n        - link \"Giới thiệu\":\n          - /url: \"#about\"\n      - listitem:\n        - link \"Kỹ năng\":\n          - /url: \"#skills\"\n      - listitem:\n        - link \"Dự án\":\n          - /url: \"#projects\"\n      - listitem:\n        - link \"Liên hệ\":\n          - /url: \"#contact\"\n  - button \"Chuyển sang chế độ tối 🌙\"\n- main:\n  - heading \"Giới thiệu\" [level=2]\n  - img \"Ảnh chân dung Phung Khanh Hung\"\n  - paragraph: Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin. Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.\n  - heading \"Kỹ năng\" [level=2]\n  - article:\n    - heading \"HTML và CSS\" [level=3]\n    - list:\n      - listitem: Đang học cách xây dựng trang bằng HTML semantic.\n      - listitem: Thực hành bố cục responsive với Flexbox và Grid.\n      - listitem: Sử dụng biến CSS để quản lý màu sáng và tối.\n  - article:\n    - heading \"JavaScript cơ bản\" [level=3]\n    - list:\n      - listitem: Thực hành xử lý sự kiện với addEventListener.\n      - listitem: Cập nhật nội dung và trạng thái trên trang.\n      - listitem: Lưu lựa chọn theme bằng localStorage.\n  - article:\n    - heading \"Công cụ phát triển\" [level=3]\n    - list:\n      - listitem: Viết và chỉnh sửa mã trong Visual Studio Code.\n      - listitem: Thực hành quản lý phiên bản với Git và GitHub.\n      - listitem: Kiểm tra giao diện và lỗi bằng Chrome DevTools.\n  - heading \"Dự án\" [level=2]\n  - article:\n    - heading \"Personal Portfolio\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Đang hoàn thiện — HW1.\n    - paragraph: HTML · CSS · JavaScript\n    - paragraph: Website giới thiệu bản thân, kỹ năng và dự án học tập. Có chế độ sáng/tối, lưu lựa chọn theme và form liên hệ demo.\n    - link \"Xem phần giới thiệu của Personal Portfolio\":\n      - /url: \"#about\"\n  - article:\n    - heading \"Study Planner\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Ý tưởng dự án, chưa triển khai.\n    - paragraph: HTML · CSS Grid · JavaScript\n    - paragraph: \"Dự kiến xây dựng trang quản lý việc học: thêm bài tập, đặt hạn nộp và đánh dấu công việc đã hoàn thành. Danh sách sẽ được lưu trên trình duyệt bằng localStorage.\"\n    - link \"Trao đổi về ý tưởng Study Planner\":\n      - /url: \"#contact\"\n  - article:\n    - heading \"Interactive Drum Kit\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Dự kiến thực hiện — HW2.\n    - paragraph: HTML · CSS · Web Audio\n    - paragraph: Dự kiến xây dựng bộ trống tương tác bằng chuột và bàn phím, cho phép phát nhiều âm thanh đồng thời và ghi lại nhịp đánh.\n    - link \"Trao đổi về dự án Interactive Drum Kit\":\n      - /url: \"#contact\"\n  - heading \"Liên hệ\" [level=2]\n  - paragraph: Đây là form demo, chưa gửi tin nhắn.\n  - paragraph:\n    - text: Họ và tên\n    - textbox \"Họ và tên\"\n  - paragraph:\n    - text: Email\n    - textbox \"Email\"\n  - paragraph:\n    - text: Tin nhắn\n    - textbox \"Tin nhắn\"\n  - button \"Kiểm tra thông tin\"\n  - status\n- contentinfo:\n  - paragraph: © 2026 PHUNG KHANH HUNG",
+      "screenshot": "m1-1280-light.png",
+      "focusScreenshot": "m1-focus-1280-light.png",
+      "skipFocused": {
+        "focused": true,
+        "top": 8,
+        "outline": "solid"
+      },
+      "skipTargetFocused": true,
+      "focusSequence": [
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về ý tưởng Study Planner",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về dự án Interactive Drum Kit",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-name",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-email",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "TEXTAREA",
+          "id": "contact-message",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Kiểm tra thông tin",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BODY",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung\n    \n\n    \n        PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\n",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(23, 32, 51)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Giới thiệu",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Kỹ năng",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Dự án",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Liên hệ",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "theme-btn",
+          "text": "Chuyển sang chế độ tối 🌙",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(7, 89, 133)"
+        }
+      ],
+      "labelsClickable": [
+        {
+          "id": "contact-name",
+          "focused": true
+        },
+        {
+          "id": "contact-email",
+          "focused": true
+        },
+        {
+          "id": "contact-message",
+          "focused": true
+        }
+      ],
+      "invalidForm": {
+        "valid": false,
+        "focused": "contact-name",
+        "status": ""
+      },
+      "validForm": {
+        "valid": true,
+        "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+        "role": "status"
+      },
+      "toggledTheme": {
+        "theme": "dark",
+        "pressed": "true",
+        "text": "Chuyển sang chế độ sáng ☀️",
+        "saved": "dark"
+      },
+      "restoredTheme": "dark",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "axe": {
+        "version": "4.14.0",
+        "passes": 26,
+        "violations": [],
+        "incomplete": []
+      },
+      "documentInfo": {
+        "lang": "vi",
+        "theme": "dark",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin"
+          },
+          {
+            "level": "H2",
+            "text": "Giới thiệu"
+          },
+          {
+            "level": "H2",
+            "text": "Kỹ năng"
+          },
+          {
+            "level": "H3",
+            "text": "HTML và CSS"
+          },
+          {
+            "level": "H3",
+            "text": "JavaScript cơ bản"
+          },
+          {
+            "level": "H3",
+            "text": "Công cụ phát triển"
+          },
+          {
+            "level": "H2",
+            "text": "Dự án"
+          },
+          {
+            "level": "H3",
+            "text": "Personal Portfolio"
+          },
+          {
+            "level": "H3",
+            "text": "Study Planner"
+          },
+          {
+            "level": "H3",
+            "text": "Interactive Drum Kit"
+          },
+          {
+            "level": "H2",
+            "text": "Liên hệ"
+          }
+        ],
+        "image": [
+          {
+            "src": "assets/images.jpg",
+            "alt": "Ảnh chân dung Phung Khanh Hung",
+            "naturalWidth": 399,
+            "naturalHeight": 501,
+            "declaredWidth": "399",
+            "declaredHeight": "501"
+          }
+        ],
+        "horizontalOverflow": false,
+        "labelAssociations": [
+          {
+            "id": "contact-name",
+            "labels": [
+              "Họ và tên"
+            ]
+          },
+          {
+            "id": "contact-email",
+            "labels": [
+              "Email"
+            ]
+          },
+          {
+            "id": "contact-message",
+            "labels": [
+              "Tin nhắn"
+            ]
+          }
+        ]
+      },
+      "accessibilityTree": "- link \"Bỏ qua điều hướng, đến nội dung\":\n  - /url: \"#main-content\"\n- banner:\n  - heading \"PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\" [level=1]\n  - navigation \"Điều hướng chính\":\n    - list:\n      - listitem:\n        - link \"Giới thiệu\":\n          - /url: \"#about\"\n      - listitem:\n        - link \"Kỹ năng\":\n          - /url: \"#skills\"\n      - listitem:\n        - link \"Dự án\":\n          - /url: \"#projects\"\n      - listitem:\n        - link \"Liên hệ\":\n          - /url: \"#contact\"\n  - button \"Chuyển sang chế độ sáng ☀️\" [pressed]\n- main:\n  - heading \"Giới thiệu\" [level=2]\n  - img \"Ảnh chân dung Phung Khanh Hung\"\n  - paragraph: Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin. Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.\n  - heading \"Kỹ năng\" [level=2]\n  - article:\n    - heading \"HTML và CSS\" [level=3]\n    - list:\n      - listitem: Đang học cách xây dựng trang bằng HTML semantic.\n      - listitem: Thực hành bố cục responsive với Flexbox và Grid.\n      - listitem: Sử dụng biến CSS để quản lý màu sáng và tối.\n  - article:\n    - heading \"JavaScript cơ bản\" [level=3]\n    - list:\n      - listitem: Thực hành xử lý sự kiện với addEventListener.\n      - listitem: Cập nhật nội dung và trạng thái trên trang.\n      - listitem: Lưu lựa chọn theme bằng localStorage.\n  - article:\n    - heading \"Công cụ phát triển\" [level=3]\n    - list:\n      - listitem: Viết và chỉnh sửa mã trong Visual Studio Code.\n      - listitem: Thực hành quản lý phiên bản với Git và GitHub.\n      - listitem: Kiểm tra giao diện và lỗi bằng Chrome DevTools.\n  - heading \"Dự án\" [level=2]\n  - article:\n    - heading \"Personal Portfolio\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Đang hoàn thiện — HW1.\n    - paragraph: HTML · CSS · JavaScript\n    - paragraph: Website giới thiệu bản thân, kỹ năng và dự án học tập. Có chế độ sáng/tối, lưu lựa chọn theme và form liên hệ demo.\n    - link \"Xem phần giới thiệu của Personal Portfolio\":\n      - /url: \"#about\"\n  - article:\n    - heading \"Study Planner\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Ý tưởng dự án, chưa triển khai.\n    - paragraph: HTML · CSS Grid · JavaScript\n    - paragraph: \"Dự kiến xây dựng trang quản lý việc học: thêm bài tập, đặt hạn nộp và đánh dấu công việc đã hoàn thành. Danh sách sẽ được lưu trên trình duyệt bằng localStorage.\"\n    - link \"Trao đổi về ý tưởng Study Planner\":\n      - /url: \"#contact\"\n  - article:\n    - heading \"Interactive Drum Kit\" [level=3]\n    - paragraph:\n      - strong: \"Trạng thái:\"\n      - text: Dự kiến thực hiện — HW2.\n    - paragraph: HTML · CSS · Web Audio\n    - paragraph: Dự kiến xây dựng bộ trống tương tác bằng chuột và bàn phím, cho phép phát nhiều âm thanh đồng thời và ghi lại nhịp đánh.\n    - link \"Trao đổi về dự án Interactive Drum Kit\":\n      - /url: \"#contact\"\n  - heading \"Liên hệ\" [level=2]\n  - paragraph: Đây là form demo, chưa gửi tin nhắn.\n  - paragraph:\n    - text: Họ và tên\n    - textbox \"Họ và tên\"\n  - paragraph:\n    - text: Email\n    - textbox \"Email\"\n  - paragraph:\n    - text: Tin nhắn\n    - textbox \"Tin nhắn\"\n  - button \"Kiểm tra thông tin\"\n  - status\n- contentinfo:\n  - paragraph: © 2026 PHUNG KHANH HUNG",
+      "screenshot": "m1-1280-dark.png",
+      "focusScreenshot": "m1-focus-1280-dark.png",
+      "skipFocused": {
+        "focused": true,
+        "top": 8,
+        "outline": "solid"
+      },
+      "skipTargetFocused": true,
+      "focusSequence": [
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về ý tưởng Study Planner",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Trao đổi về dự án Interactive Drum Kit",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-name",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "INPUT",
+          "id": "contact-email",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "TEXTAREA",
+          "id": "contact-message",
+          "text": "",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Kiểm tra thông tin",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BODY",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung\n    \n\n    \n        PHUNG KHANH HUNG — Sinh viên Công nghệ thông tin\n",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(248, 250, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Bỏ qua điều hướng, đến nội dung",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Giới thiệu",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Kỹ năng",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Dự án",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Liên hệ",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "theme-btn",
+          "text": "Chuyển sang chế độ sáng ☀️",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "text": "Xem phần giới thiệu của Personal Portfolio",
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(125, 211, 252)"
+        }
+      ],
+      "labelsClickable": [
+        {
+          "id": "contact-name",
+          "focused": true
+        },
+        {
+          "id": "contact-email",
+          "focused": true
+        },
+        {
+          "id": "contact-message",
+          "focused": true
+        }
+      ],
+      "invalidForm": {
+        "valid": false,
+        "focused": "contact-name",
+        "status": ""
+      },
+      "validForm": {
+        "valid": true,
+        "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+        "role": "status"
+      },
+      "toggledTheme": {
+        "theme": "light",
+        "pressed": "false",
+        "text": "Chuyển sang chế độ tối 🌙",
+        "saved": "light"
+      },
+      "restoredTheme": "light",
+      "errors": [],
+      "failedResponses": []
+    }
+  ]
+}
