@@ -35,6 +35,11 @@
     <main id="main-content" tabindex="-1">
         <section id="about">
             <h2>Giới thiệu</h2>
+            <img class="avatar" src="assets/avatar.webp" alt="Ảnh chân dung Phung Khanh Hung" width="400" height="400">
+            <p>
+                Tôi là Phung Khanh Hung, sinh viên Công nghệ thông tin.
+                Tôi đang học xây dựng website bằng HTML, CSS và JavaScript.
+            </p>
             <!-- Ảnh và phần giới thiệu -->
         </section>
 
@@ -50,13 +55,36 @@
 
         <section id="contact">
             <h2>Liên hệ</h2>
-            <!-- Form -->
+
+            <p>Đây là form demo, chưa gửi tin nhắn.</p>
+
+            <form id="contact-form">
+                <p>
+                    <label for="contact-name">Họ và tên</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required minlength="3">
+                </p>
+
+                <p>
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                </p>
+
+                <p>
+                    <label for="contact-message">Tin nhắn</label>
+                    <textarea id="contact-message" name="message" rows="5" required minlength="10"></textarea>
+                </p>
+
+                <button type="submit">Kiểm tra thông tin</button>
+
+                <p id="contact-status" role="status"></p>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>© 2026 PHUNG KHANH HUNG</p>
     </footer>
+    <script src="contact.js" defer></script>
 </body>
 
 </html>
