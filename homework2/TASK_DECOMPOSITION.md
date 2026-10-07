@@ -109,3 +109,42 @@ Planned implementation commit:
 - feat(js): bind drum controls with repeat filtering
 
 Verification status: pending manual testing.
+
+## T-04: Timestamped FIFO Beat Recorder
+
+Goal: record drum hit events in chronological order and replay them while preserving their relative timing.
+
+Files:
+- recorder.js: recording state, timestamps, event queue, and snapshot access.
+- controls.js: record each manual hit and bind recording and replay controls.
+- index.html: Record, Stop Recording, Replay, and an accessible status region.
+
+Data and interface contract:
+- Each recorded event contains key, src, and time in milliseconds relative to the recording start.
+- Use performance.now() to measure elapsed time.
+- Append manual hit events using push; replay a copied queue using shift (FIFO).
+- Keep recorder.js independent of DOM elements and audio playback.
+- Stop Recording preserves the saved events; starting a new recording clears the previous take.
+- Replay reads a snapshot and does not consume or append to the saved recording.
+- Schedule each replay event relative to one replay start time, without awaiting audio completion.
+- Disable Record and Replay during replay; disable Replay during recording or when no events are saved.
+- Update status text using textContent.
+- Record and Stop implement the required event recorder; Replay is included to demonstrate the saved sequence.
+
+Acceptance checks:
+- Record an A, S, D sequence with different pauses and verify the event order and timestamps.
+- Both clicks and mapped keyboard hits are recorded.
+- Holding a mapped key records only one hit due to T-03 repeat filtering.
+- Hits after Stop Recording are not appended.
+- An empty recording cannot be replayed.
+- Replay preserves event order and approximately preserves pauses without modifying the saved take.
+- Replay may be repeated, and replayed hits are not recorded again.
+- Starting another recording clears the previous take.
+- No unexpected browser Console errors occur.
+
+Timing scope: setTimeout provides approximate foreground replay timing; it is not a sample-accurate audio scheduler.
+
+Planned implementation commit:
+- feat(js): add timestamped FIFO beat recorder
+
+Verification status: pending implementation and manual testing.
