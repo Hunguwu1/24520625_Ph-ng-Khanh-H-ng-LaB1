@@ -1,5 +1,12 @@
 const eventTimeElement = document.querySelector("#event-time");
-const eventTime = Date.parse(eventTimeElement.dateTime);
+const eventTimestamp = eventTimeElement.dateTime;
+
+const utcPattern =
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
+
+const eventTime = utcPattern.test(eventTimestamp)
+    ? Date.parse(eventTimestamp)
+    : NaN;
 
 const daysElement = document.querySelector("#days");
 const hoursElement = document.querySelector("#hours");
