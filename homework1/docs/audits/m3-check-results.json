@@ -1,0 +1,553 @@
+{
+  "date": "2026-10-07",
+  "timezone": "Asia/Saigon",
+  "browser": "Chrome 154.0.8037.98",
+  "method": "Headless Chrome via Playwright; source and served-byte comparison; DOM probes under the document CSP",
+  "url": "http://127.0.0.1:5504/index.html",
+  "source": {
+    "index.html": {
+      "hash": "sha256-t5niYSCdo1R/OElRZOVHlDPhGh0oemlzDNGfrDLCi1M=",
+      "responseStatus": 200,
+      "servedMatchesDisk": true
+    },
+    "theme.js": {
+      "hash": "sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=",
+      "responseStatus": 200,
+      "servedMatchesDisk": true
+    },
+    "contact.js": {
+      "hash": "sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=",
+      "responseStatus": 200,
+      "servedMatchesDisk": true
+    },
+    "style.css": {
+      "hash": "sha256-mf+cGnpLs+/Pf2xzYzxpatSoRD9jNA4WWWQfKpEGTts=",
+      "responseStatus": 200,
+      "servedMatchesDisk": true
+    },
+    "assets/images.jpg": {
+      "hash": "sha256-tHp6BCpesLldutY09SAadSdCTQqwJkAOK4Ulufsy0sY=",
+      "responseStatus": 200,
+      "servedMatchesDisk": true
+    },
+    "javascript": {
+      "usesAddEventListener": true,
+      "usesTextContent": true,
+      "unsafePatterns": []
+    }
+  },
+  "runs": [
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "light",
+      "sourceCheck": {
+        "policy": "default-src 'none';\n            script-src\n                'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=';\n            style-src 'self';\n            img-src 'self';\n            object-src 'none';\n            base-uri 'none';\n            form-action 'none';",
+        "policyBeforeScriptsAndCSS": true,
+        "scripts": [
+          {
+            "src": "theme.js",
+            "integrity": "sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=",
+            "inline": false
+          },
+          {
+            "src": "contact.js",
+            "integrity": "sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=",
+            "inline": false
+          }
+        ],
+        "handlers": [],
+        "javascriptURLs": 0
+      },
+      "appearance": {
+        "theme": "light",
+        "background": "rgb(255, 255, 255)",
+        "imageLoaded": true,
+        "overflow": false
+      },
+      "toggled": {
+        "theme": "dark",
+        "stored": "dark",
+        "pressed": "true",
+        "text": "Chuyển sang chế độ sáng ☀️"
+      },
+      "reloadPersistence": true,
+      "form": {
+        "empty": {
+          "valid": false,
+          "focus": "contact-name",
+          "status": ""
+        },
+        "invalidEmail": {
+          "valid": false,
+          "focus": "contact-email",
+          "status": ""
+        },
+        "valid": {
+          "valid": true,
+          "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+          "sameDocument": true
+        }
+      },
+      "normal": {
+        "consoleErrors": [
+          {
+            "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+            "location": {
+              "url": "http://127.0.0.1:5504/favicon.ico",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          }
+        ],
+        "runtimeErrors": [],
+        "failedRequests": [],
+        "httpErrors": [],
+        "faviconWarnings": [
+          {
+            "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+            "location": {
+              "url": "http://127.0.0.1:5504/favicon.ico",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          }
+        ],
+        "applicationErrors": []
+      },
+      "probes": {
+        "inlineExecuted": false,
+        "handlerExecuted": false,
+        "violations": [
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-attr",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "http://127.0.0.1:5504/theme.js?m3-unapproved",
+            "disposition": "enforce"
+          }
+        ]
+      },
+      "expectedProbeErrors": [
+        {
+          "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-tAYi7E1ZN7F0X/0orOT1RBCCSEuMLY87MIYJjf74utg='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 6,
+            "column": 0,
+            "lineNumber": 6,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Executing inline event handler violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 5,
+            "column": 0,
+            "lineNumber": 5,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Loading the script 'http://127.0.0.1:5504/theme.js?m3-unapproved' violates the following Content Security Policy directive: \"script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M='\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "cleanAfterReload": {
+        "scripts": 2,
+        "handlers": false,
+        "theme": "light"
+      },
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "height": 900,
+      "theme": "dark",
+      "sourceCheck": {
+        "policy": "default-src 'none';\n            script-src\n                'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=';\n            style-src 'self';\n            img-src 'self';\n            object-src 'none';\n            base-uri 'none';\n            form-action 'none';",
+        "policyBeforeScriptsAndCSS": true,
+        "scripts": [
+          {
+            "src": "theme.js",
+            "integrity": "sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=",
+            "inline": false
+          },
+          {
+            "src": "contact.js",
+            "integrity": "sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=",
+            "inline": false
+          }
+        ],
+        "handlers": [],
+        "javascriptURLs": 0
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "rgb(15, 23, 42)",
+        "imageLoaded": true,
+        "overflow": false
+      },
+      "toggled": {
+        "theme": "light",
+        "stored": "light",
+        "pressed": "false",
+        "text": "Chuyển sang chế độ tối 🌙"
+      },
+      "reloadPersistence": true,
+      "form": {
+        "empty": {
+          "valid": false,
+          "focus": "contact-name",
+          "status": ""
+        },
+        "invalidEmail": {
+          "valid": false,
+          "focus": "contact-email",
+          "status": ""
+        },
+        "valid": {
+          "valid": true,
+          "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+          "sameDocument": true
+        }
+      },
+      "normal": {
+        "consoleErrors": [],
+        "runtimeErrors": [],
+        "failedRequests": [],
+        "httpErrors": [],
+        "faviconWarnings": [],
+        "applicationErrors": []
+      },
+      "probes": {
+        "inlineExecuted": false,
+        "handlerExecuted": false,
+        "violations": [
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-attr",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "http://127.0.0.1:5504/theme.js?m3-unapproved",
+            "disposition": "enforce"
+          }
+        ]
+      },
+      "expectedProbeErrors": [
+        {
+          "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-tAYi7E1ZN7F0X/0orOT1RBCCSEuMLY87MIYJjf74utg='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 6,
+            "column": 0,
+            "lineNumber": 6,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Executing inline event handler violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 5,
+            "column": 0,
+            "lineNumber": 5,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Loading the script 'http://127.0.0.1:5504/theme.js?m3-unapproved' violates the following Content Security Policy directive: \"script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M='\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "cleanAfterReload": {
+        "scripts": 2,
+        "handlers": false,
+        "theme": "dark"
+      },
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "sourceCheck": {
+        "policy": "default-src 'none';\n            script-src\n                'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=';\n            style-src 'self';\n            img-src 'self';\n            object-src 'none';\n            base-uri 'none';\n            form-action 'none';",
+        "policyBeforeScriptsAndCSS": true,
+        "scripts": [
+          {
+            "src": "theme.js",
+            "integrity": "sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=",
+            "inline": false
+          },
+          {
+            "src": "contact.js",
+            "integrity": "sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=",
+            "inline": false
+          }
+        ],
+        "handlers": [],
+        "javascriptURLs": 0
+      },
+      "appearance": {
+        "theme": "light",
+        "background": "rgb(255, 255, 255)",
+        "imageLoaded": true,
+        "overflow": false
+      },
+      "toggled": {
+        "theme": "dark",
+        "stored": "dark",
+        "pressed": "true",
+        "text": "Chuyển sang chế độ sáng ☀️"
+      },
+      "reloadPersistence": true,
+      "form": {
+        "empty": {
+          "valid": false,
+          "focus": "contact-name",
+          "status": ""
+        },
+        "invalidEmail": {
+          "valid": false,
+          "focus": "contact-email",
+          "status": ""
+        },
+        "valid": {
+          "valid": true,
+          "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+          "sameDocument": true
+        }
+      },
+      "normal": {
+        "consoleErrors": [],
+        "runtimeErrors": [],
+        "failedRequests": [],
+        "httpErrors": [],
+        "faviconWarnings": [],
+        "applicationErrors": []
+      },
+      "probes": {
+        "inlineExecuted": false,
+        "handlerExecuted": false,
+        "violations": [
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-attr",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "http://127.0.0.1:5504/theme.js?m3-unapproved",
+            "disposition": "enforce"
+          }
+        ]
+      },
+      "expectedProbeErrors": [
+        {
+          "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-tAYi7E1ZN7F0X/0orOT1RBCCSEuMLY87MIYJjf74utg='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 6,
+            "column": 0,
+            "lineNumber": 6,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Executing inline event handler violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 5,
+            "column": 0,
+            "lineNumber": 5,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Loading the script 'http://127.0.0.1:5504/theme.js?m3-unapproved' violates the following Content Security Policy directive: \"script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M='\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "cleanAfterReload": {
+        "scripts": 2,
+        "handlers": false,
+        "theme": "light"
+      },
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "sourceCheck": {
+        "policy": "default-src 'none';\n            script-src\n                'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=';\n            style-src 'self';\n            img-src 'self';\n            object-src 'none';\n            base-uri 'none';\n            form-action 'none';",
+        "policyBeforeScriptsAndCSS": true,
+        "scripts": [
+          {
+            "src": "theme.js",
+            "integrity": "sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4=",
+            "inline": false
+          },
+          {
+            "src": "contact.js",
+            "integrity": "sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=",
+            "inline": false
+          }
+        ],
+        "handlers": [],
+        "javascriptURLs": 0
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "rgb(15, 23, 42)",
+        "imageLoaded": true,
+        "overflow": false
+      },
+      "toggled": {
+        "theme": "light",
+        "stored": "light",
+        "pressed": "false",
+        "text": "Chuyển sang chế độ tối 🌙"
+      },
+      "reloadPersistence": true,
+      "form": {
+        "empty": {
+          "valid": false,
+          "focus": "contact-name",
+          "status": ""
+        },
+        "invalidEmail": {
+          "valid": false,
+          "focus": "contact-email",
+          "status": ""
+        },
+        "valid": {
+          "valid": true,
+          "status": "Dữ liệu hợp lệ; đây là form demo, chưa gửi tin nhắn.",
+          "sameDocument": true
+        }
+      },
+      "normal": {
+        "consoleErrors": [],
+        "runtimeErrors": [],
+        "failedRequests": [],
+        "httpErrors": [],
+        "faviconWarnings": [],
+        "applicationErrors": []
+      },
+      "probes": {
+        "inlineExecuted": false,
+        "handlerExecuted": false,
+        "violations": [
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-attr",
+            "blockedURI": "inline",
+            "disposition": "enforce"
+          },
+          {
+            "directive": "script-src-elem",
+            "blockedURI": "http://127.0.0.1:5504/theme.js?m3-unapproved",
+            "disposition": "enforce"
+          }
+        ]
+      },
+      "expectedProbeErrors": [
+        {
+          "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-tAYi7E1ZN7F0X/0orOT1RBCCSEuMLY87MIYJjf74utg='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 6,
+            "column": 0,
+            "lineNumber": 6,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Executing inline event handler violates the following Content Security Policy directive 'script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M=''. Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 5,
+            "column": 0,
+            "lineNumber": 5,
+            "columnNumber": 0
+          }
+        },
+        {
+          "text": "Loading the script 'http://127.0.0.1:5504/theme.js?m3-unapproved' violates the following Content Security Policy directive: \"script-src 'sha256-LmsdovqKgCLQ7kKYfRX6gPblLA/EczhiVGunvMeUbg4='\n                'sha256-zOfr1k0PMEduPXYTVTh0FH/Ojjwv3c9k43BvZ8zkf9M='\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+          "location": {
+            "url": "",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "cleanAfterReload": {
+        "scripts": 2,
+        "handlers": false,
+        "theme": "dark"
+      },
+      "result": "PASS"
+    }
+  ],
+  "integrityNegativeTest": {
+    "themeExecuted": false,
+    "tamperedExecuted": false,
+    "expectedErrors": [
+      "Failed to find a valid digest in the 'integrity' attribute for resource 'http://127.0.0.1:5504/theme.js' with computed SHA-256 integrity '5Ow0nmYfjrPv/clbiZnc24GL5aguPpjKv9yw6v/1E5s='. The resource has been blocked."
+    ],
+    "diskFilesUnchanged": true,
+    "result": "PASS"
+  },
+  "result": "PASS"
+}

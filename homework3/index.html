@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIT Tech Day — Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="countdown.js" defer></script>
+    <script src="registration.js" defer></script>
+</head>
+
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <h1>UIT Tech Day</h1>
+        <p>Learn, connect, and explore the future of web development.</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#countdown">Countdown</a></li>
+                <li><a href="#registration">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About the event</h2>
+            <p>
+                Join students and developers for talks, demonstrations,
+                and discussions about modern web development.
+            </p>
+            <p>
+                Date:
+                <time id="event-time" datetime="2026-12-01T02:00:00Z">
+                    December 1, 2026, at 9:00 AM Vietnam time (UTC+7)
+                </time>
+            </p>
+            <p>Location: University of Information Technology</p>
+        </section>
+
+        <section id="countdown" aria-labelledby="countdown-heading">
+            <h2 id="countdown-heading">Time until the event</h2>
+
+            <dl class="countdown">
+                <dt>Days</dt>
+                <dd id="days">00</dd>
+
+                <dt>Hours</dt>
+                <dd id="hours">00</dd>
+
+                <dt>Minutes</dt>
+                <dd id="minutes">00</dd>
+
+                <dt>Seconds</dt>
+                <dd id="seconds">00</dd>
+            </dl>
+
+            <p id="countdown-message">The countdown will appear here.</p>
+        </section>
+
+        <section id="registration" aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Register for the event</h2>
+            <p>Enter your name and email. Both fields are required.</p>
+
+            <form id="registration-form" data-state="idle">
+                <p>
+                    <label for="full-name">Full name</label>
+                    <input id="full-name" name="fullName" type="text" autocomplete="name" minlength="2" maxlength="80"
+                        required>
+                </p>
+
+                <p>
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </p>
+
+                <button id="submit-button" type="submit" disabled>
+                    Register
+                </button>
+            </form>
+
+            <p>This form simulates a submission. No data is sent to a server.</p>
+            <p id="form-status" role="status" aria-atomic="true"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UIT Tech Day. Homework 3 project.</p>
+    </footer>
+</body>
+
+</html>

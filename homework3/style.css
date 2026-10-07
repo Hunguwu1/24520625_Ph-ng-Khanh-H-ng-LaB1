@@ -1,0 +1,222 @@
+/* Reusable design values */
+:root {
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #475569;
+    --color-primary: #1d4ed8;
+    --color-on-primary: #ffffff;
+    --color-border: #cbd5e1;
+    --color-control-border: #64748b;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+
+    --radius: 0.75rem;
+    --content-width: 64rem;
+}
+
+/* Consistent sizing and spacing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page defaults */
+html {
+    color-scheme: light;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Form controls use the same font as the page */
+input,
+button {
+    font: inherit;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+/* Make keyboard focus clearly visible */
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* Skip link: visible when focused */
+body>a[href="#main-content"] {
+    position: fixed;
+    top: var(--space-2);
+    left: var(--space-2);
+    z-index: 10;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-surface);
+    transform: translateY(-200%);
+}
+
+body>a[href="#main-content"]:focus {
+    transform: translateY(0);
+}
+
+/* Header and navigation */
+body>header {
+    padding: var(--space-4) var(--space-2);
+    background-color: var(--color-surface);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+h1 {
+    margin-bottom: var(--space-2);
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: var(--space-1);
+    font-weight: 600;
+}
+
+/* Mobile-first page layout */
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    width: calc(100% - 2 * var(--space-2));
+    max-width: var(--content-width);
+    margin: var(--space-4) auto;
+}
+
+main>section {
+    min-width: 0;
+    padding: var(--space-3);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow-wrap: anywhere;
+}
+
+h2 {
+    margin-bottom: var(--space-2);
+    font-size: 1.5rem;
+}
+
+section>p {
+    margin-bottom: var(--space-2);
+}
+
+/* Countdown: each label sits above its number */
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: var(--space-1);
+    padding: var(--space-2);
+    background-color: var(--color-background);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.countdown dt {
+    color: var(--color-muted);
+    font-size: 0.75rem;
+}
+
+.countdown dd {
+    color: var(--color-primary);
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+#countdown-message {
+    margin-top: var(--space-2);
+}
+
+/* Registration form */
+form {
+    display: grid;
+    gap: var(--space-2);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-1) var(--space-2);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-control-border);
+}
+
+button {
+    width: 100%;
+    padding: var(--space-1) var(--space-2);
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+    border: 0;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+#form-status {
+    min-height: 1.6em;
+    margin-top: var(--space-2);
+}
+
+/* Footer */
+body>footer {
+    padding: var(--space-3) var(--space-2);
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* Larger screens */
+@media (min-width: 48rem) {
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    #about {
+        grid-column: 1 / -1;
+    }
+}
