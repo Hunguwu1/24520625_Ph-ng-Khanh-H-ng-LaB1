@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2 — Drum Kit</title>
+</head>
+
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <h1>Drum Kit</h1>
+        <p>Press A, S, or D, or select a button to play a drum sound.</p>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section aria-labelledby="drum-heading">
+            <h2 id="drum-heading">Drum Pads</h2>
+
+            <ul class="drum-grid">
+                <li>
+                    <button type="button" class="drum-pad" data-key="a" data-sound="sounds/kick.wav">
+                        <kbd>A</kbd> — Kick
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="drum-pad" data-key="s" data-sound="sounds/snare.wav">
+                        <kbd>S</kbd> — Snare
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="drum-pad" data-key="d" data-sound="sounds/hihat.wav">
+                        <kbd>D</kbd> — Hi-hat
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HW2 — Web Application Development</p>
+    </footer>
+</body>
+
+</html>
