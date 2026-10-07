@@ -7,6 +7,7 @@
     --color-primary: #1d4ed8;
     --color-on-primary: #ffffff;
     --color-border: #cbd5e1;
+    --color-control-border: #64748b;
 
     --space-1: 0.5rem;
     --space-2: 1rem;
@@ -177,8 +178,7 @@ input {
     padding: var(--space-1) var(--space-2);
     color: var(--color-text);
     background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
+    border: 1px solid var(--color-control-border);
 }
 
 button {
