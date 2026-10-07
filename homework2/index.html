@@ -40,12 +40,26 @@
                 </li>
             </ul>
         </section>
+        <section aria-labelledby="recorder-heading">
+            <h2 id="recorder-heading">Beat Recorder</h2>
+
+            <button type="button" id="record-btn">Record</button>
+            <button type="button" id="stop-btn" disabled>
+                Stop Recording
+            </button>
+            <button type="button" id="replay-btn" disabled>
+                Replay
+            </button>
+
+            <p id="recorder-status" role="status">Ready to record.</p>
+        </section>
     </main>
 
     <footer>
         <p>HW2 — Web Application Development</p>
     </footer>
     <script type="module" src="./controls.js"></script>
+
 </body>
 
 </html>
