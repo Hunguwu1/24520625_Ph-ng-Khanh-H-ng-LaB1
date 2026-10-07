@@ -1,0 +1,60 @@
+/* Reusable design values */
+:root {
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #475569;
+    --color-primary: #1d4ed8;
+    --color-on-primary: #ffffff;
+    --color-border: #cbd5e1;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+
+    --radius: 0.75rem;
+    --content-width: 64rem;
+}
+
+/* Consistent sizing and spacing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page defaults */
+html {
+    color-scheme: light;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Form controls use the same font as the page */
+input,
+button {
+    font: inherit;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+/* Make keyboard focus clearly visible */
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
