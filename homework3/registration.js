@@ -29,6 +29,7 @@ function setFormState(nextState, message = "") {
 }
 
 async function simulateRegistration(data) {
+
     await new Promise((resolve) => {
         setTimeout(resolve, 2000);
     });
@@ -41,6 +42,9 @@ async function simulateRegistration(data) {
         fullName: data.fullName,
     };
 }
+fullNameInput.addEventListener("input", () => {
+    fullNameInput.setCustomValidity("");
+});
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -50,14 +54,29 @@ form.addEventListener("submit", async (event) => {
         return;
     }
 
-    if (!form.reportValidity()) {
-        return;
-    }
-
     const data = {
         fullName: fullNameInput.value.trim(),
         email: emailInput.value.trim(),
     };
+
+    /* Clear any previous custom validation message */
+    fullNameInput.setCustomValidity("");
+
+    /* Validate the name after trimming whitespace */
+    if (data.fullName.length < 2) {
+        fullNameInput.setCustomValidity(
+            "Please enter a name with at least 2 characters."
+        );
+    } else if (data.fullName.length > 80) {
+        fullNameInput.setCustomValidity(
+            "Please enter a name with no more than 80 characters."
+        );
+    }
+
+    if (!form.reportValidity()) {
+        setFormState("error", "Please check the form fields.");
+        return;
+    }
 
     setFormState("submitting", "Submitting your registration...");
 
