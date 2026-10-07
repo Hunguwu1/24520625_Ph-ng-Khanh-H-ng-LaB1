@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Nguyen – Enterprise Developer Portfolio" />
+  <title>Alex Nguyen | Developer Portfolio</title>
+
+  <!-- Prevent Flash of Wrong Theme (FOUT): read localStorage before first paint -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body && document.body.classList.add('dark-theme');
+          document.documentElement.classList.add('dark-theme');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- T-02A: Tokens & Reset -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <!-- T-02B: Responsive 2D Grid -->
+  <link rel="stylesheet" href="css/grid.css" />
+</head>
+
+<body>
+
+  <!-- Skip link – keyboard accessibility (WCAG 2.4.1) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- SR-only live region for theme announcements -->
+  <div id="theme-announcement" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="nav__logo" href="#main-content">
+        <span aria-hidden="true">&lt;</span>AN<span aria-hidden="true">/&gt;</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- T-02C: Theme Switcher – aria-pressed required by spec -->
+      <button
+        id="theme-btn"
+        class="theme-btn"
+        type="button"
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true" focusable="false">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <span class="sr-only">Toggle theme</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════ -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ── HERO SECTION ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+
+        <div class="hero__text">
+          <p class="hero__eyebrow">Enterprise Developer</p>
+          <h1 class="hero__heading" id="hero-heading">
+            Hi, I'm <span class="accent">Alex Nguyen</span>
+          </h1>
+          <p class="hero__desc">
+            Full-stack engineer with 6+ years building scalable web applications.
+            Specialising in React, Node.js, and cloud-native architectures.
+          </p>
+          <p class="hero__cta-group">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--outline" href="#contact">Get In Touch</a>
+          </p>
+        </div>
+
+        <!-- Explicit width + height declared to prevent CLS -->
+        <figure class="hero__figure">
+          <img
+            class="hero__avatar"
+            src="https://placehold.co/280x280/4f46e5/ffffff?text=AN"
+            alt="Portrait of Alex Nguyen, full-stack developer"
+            width="280"
+            height="280"
+          />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ── SKILLS MATRIX ── -->
+    <section id="skills" class="section section--alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Expertise</span>
+          <h2 class="section__heading" id="skills-heading">Technical Skills</h2>
+        </header>
+
+        <!-- Skills arranged with CSS Grid (T-02B) -->
+        <ul class="skills-grid" role="list" aria-label="Technical skills list">
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">⚛️</span>
+            <strong class="skill-card__name">React</strong>
+            <span class="skill-card__level">Expert</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🟩</span>
+            <strong class="skill-card__name">Node.js</strong>
+            <span class="skill-card__level">Expert</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">📦</span>
+            <strong class="skill-card__name">TypeScript</strong>
+            <span class="skill-card__level">Expert</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🐍</span>
+            <strong class="skill-card__name">Python</strong>
+            <span class="skill-card__level">Advanced</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">☁️</span>
+            <strong class="skill-card__name">AWS</strong>
+            <span class="skill-card__level">Advanced</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🐳</span>
+            <strong class="skill-card__name">Docker</strong>
+            <span class="skill-card__level">Advanced</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🗄️</span>
+            <strong class="skill-card__name">PostgreSQL</strong>
+            <span class="skill-card__level">Advanced</span>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">⚡</span>
+            <strong class="skill-card__name">GraphQL</strong>
+            <span class="skill-card__level">Intermediate</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── PROJECT CARDS ── -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Portfolio</span>
+          <h2 class="section__heading" id="projects-heading">Featured Projects</h2>
+        </header>
+
+        <!-- Project Cards use <article> as required -->
+        <ul class="projects-grid" role="list" aria-label="Featured projects">
+
+          <li>
+            <article class="project-card">
+              <img
+                class="project-card__thumb"
+                src="https://placehold.co/600x340/4f46e5/ffffff?text=SaaS+Platform"
+                alt="Screenshot of Enterprise SaaS Platform dashboard"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">Enterprise SaaS Platform</h3>
+                  <!-- Tags / Badges -->
+                  <ul class="tag-list" role="list" aria-label="Technologies">
+                    <li><span class="tag">React</span></li>
+                    <li><span class="tag">Node.js</span></li>
+                    <li><span class="tag">AWS</span></li>
+                  </ul>
+                </header>
+                <p class="project-card__desc">
+                  Multi-tenant SaaS platform handling 50k+ daily active users.
+                  Reduced time-to-deploy by 60% through CI/CD automation on AWS ECS.
+                </p>
+                <footer class="project-card__links">
+                  <a class="link-btn" href="#" aria-label="Live demo of Enterprise SaaS Platform">🌐 Live Demo</a>
+                  <a class="link-btn" href="#" aria-label="GitHub source for Enterprise SaaS Platform">💾 GitHub</a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <img
+                class="project-card__thumb"
+                src="https://placehold.co/600x340/7c3aed/ffffff?text=Analytics"
+                alt="Screenshot of Real-time Analytics Dashboard"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">Analytics Dashboard</h3>
+                  <ul class="tag-list" role="list" aria-label="Technologies">
+                    <li><span class="tag">TypeScript</span></li>
+                    <li><span class="tag">WebSocket</span></li>
+                    <li><span class="tag">D3.js</span></li>
+                  </ul>
+                </header>
+                <p class="project-card__desc">
+                  Real-time analytics dashboard with WebSocket-powered live updates,
+                  custom date ranges, and CSV export.
+                </p>
+                <footer class="project-card__links">
+                  <a class="link-btn" href="#" aria-label="Live demo of Analytics Dashboard">🌐 Demo</a>
+                  <a class="link-btn" href="#" aria-label="GitHub source for Analytics Dashboard">💾 GitHub</a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <img
+                class="project-card__thumb"
+                src="https://placehold.co/600x340/0891b2/ffffff?text=AI+Bot"
+                alt="Screenshot of AI Code Review Bot interface"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">AI Code Review Bot</h3>
+                  <ul class="tag-list" role="list" aria-label="Technologies">
+                    <li><span class="tag">Python</span></li>
+                    <li><span class="tag">OpenAI</span></li>
+                    <li><span class="tag">GitHub Actions</span></li>
+                  </ul>
+                </header>
+                <p class="project-card__desc">
+                  GitHub Actions bot using GPT-4 for automated PR reviews,
+                  security scanning, and performance suggestions.
+                </p>
+                <footer class="project-card__links">
+                  <a class="link-btn" href="#" aria-label="GitHub source for AI Code Review Bot">💾 GitHub</a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── CONTACT FORM ── -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Get In Touch</span>
+          <h2 class="section__heading" id="contact-heading">Let's Work Together</h2>
+        </header>
+
+        <div class="contact-grid">
+
+          <address class="contact-info">
+            <h3 class="contact-info__title">Open to opportunities</h3>
+            <p class="contact-info__desc">
+              Available for senior and lead full-stack roles, consulting
+              engagements, and open-source collaboration.
+            </p>
+            <ul class="contact-links" role="list">
+              <li>
+                <a class="contact-link" href="mailto:alex@example.com">
+                  <span aria-hidden="true">📧</span> alex@example.com
+                </a>
+              </li>
+              <li>
+                <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <span aria-hidden="true">💾</span> github.com/alexnguyen
+                </a>
+              </li>
+              <li>
+                <a class="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <span aria-hidden="true">💼</span> linkedin.com/in/alexnguyen
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <!-- HTML5 validation: required, type="email" -->
+          <form class="contact-form" aria-label="Send a message to Alex" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="f-name">Full Name</label>
+              <input
+                class="form-input"
+                id="f-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                aria-required="true"
+                placeholder="Jane Smith"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email Address</label>
+              <input
+                class="form-input"
+                id="f-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+                placeholder="jane@company.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-message">Message</label>
+              <textarea
+                class="form-input form-textarea"
+                id="f-message"
+                name="message"
+                required
+                aria-required="true"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">
+              Send Message ✉️
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">
+        &copy; <span id="current-year"></span> Alex Nguyen. All rights reserved.
+      </p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav" role="list">
+          <li><a class="footer-nav__link" href="#skills">Skills</a></li>
+          <li><a class="footer-nav__link" href="#projects">Projects</a></li>
+          <li><a class="footer-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- T-02C: Theme engine – defer so DOM is ready -->
+  <script src="js/theme.js" defer></script>
+
+  <script>
+    // Footer year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Contact form submit handler
+    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = '✓ Sent! I\'ll reply within 24h.';
+      btn.disabled = true;
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.disabled = false;
+        e.target.reset();
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
