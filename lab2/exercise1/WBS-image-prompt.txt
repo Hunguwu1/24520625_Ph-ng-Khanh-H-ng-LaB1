@@ -1,0 +1,48 @@
+Use case: infographic-diagram.
+Create a polished, high-resolution LANDSCAPE WBS hierarchy image for a Vietnamese university programming assignment, based on the exact work breakdown below. This is a readable deliverable for a report, not a decorative illustration. White background, navy title and root node, five evenly spaced color-coded columns (blue, teal, purple, amber, green), thin orthogonal tree connector lines without arrowheads, flat rounded rectangular cards, crisp typography with accurate Vietnamese diacritics. Generous whitespace and strong contrast. Requested canvas approximately 3200x2000 landscape; maximize resolution and ensure all labels fit without clipping. No logos, watermarks, photographs, checkmarks, completion statuses, or invented tasks.
+
+Main title at the top verbatim: "WBS — EXERCISE 1"
+Subtitle verbatim: "Mini-React VNode & Mounting Engine"
+One centered ROOT card: "Xây dựng Mini-React"
+Root connects to FIVE group cards in one horizontal row. Under each group, arrange that group's numbered leaf cards vertically and connect them using a vertical branch line. Show hierarchy clearly with each leaf connected only to its own parent. Do not connect the groups to one another as a flowchart. Every card below should occur exactly once. Keep WBS numeric codes visible and consistent with the source.
+
+COLUMN 1 group: "1.0 Chuẩn bị bài làm"
+Leaves:
+"1.1 Tạo trang chạy thử" / supporting line "index.html • #app • module"
+"1.2 Thiết kế VNode" / supporting line "type • props • children"
+
+COLUMN 2 group: "2.0 Xây dựng factory"
+Leaves:
+"2.1 createTextElement" / supporting line "Tạo text VNode"
+"2.2 createElement" / supporting line "Tạo element VNode"
+"2.3 Chuẩn hóa children" / supporting line "Làm phẳng, chuyển text, lọc"
+"2.4 Kiểm tra kiểu dữ liệu" / supporting line "isObject • isText • isVNode"
+"2.5 Commit factory" / supporting line "Commit thứ nhất"
+
+COLUMN 3 group: "3.0 Mounting engine"
+Leaves:
+"3.1 Render text VNode" / supporting line "document.createTextNode"
+"3.2 Render element và props" / supporting line "createElement • attributes"
+"3.3 Gắn sự kiện" / supporting line "onClick • addEventListener"
+"3.4 Render children và mount" / supporting line "Đệ quy • replaceChildren"
+
+COLUMN 4 group: "4.0 Kiểm tra và audit"
+Leaves:
+"4.1 Semantic tags" / supporting line "main • section • button"
+"4.2 Kiểm tra XSS" / supporting line "Script string → text node"
+"4.3 Payload bổ sung" / supporting line "Image string → text node"
+"4.4 Props, events, typeguard" / supporting line "Assertions • TypeError"
+"4.5 VNode khớp DOM" / supporting line "assertTreeMatches"
+"4.6 DevTools Audit" / supporting line "Elements • Console"
+
+COLUMN 5 group: "5.0 Hoàn thiện và bàn giao"
+Leaves:
+"5.1 Commit renderer" / supporting line "Commit thứ hai"
+"5.2 Kiểm tra sản phẩm cuối" / supporting line "File bài làm • lịch sử Git"
+
+At bottom, add a clean footer strip, separated from the tree, containing exactly these three lines. Preserve spelling and capitalization, and render full commit messages without truncating:
+"Commit 1: feat(core): implement createElement factory"
+"Commit 2: feat(core): implement renderToDOM"
+"Sản phẩm: index.html • mini-react.js • test-runner.js • WBS.md"
+
+All text should be large enough to read in a report. Technical identifiers must be spelled exactly. Use no code snippets beyond the specified labels.
