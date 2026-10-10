@@ -1,3 +1,4 @@
+import { registerClickHandler } from "./event-hub.js";
 const TEXT_ELEMENT = "TEXT_ELEMENT";
 const TAG_NAME = /^[a-z][a-z0-9-]*$/;
 
@@ -114,7 +115,12 @@ export function renderToDOM(vnode) {
             }
 
             const eventName = name.slice(2).toLowerCase();
-            element.addEventListener(eventName, value);
+
+            if (eventName !== "click") {
+                throw new Error(`Event Hub chưa hỗ trợ sự kiện: ${eventName}`);
+            }
+
+            registerClickHandler(element, value);
             continue;
         }
 
