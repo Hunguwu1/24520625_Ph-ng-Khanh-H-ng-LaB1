@@ -1,3 +1,4 @@
+import { attachEventHub } from "./event-hub.js";
 import { renderToDOM } from "./mini-react.js";
 
 // Giữ dữ liệu giữa những lần render.
@@ -46,6 +47,7 @@ export function renderApp(
 
     appComponent = component;
     appRoot = root;
+    attachEventHub(appRoot);
 
     // Đọc lại các state theo thứ tự từ vị trí 0.
     refCursor = 0;
