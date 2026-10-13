@@ -1,0 +1,21 @@
+main {
+  padding: 2rem;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  color: var(--text-h);
+  background: var(--code-bg);
+}
