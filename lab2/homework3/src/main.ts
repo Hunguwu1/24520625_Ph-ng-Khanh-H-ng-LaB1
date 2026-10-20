@@ -1,13 +1,5 @@
 import './style.css'
-
-// Dữ liệu mẫu để dựng giao diện ban đầu.
-const product = {
-  id: 'product-001',
-  name: 'Tai nghe Bluetooth',
-  originalPrice: 599_000,
-  salePrice: 299_000,
-  availableStock: 10,
-}
+import { inventory, product } from './data/demo'
 
 // Bộ định dạng tiền Việt Nam.
 const currencyFormatter = new Intl.NumberFormat('vi-VN', {
@@ -38,7 +30,7 @@ app.innerHTML = `
       ${currencyFormatter.format(product.salePrice)}
     </p>
 
-    <p>Còn lại: <strong>${product.availableStock}</strong> sản phẩm</p>
+    <p>Còn lại: <strong>${inventory.available}</strong> sản phẩm</p>
 
     <button type="button" disabled>Mua ngay</button>
 
