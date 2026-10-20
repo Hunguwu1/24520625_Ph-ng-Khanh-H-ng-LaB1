@@ -54,3 +54,23 @@ button:disabled {
   color: #64748b;
   font-size: 14px;
 }
+
+.countdown {
+  margin: 20px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff1f2;
+  text-align: center;
+}
+
+.countdown p {
+  margin: 4px 0;
+}
+
+.timer {
+  color: #e53935;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
