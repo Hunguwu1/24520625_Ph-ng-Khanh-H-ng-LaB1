@@ -1,6 +1,6 @@
 import { createServer } from 'node:http'
 import type { ServerResponse } from 'node:http'
-import { flashSale, inventory, product } from './store.ts'
+import { flashSale, getInventory, product } from './store.ts'
 
 const port = 3000
 
@@ -49,7 +49,7 @@ const server = createServer((request, response) => {
     if (url.pathname === `/api/products/${product.id}`) {
         sendJson(response, 200, {
             product,
-            inventory,
+            inventory: getInventory(),
             flashSale,
             serverNow: Date.now(),
         })
