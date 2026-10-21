@@ -3,7 +3,7 @@ import type { ServerResponse } from 'node:http'
 import { readReservationInput } from './http.ts'
 import { reserveInventory } from './reservations.ts'
 import { flashSale, getInventory, product } from './store.ts'
-
+import { expireReservations } from './expiration.ts'
 const port = 3000
 
 const errorStatuses = new Map<string, number>([
@@ -29,6 +29,7 @@ function sendJson(
 
     response.end(JSON.stringify(data))
 }
+
 
 const server = createServer(async (request, response) => {
     try {
@@ -61,6 +62,8 @@ const server = createServer(async (request, response) => {
         }
 
         if (url.pathname === `/api/products/${product.id}`) {
+            expireReservations()
+
             sendJson(response, 200, {
                 product,
                 inventory: getInventory(),
@@ -94,7 +97,21 @@ const server = createServer(async (request, response) => {
             error: statusCode === 500 ? 'INTERNAL_ERROR' : code,
         })
     }
+
 })
+
+const expiryTimer = setInterval(() => {
+    try {
+        expireReservations()
+    } catch (error) {
+        console.error('Không thể xử lý lượt giữ hết hạn:', error)
+    }
+}, 1000)
+
+expiryTimer.unref()
+
+server.on('close', () => clearInterval(expiryTimer))
+
 
 server.listen(port, '127.0.0.1', () => {
     console.log(`API đang chạy tại http://127.0.0.1:${port}`)
