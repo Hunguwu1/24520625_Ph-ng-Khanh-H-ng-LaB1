@@ -11,6 +11,7 @@
     "test:expiration": "tsx --test server/expiration.test.ts",
     "test:checkout": "tsx --test server/checkout.test.ts",
     "test": "tsx --test server/reservations.test.ts server/expiration.test.ts server/checkout.test.ts",
+    "test:concurrency": "tsx --test server/concurrency.test.ts",
     "build": "tsc && npm run check:server && vite build",
     "preview": "vite preview"
   },
