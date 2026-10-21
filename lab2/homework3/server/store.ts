@@ -2,10 +2,10 @@ import { DatabaseSync } from 'node:sqlite'
 import type { FlashSale, Inventory, Product } from '../src/domain/models.ts'
 
 export const product: Product = {
-    id: 'product-001',
-    name: 'Tai nghe Bluetooth',
-    originalPrice: 599_000,
-    salePrice: 299_000,
+  id: 'product-001',
+  name: 'Tai nghe Bluetooth',
+  originalPrice: 599_000,
+  salePrice: 299_000,
 }
 
 export const db = new DatabaseSync(':memory:')
@@ -33,6 +33,15 @@ db.exec(`
     ),
     expiresAt INTEGER NOT NULL
   ) STRICT;
+
+  CREATE TABLE orders (
+  id TEXT PRIMARY KEY,
+  reservationId TEXT NOT NULL UNIQUE REFERENCES reservations(id),
+  userId TEXT NOT NULL,
+  quantity INTEGER NOT NULL CHECK (quantity > 0),
+  totalAmount INTEGER NOT NULL CHECK (totalAmount >= 0),
+  createdAt INTEGER NOT NULL
+) STRICT; 
 `)
 
 db.prepare(`
@@ -42,29 +51,29 @@ db.prepare(`
 `).run(product.id)
 
 export function getInventory(): Inventory {
-    const row = db.prepare(
-        'SELECT * FROM inventory WHERE productId = ?',
-    ).get(product.id)
+  const row = db.prepare(
+    'SELECT * FROM inventory WHERE productId = ?',
+  ).get(product.id)
 
-    if (!row) {
-        throw new Error('INVENTORY_NOT_FOUND')
-    }
+  if (!row) {
+    throw new Error('INVENTORY_NOT_FOUND')
+  }
 
-    return {
-        productId: String(row.productId),
-        total: Number(row.total),
-        available: Number(row.available),
-        reserved: Number(row.reserved),
-        sold: Number(row.sold),
-        version: Number(row.version),
-    }
+  return {
+    productId: String(row.productId),
+    total: Number(row.total),
+    available: Number(row.available),
+    reserved: Number(row.reserved),
+    sold: Number(row.sold),
+    version: Number(row.version),
+  }
 }
 
 const startsAt = Date.now()
 
 export const flashSale: FlashSale = {
-    id: 'sale-server-001',
-    productId: product.id,
-    startsAt,
-    endsAt: startsAt + 5 * 60 * 1000,
+  id: 'sale-server-001',
+  productId: product.id,
+  startsAt,
+  endsAt: startsAt + 5 * 60 * 1000,
 }
