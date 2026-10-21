@@ -1,6 +1,8 @@
 import type { IncomingMessage } from 'node:http'
 
-export async function readReservationInput(request: IncomingMessage) {
+async function readJsonObject(
+    request: IncomingMessage,
+): Promise<Record<string, unknown>> {
     const contentType = request.headers['content-type']
         ?.split(';')[0]?.trim().toLowerCase()
 
@@ -38,7 +40,11 @@ export async function readReservationInput(request: IncomingMessage) {
         throw new Error('INVALID_INPUT')
     }
 
-    const value = data as Record<string, unknown>
+    return data as Record<string, unknown>
+}
+
+export async function readReservationInput(request: IncomingMessage) {
+    const value = await readJsonObject(request)
 
     if (
         typeof value.productId !== 'string' ||
@@ -54,5 +60,23 @@ export async function readReservationInput(request: IncomingMessage) {
         userId: value.userId,
         quantity: value.quantity,
         expectedVersion: value.expectedVersion,
+    }
+}
+
+export async function readCheckoutInput(request: IncomingMessage) {
+    const value = await readJsonObject(request)
+
+    if (
+        typeof value.reservationId !== 'string' ||
+        !value.reservationId.trim() ||
+        typeof value.userId !== 'string' ||
+        !value.userId.trim()
+    ) {
+        throw new Error('INVALID_INPUT')
+    }
+
+    return {
+        reservationId: value.reservationId.trim(),
+        userId: value.userId.trim(),
     }
 }

@@ -1,6 +1,7 @@
 import { createServer } from 'node:http'
 import type { ServerResponse } from 'node:http'
-import { readReservationInput } from './http.ts'
+import { readCheckoutInput, readReservationInput } from './http.ts'
+import { checkoutReservation } from './checkout.ts'
 import { reserveInventory } from './reservations.ts'
 import { flashSale, getInventory, product } from './store.ts'
 import { expireReservations } from './expiration.ts'
@@ -15,6 +16,10 @@ const errorStatuses = new Map<string, number>([
     ['SALE_INACTIVE', 409],
     ['PAYLOAD_TOO_LARGE', 413],
     ['UNSUPPORTED_MEDIA_TYPE', 415],
+    ['FORBIDDEN', 403],
+    ['RESERVATION_NOT_FOUND', 404],
+    ['RESERVATION_EXPIRED', 409],
+    ['RESERVATION_NOT_ACTIVE', 409],
 ])
 
 function sendJson(
@@ -39,7 +44,8 @@ const server = createServer(async (request, response) => {
             url.pathname === '/api/health' ||
                 url.pathname === `/api/products/${product.id}`
                 ? 'GET'
-                : url.pathname === '/api/reservations'
+                : url.pathname === '/api/reservations' ||
+                    url.pathname === '/api/checkout'
                     ? 'POST'
                     : undefined
 
@@ -68,6 +74,22 @@ const server = createServer(async (request, response) => {
                 product,
                 inventory: getInventory(),
                 flashSale,
+                serverNow: Date.now(),
+            })
+            return
+        }
+
+        if (url.pathname === '/api/checkout') {
+            const input = await readCheckoutInput(request)
+
+            const order = checkoutReservation(
+                input.reservationId,
+                input.userId,
+            )
+
+            sendJson(response, 200, {
+                order,
+                inventory: getInventory(),
                 serverNow: Date.now(),
             })
             return
