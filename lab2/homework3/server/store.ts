@@ -70,10 +70,21 @@ export function getInventory(): Inventory {
 }
 
 const startsAt = Date.now()
+// Demo mặc định 30 phút, tính từ lúc backend khởi động; F5 không đặt lại giờ.
+const saleDurationMs = Number(
+  process.env.FLASH_SALE_DURATION_MS ?? 30 * 60 * 1000,
+)
+
+if (
+  !Number.isSafeInteger(saleDurationMs) || saleDurationMs <= 0 ||
+  !Number.isSafeInteger(startsAt + saleDurationMs)
+) {
+  throw new Error('FLASH_SALE_DURATION_MS phải là số nguyên dương (mili giây)')
+}
 
 export const flashSale: FlashSale = {
   id: 'sale-server-001',
   productId: product.id,
   startsAt,
-  endsAt: startsAt + 5 * 60 * 1000,
+  endsAt: startsAt + saleDurationMs,
 }
