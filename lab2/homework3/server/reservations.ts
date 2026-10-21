@@ -1,6 +1,7 @@
 import { randomUUID } from 'node:crypto'
 import type { Reservation } from '../src/domain/models.ts'
 import { db, flashSale, getInventory, product } from './store.ts'
+import { expireReservations } from './expiration.ts'
 
 interface ReserveInput {
     productId: string
@@ -23,6 +24,9 @@ export function reserveInventory(input: ReserveInput): Reservation {
     if (productId !== product.id) {
         throw new Error('PRODUCT_NOT_FOUND')
     }
+
+    // Thu hồi các lượt giữ đã hết hạn trước khi xử lý yêu cầu mới.
+    expireReservations()
 
     db.exec('BEGIN IMMEDIATE')
 
