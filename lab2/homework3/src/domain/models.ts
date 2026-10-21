@@ -35,3 +35,12 @@ export interface Reservation {
     status: ReservationStatus
     expiresAt: number
 }
+
+export interface Order {
+    id: string
+    reservationId: string
+    userId: string
+    quantity: number
+    totalAmount: number
+    createdAt: number
+}
