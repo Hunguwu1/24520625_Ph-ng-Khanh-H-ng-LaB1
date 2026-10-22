@@ -19,3 +19,20 @@ th {
   color: var(--text-h);
   background: var(--code-bg);
 }
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr[aria-selected="true"] {
+  background-color: #dbeafe;
+  color: #172554;
+  outline: 2px solid #1d4ed8;
+  outline-offset: -2px;
+  font-weight: 600;
+}
+
+table :focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: -3px;
+}
