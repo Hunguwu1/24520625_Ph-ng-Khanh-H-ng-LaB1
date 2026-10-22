@@ -1,0 +1,14 @@
+npm notice run homework3@0.0.0 build
+npm notice run tsc && npm run check:server && vite build
+npm notice run homework3@0.0.0 check:server
+npm notice run tsc -p tsconfig.server.json
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 7 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 0.45 kB │ gzip: 0.29 kB
+dist/assets/index-BN42nD9b.css  1.13 kB │ gzip: 0.58 kB
+dist/assets/index-bgq4GBTL.js   6.65 kB │ gzip: 3.00 kB
+
+✓ built in 116ms
