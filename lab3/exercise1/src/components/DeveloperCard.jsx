@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import SkillBadge from "./SkillBadge";
+import styles from "./DeveloperCard.module.css";
 
 export default function DeveloperCard({
     fullName = "Tran Vinh Khiem",
@@ -16,12 +17,15 @@ export default function DeveloperCard({
         .join("")
         .toUpperCase();
     return (
-        <article aria-labelledby="dev-heading">
-            <header>
+        <article className={styles.card} aria-labelledby="dev-heading">
+            <header className={styles.header}>
                 {avatarFailed ? (
-                    <span aria-label={fullName}>{initials}</span>
+                    <span className={styles.avatar} aria-label={fullName}>
+                        {initials}
+                    </span>
                 ) : (
                     <img
+                        className={styles.avatar}
                         src={avatarUrl}
                         alt={fullName}
                         width="64"
@@ -35,7 +39,7 @@ export default function DeveloperCard({
                 </hgroup>
             </header>
 
-            <dl>
+            <dl className={styles.metrics}>
                 {Object.entries(metrics).map(([key, value]) => (
                     <Fragment key={key}>
                         <dt>{key}</dt>
@@ -44,7 +48,7 @@ export default function DeveloperCard({
                 ))}
             </dl>
 
-            <ul aria-label="Engineered Skills">
+            <ul className={styles.skills} aria-label="Engineered Skills">
                 {skills.map((skill) => (
                     <SkillBadge key={skill.id} {...skill} />
                 ))}
