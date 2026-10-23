@@ -22,6 +22,18 @@ export default function ScientistDirectory({
         .toSorted((a, b) =>
             sortBy === "iq-desc" ? b.iq - a.iq : a.age - b.age
         );
+    function handleDelete(id) {
+        setPeople((previousPeople) =>
+            previousPeople.filter((person) => person.id !== id)
+        );
+    }
+
+    function handleReset() {
+        setPeople([...initialData]);
+        setQuery("");
+        setMinIq(160);
+        setSortBy("iq-desc");
+    }
     return (
         <section aria-label="Pioneer Directory">
             <h1>Scientist & Pioneer Directory</h1>
@@ -63,10 +75,30 @@ export default function ScientistDirectory({
                 </div>
             </form>
 
+            <button type="button" onClick={handleReset}>
+                Khôi phục
+            </button>
+
+            <p>
+                <output role="status" aria-live="polite">
+                    Tìm thấy {visiblePeople.length} người.
+                </output>
+            </p>
+
             <ul>
                 {visiblePeople.map((person) => (
                     <li key={person.id}>
-                        {person.name} — Tuổi: {person.age} — IQ: {person.iq}
+                        <span>
+                            {person.name} — Tuổi: {person.age} — IQ: {person.iq}
+                        </span>{" "}
+
+                        <button
+                            type="button"
+                            onClick={() => handleDelete(person.id)}
+                            aria-label={`Xóa ${person.name}`}
+                        >
+                            Xóa
+                        </button>
                     </li>
                 ))}
             </ul>
