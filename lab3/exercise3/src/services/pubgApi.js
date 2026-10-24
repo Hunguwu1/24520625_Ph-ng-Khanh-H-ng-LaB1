@@ -2,7 +2,6 @@ const squads = {
     te: { name: "The Expendables", kills: 12 },
     ce: { name: "Cerberus Esports", kills: 8 },
 };
-
 export function fetchKraftonPubgTelemetry(squadId, { signal }) {
     return new Promise((resolve, reject) => {
         const abortRequest = () => {
@@ -20,6 +19,8 @@ export function fetchKraftonPubgTelemetry(squadId, { signal }) {
                 reject(new Error("Không tìm thấy đội."));
                 return;
             }
+
+
 
             resolve({ ...squad });
         }, 2000);

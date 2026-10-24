@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchKraftonPubgTelemetry } from "../services/pubgApi";
-
+import "./PubgMatchTelemetry.css";
 export default function PubgMatchTelemetry({ squadId = "te" }) {
     const [view, setView] = useState({
         status: "IDLE",
@@ -49,13 +49,20 @@ export default function PubgMatchTelemetry({ squadId = "te" }) {
     }
 
     if (view.status === "LOADING") {
-        return <p aria-busy="true">Đang tải dữ liệu đội...</p>;
+        return (
+            <section className="skeleton" aria-busy="true">
+                <p>Syncing KRAFTON Radar...</p>
+                <div className="skeleton-line" />
+                <div className="skeleton-line short" />
+            </section>
+        );
     }
 
     if (view.status === "ERROR") {
         return (
-            <section>
-                <p>Lỗi: {view.error}</p>
+            <section className="error-alert" role="alert">
+                <h2>Blue Zone Link Lost</h2>
+                <p>{view.error}</p>
 
                 <button
                     type="button"
