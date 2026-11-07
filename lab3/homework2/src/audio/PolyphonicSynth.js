@@ -11,15 +11,21 @@ export class PolyphonicSynth {
     this.disposed = false;
   }
 
+  prepare() {
+    if (this.disposed) throw new Error('Bộ phát đã được đóng.');
+    const AudioContextClass = globalThis.AudioContext || globalThis.webkitAudioContext;
+    if (!AudioContextClass) throw new Error('Trình duyệt chưa hỗ trợ Web Audio API.');
+    this.ctx ??= new AudioContextClass();
+    return this.ctx.state === 'suspended' ? this.ctx.resume() : Promise.resolve();
+  }
+
   noteOn(midi, freqHz) {
     if (this.disposed) throw new Error('Bộ phát đã được đóng.');
     if (this.voices.has(midi)) {
       return { stolenMidi: null, resumed: Promise.resolve() };
     }
 
-    const AudioContextClass = globalThis.AudioContext || globalThis.webkitAudioContext;
-    if (!AudioContextClass) throw new Error('Trình duyệt chưa hỗ trợ Web Audio API.');
-    this.ctx ??= new AudioContextClass();
+    const resumed = this.prepare();
     const ctx = this.ctx;
     let stolenMidi = null;
     if (this.voices.size >= this.maxVoices) {
@@ -29,7 +35,6 @@ export class PolyphonicSynth {
     }
     // Resume trong thao tác người dùng, không chờ trước khi đăng ký voice.
     // Vì vậy thao tác thả phím vẫn hủy được nốt nếu resume chưa hoàn tất.
-    const resumed = ctx.state === 'suspended' ? ctx.resume() : Promise.resolve();
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     const voice = { osc, gain };

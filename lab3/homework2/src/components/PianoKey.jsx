@@ -1,7 +1,7 @@
 import { memo, useRef } from 'react';
 
 const PianoKey = memo(function PianoKey({
-  midi, noteName, isBlack, position, isPressed, onNoteOn, onNoteOff,
+  midi, noteName, isBlack, position, isPressed, onNoteOn, onNoteOff, disabled = false,
 }) {
   const pointerId = useRef(null);
 
@@ -14,6 +14,7 @@ const PianoKey = memo(function PianoKey({
   return (
     <button
       type="button"
+      disabled={disabled}
       className={`piano-key ${isBlack ? 'key-black' : 'key-white'}${isPressed ? ' is-pressed' : ''}`}
       style={{ left: `calc(var(--white-width) * ${position})` }}
       aria-label={noteName}

@@ -105,6 +105,16 @@
   cursor: default;
 }
 
+.recorder-controls select {
+  padding: 8px;
+  font: inherit;
+}
+
+.piano-key:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
 .recording-table-wrapper {
   overflow-x: auto;
   margin-top: 12px;
