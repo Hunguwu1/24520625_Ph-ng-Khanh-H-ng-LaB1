@@ -99,3 +99,23 @@ button:disabled {
 button:not(:disabled) {
   cursor: pointer;
 }
+
+.arena {
+  box-sizing: border-box;
+  width: min(900px, 100%);
+  padding: 24px 16px;
+}
+
+.drop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.drop-list .product-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
