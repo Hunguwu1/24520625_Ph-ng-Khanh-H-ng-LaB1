@@ -79,3 +79,45 @@
   font: inherit;
   cursor: pointer;
 }
+
+.recorder {
+  margin-top: 24px;
+  padding: 20px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.recorder-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.recorder-controls button {
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.recorder-controls button:disabled {
+  cursor: default;
+}
+
+.recording-table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.recording-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.recording-table th,
+.recording-table td {
+  padding: 8px;
+  border: 1px solid var(--border);
+}

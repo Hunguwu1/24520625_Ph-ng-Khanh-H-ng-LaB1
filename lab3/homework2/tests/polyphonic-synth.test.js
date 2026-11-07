@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { after, test } from 'node:test';
 import { PolyphonicSynth } from '../src/audio/PolyphonicSynth.js';
+import { NoteRecorder } from '../src/audio/NoteRecorder.js';
 
 const originalContext = globalThis.AudioContext;
 
@@ -100,4 +101,27 @@ test('invalid voice limits are rejected', () => {
   for (const limit of [0, -1, 1.5, NaN]) {
     assert.throws(() => new PolyphonicSynth(limit), RangeError);
   }
+});
+
+test('recording closes FIFO-stolen notes and ignores their later release', () => {
+  let time = 0;
+  const recorder = new NoteRecorder(() => time);
+  const synth = new PolyphonicSynth();
+  recorder.start();
+  for (let midi = 60; midi <= 68; midi++) {
+    time = (midi - 60) * 100;
+    const { stolenMidi } = play(synth, midi);
+    if (stolenMidi !== null) recorder.noteOff(stolenMidi);
+    recorder.noteOn(midi, 440 * 2 ** ((midi - 69) / 12));
+  }
+  time = 900;
+  synth.noteOff(60);
+  recorder.noteOff(60);
+  assert.equal(synth.voices.size, 8);
+  assert.equal(recorder.snapshot()[0].durationMs, 800);
+  const notes = recorder.stop();
+  assert.equal(notes.length, 9);
+  assert.equal(notes.at(-1).durationMs, 100);
+  assert.equal(notes.at(-1).deltaMs, 100);
+  synth.dispose();
 });
