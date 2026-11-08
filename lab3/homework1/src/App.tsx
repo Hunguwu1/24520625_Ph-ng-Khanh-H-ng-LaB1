@@ -135,6 +135,12 @@ export default function App() {
               type="button"
               className="drum-pad"
               onClick={() => triggerPad(pad)}
+              onKeyDown={(event) => {
+                // Native Enter clicks also repeat, outside the shortcut hook.
+                if (event.repeat && (event.key === "Enter" || event.key === " ")) {
+                  event.preventDefault();
+                }
+              }}
               data-pad-id={pad.id}
               aria-keyshortcuts={shortcutsEnabled ? pad.key : undefined}
               aria-pressed={activePads.includes(pad.id)}
