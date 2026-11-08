@@ -6,9 +6,9 @@ This report records **3 actual Lab 3 issues**, discovered during interface testi
 
 ## Lab 3 — Issue 1: Horizontal Page Overflow on Narrow Screens
 
-**Fix commit:** `8ce2b37` — `fix: prevent mobile overflow and document AI failure`.
+**Fix commit:** `2e6a103` — `fix: prevent mobile overflow and document AI failure`.
 
-**AI code provenance.** During the Lab 3 implementation conversation, Codex generated the React interface, leaderboard, and CSS without constraining the width of the root `#app` element. The issue was discovered during browser testing after commit `d4eb24f`. The relevant interface code and the discovery of this issue are recorded in the implementation conversation. This report covers Lab 3 incidents only.
+**AI code provenance.** During the Lab 3 implementation conversation, Codex generated the React interface, leaderboard, and CSS without constraining the width of the root `#app` element. The issue was discovered during browser testing after commit `483614a`. The relevant interface code and the discovery of this issue are recorded in the implementation conversation. This report covers Lab 3 incidents only.
 
 **Reproduction before the fix.** Run `npm.cmd run dev` and open the application in Chrome with a 375px-wide viewport. Open the Console and measure `window.innerWidth` and `document.documentElement.scrollWidth`.
 
@@ -38,7 +38,7 @@ Evidence: [screenshot after the fix](docs/audit/mobile-after.png), [measurements
 
 ## Lab 3 — Issue 2: Reloading the Page Postpones the Airdrop
 
-**Fix commit:** `629ed4d` — `fix: preserve airdrop schedule across page reloads`.
+**Fix commit:** `317a151` — `fix: preserve airdrop schedule across page reloads`.
 
 **AI code provenance.** The defect was found in the existing Codex-generated Lab 3 implementation: `App.tsx` initialized its drops with `createDemoDrops()`, whose default argument was `Date.now()`. The implementation context identifies these files as AI-generated; browser evidence establishes the behavior, not authorship by itself.
 
@@ -65,7 +65,7 @@ Screenshots: [before fix](docs/audit/timer-reload-before.png), [after fix](docs/
 
 ## Lab 3 — Issue 3: Optimistic Stock Shows Sold Out Before Confirmation
 
-**Fix commit:** `3b463b3` — `fix: show pending confirmation before declaring drop sold out`.
+**Fix commit:** `f6642f0` — `fix: show pending confirmation before declaring drop sold out`.
 
 **AI code provenance.** The defect was found in the existing Codex-generated `src/components/DropCard.tsx`. The optimistic decrement and the phase calculation interacted to expose an unconfirmed terminal status.
 
