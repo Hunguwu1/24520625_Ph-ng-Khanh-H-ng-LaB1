@@ -4,11 +4,12 @@ const PianoKey = memo(function PianoKey({
   midi, noteName, isBlack, position, isPressed, onNoteOn, onNoteOff, disabled = false,
 }) {
   const pointerId = useRef(null);
+  const heldKeys = useRef(new Set());
 
   function releasePointer(event) {
     if (pointerId.current !== event.pointerId) return;
     pointerId.current = null;
-    onNoteOff(midi);
+    if (heldKeys.current.size === 0) onNoteOff(midi);
   }
 
   return (
@@ -22,7 +23,10 @@ const PianoKey = memo(function PianoKey({
       title={noteName}
       onPointerDown={(event) => {
         if (event.button !== 0) return;
-        if (!isPressed) pointerId.current = null;
+        if (!isPressed) {
+          pointerId.current = null;
+          heldKeys.current.clear();
+        }
         if (pointerId.current !== null) return;
         event.preventDefault();
         event.currentTarget.setPointerCapture(event.pointerId);
@@ -35,15 +39,20 @@ const PianoKey = memo(function PianoKey({
       onKeyDown={(event) => {
         if (event.key !== ' ' && event.key !== 'Enter') return;
         event.preventDefault();
-        if (!event.repeat) onNoteOn(midi);
+        if (event.repeat) return;
+        if (!isPressed) heldKeys.current.clear();
+        heldKeys.current.add(event.key);
+        onNoteOn(midi);
       }}
       onKeyUp={(event) => {
         if (event.key !== ' ' && event.key !== 'Enter') return;
         event.preventDefault();
-        onNoteOff(midi);
+        heldKeys.current.delete(event.key);
+        if (heldKeys.current.size === 0 && pointerId.current === null) onNoteOff(midi);
       }}
       onBlur={() => {
         pointerId.current = null;
+        heldKeys.current.clear();
         onNoteOff(midi);
       }}
     >
