@@ -14,7 +14,7 @@ Các ràng buộc chính: sinh 88 phím A0–C8; 52 phím trắng, 36 phím đen
 | --- | --- | --- | --- |
 | T01 | Khởi tạo React + Vite, cài thư viện và xác nhận trang chạy | Không | Có môi trường phát triển, build và lint |
 | T02 | Duyệt MIDI 21–108; ánh xạ nhóm 12 bán cung; tính quãng tám và tần số | T01 | `generatePianoKeys()`, đúng 88 nốt và A4 = 440 Hz |
-| T03 | Tính vị trí phím trắng; đặt phím đen tại ranh giới hai phím trắng | T02 | Bàn phím đúng nhóm phím đen, có cuộn ngang |
+| T03 | Tính vị trí phím trắng; đặt phím đen tại ranh giới hai phím trắng | T02 | Bàn phím đúng nhóm phím đen, chia quãng tám tự xuống hàng, không cuộn ngang |
 | T04 | Tách một phím thành component memo; truyền MIDI, tên nốt, vị trí, trạng thái | T03 | 88 instance PianoKey với `key={midi}` |
 | T05 | Xử lý pointer down/up/cancel/lost capture và Space/Enter | T04 | Nhấn/thả đúng một nốt, không kẹt trạng thái khi kéo ra ngoài |
 | T06 | Tạo PolyphonicSynth, khởi tạo/resume context trong tương tác người dùng | T02 | `prepare()`, `noteOn()`, `noteOff()` hoạt động |
@@ -32,7 +32,7 @@ Các ràng buộc chính: sinh 88 phím A0–C8; 52 phím trắng, 36 phím đen
 | T18 | Dừng khi blur, pagehide hoặc trang ẩn; dispose khi unmount | T10, T16 | Không có lịch phát tiếp sau khi rời trang; gỡ listener |
 | T19 | Viết kiểm tra với đồng hồ giả và AudioContext giả; chạy build/lint | T08–T18 | 24 bài kiểm tra hiện tại đạt; build/lint đạt |
 | T20 | Đo bằng React DevTools Profiler và kiểm tra trình duyệt | T17–T19 | Ảnh và JSON chứng minh chỉ phím thao tác render |
-| T21 | Lập WBS, task decomposition, hoàn thiện README và hồ sơ nộp | T20 | Hai file phân rã đã có; README và quy định nộp còn cần rà soát |
+| T21 | Lập WBS, task decomposition, hoàn thiện README và hồ sơ nộp | T20 | Tài liệu, README và audit đã cập nhật; bằng chứng Profiler còn cần bổ sung |
 
 Luồng phụ thuộc chính: T01 → T02 → giao diện/bộ âm → tích hợp → ghi → phát lại → hủy và cleanup → kiểm tra → tài liệu.
 
@@ -140,7 +140,7 @@ Cleanup của lượt cũ chỉ được tác động khi nó còn là lượt h
 | Recorder | Khoảng nghỉ đầu; thả ngược thứ tự; nhấn trùng; stop chốt nốt; clear/start; snapshot độc lập | `tests/note-recorder.test.js` |
 | Replay | 3 tốc độ; hợp âm; nốt bắt đầu sớm nhưng kết thúc muộn; timer trễ không cộng dồn sai nhịp | `tests/audio-task-queue.test.js` |
 | Cancellation | Stop lúc chờ timer/resume; restart; dispose; lỗi audio; lịch tắt cùng MIDI đã cũ | `tests/audio-task-queue.test.js` |
-| Giao diện | Nhấn/thả, kéo ra ngoài, cuộn ngang, ghi/phát, Stop, chuyển tab | Thao tác thực tế trên trình duyệt |
+| Giao diện | Nhấn/thả, kéo ra ngoài, không cuộn ngang ở 375px, ghi/phát, Stop, chuyển tab | Thao tác thực tế trên trình duyệt |
 | Render | Ghi Profiler rồi chỉ nhấn/thả một phím, không bắt đầu ghi nốt/phát bản ghi | Đã đo trong phiên kiểm tra; cần xuất lại JSON và ảnh nếu nộp minh chứng |
 
 Các lệnh kiểm tra từ thư mục bài:
@@ -171,7 +171,20 @@ Kết quả gần nhất ngày 08/11/2026: 24/24 bài kiểm tra đạt, build v
 
 - Có mã nguồn, cấu hình cài/chạy và các bài kiểm tra.
 - Khi hồ sơ nộp yêu cầu, bổ sung lại ảnh và dữ liệu Profiler thật; không thay thế bằng nhận định chỉ dựa vào React.memo trong mã.
-- Cần cập nhật README hiện còn là mẫu Vite thành hướng dẫn riêng của bài.
+- README đã cập nhật hướng dẫn chạy, xác minh audit và giới hạn bằng chứng.
 - Cần xác nhận cách chấm giới hạn 8 oscillator: hiện có 8 voice hoạt động nhưng đuôi release 40 ms có thể tạo chồng oscillator ngắn.
 - Bản ghi chưa lưu bền vững; âm sắc là tổng hợp; chưa có đo bộ nhớ dài hạn. Không ghi các mục này là đã xác minh nếu chưa đo thêm.
 - Sau khi rà soát, lưu commit tài liệu/bằng chứng theo nhu cầu; các commit chức năng thực tế được liệt kê trong WBS.
+
+## 8. Bổ sung sau rà soát rubric ngày 08/11/2026
+
+| ID | Công việc | Bằng chứng / trạng thái |
+| --- | --- | --- |
+| T22 | Chia đủ 88 phím theo fieldset/legend quãng tám; bảng tự xuống dòng | Không cuộn ngang tại 375px; reports/ai-audit/verification.json |
+| T23 | Dùng useId + htmlFor cho tốc độ; lang=vi; focus rõ | Lighthouse Accessibility 100/100; reports/lighthouse-375.report.html |
+| T24 | Theo dõi đồng thời Space/Enter và pointer | Bản cũ tắt sớm; bản sửa giữ nốt đến khi thả nguồn cuối |
+| T25 | Tạo project-rules.md và AI_FAILURE_AUDIT.md | Quy tắc, ba lỗi được tái hiện từ Git và nguồn bằng chứng |
+| T26 | Tự động so sánh bản Git dd2bc92 với bản hiện tại | npm run audit:verify; không chỉnh sửa bản cũ |
+| T27 | Lưu commit riêng cho từng thay đổi | Xem lịch sử trong AI_FAILURE_AUDIT.md và git log |
+
+Mục 8 phản ánh thay đổi mới nhất, thay thế các mô tả bố cục cũ. Việc thiếu ảnh/JSON Profiler ở mục 5 vẫn còn; không dùng audit này làm bằng chứng Profiler.

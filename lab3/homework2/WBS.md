@@ -24,7 +24,7 @@ Trạng thái phản ánh mã nguồn và bằng chứng hiện có; không ph�
 | 2.1 | Tạo MIDI và tên nốt | Duyệt MIDI 21–108; tính tên nốt và quãng tám | Hoàn thành |
 | 2.2 | Phân loại và tính tần số | 52 phím trắng, 36 phím đen; `440 * 2 ** ((midi - 69) / 12)` | Hoàn thành |
 | 3.0 | Xây dựng giao diện | 88 component `PianoKey`, đúng vị trí phím trắng/đen | Hoàn thành |
-| 3.1 | Bố trí bàn phím | Cuộn ngang, có nhãn nốt, A0 đầu đàn và C8 cuối đàn | Hoàn thành |
+| 3.1 | Bố trí bàn phím | Các quãng tám tự xuống hàng, có nhãn nốt, A0 đầu đàn và C8 cuối đàn | Hoàn thành |
 | 3.2 | Xử lý thao tác | Pointer capture; nhấn/thả, cancel, mất capture; hỗ trợ Space/Enter | Hoàn thành |
 | 3.3 | Hiển thị trạng thái | Màu nhấn theo state và `aria-pressed`; khóa phím trong lúc phát lại | Hoàn thành |
 | 4.0 | Xây dựng bộ tổng hợp âm | `PolyphonicSynth`, Web Audio API, quản lý voice | Hoàn thành với lưu ý ở mục 6 |
@@ -44,13 +44,13 @@ Trạng thái phản ánh mã nguồn và bằng chứng hiện có; không ph�
 | 6.4 | Bảo vệ lượt phát mới | Token sự kiện và mã phiên tránh lịch tắt cũ hoặc cleanup cũ tác động lượt mới | Hoàn thành |
 | 7.0 | Cô lập render | Memo và callback ổn định; đo thực tế bằng Profiler | Hoàn thành cho kịch bản một phím |
 | 7.1 | Tối ưu props | Truyền primitive props và `isPressed` riêng; `useCallback` ổn định | Hoàn thành |
-| 7.2 | Thu bằng chứng Profiler | Nhấn/thả A0: mỗi commit chỉ App và một PianoKey render | Hoàn thành |
+| 7.2 | Thu bằng chứng Profiler | Nhấn/thả A0: mỗi commit chỉ App và một PianoKey render | Ghi nhận lịch sử; chưa có tệp xác minh trong hồ sơ hiện tại |
 | 8.0 | Kiểm tra và tài liệu | Kiểm tra tự động, trình duyệt và hồ sơ bàn giao | Đã có bằng chứng; còn rà soát bàn giao |
 | 8.1 | Kiểm tra tự động | 24/24 bài kiểm tra đạt; build và lint đạt | Hoàn thành tại lần kiểm tra gần nhất |
 | 8.2 | Kiểm tra trình duyệt | Ghi/phát, 3 tốc độ, Stop, phát lại và chuyển tab | Đã kiểm tra |
 | 8.3 | Lưu bằng chứng | Đã thu ảnh và JSON Profiler trong phiên kiểm tra; thư mục `evidence/` hiện không còn trong bản làm việc | Cần bổ sung lại nếu hồ sơ nộp yêu cầu |
-| 8.4 | Lập WBS và phân rã tác vụ | `WBS.md`, `task_decomposition.md` | Hoàn thành |
-| 8.5 | Hoàn thiện hồ sơ nộp | Cập nhật README thay nội dung mẫu; đối chiếu quy định nộp của giảng viên | Chưa hoàn thành |
+| 8.4 | Lập WBS và phân rã tác vụ | `WBS.md`, `TASK_DECOMPOSITION.md` | Hoàn thành |
+| 8.5 | Hoàn thiện hồ sơ nộp | README, quy tắc dự án, audit ba lỗi và hướng dẫn chạy lại | Đã cập nhật; Profiler còn thiếu |
 
 ## 3. Các sản phẩm bàn giao
 
@@ -64,8 +64,8 @@ Trạng thái phản ánh mã nguồn và bằng chứng hiện có; không ph�
 | Bộ ghi | `src/audio/NoteRecorder.js` | Thứ tự nhấn, delta và duration |
 | Bộ phát lại | `src/audio/AudioTaskQueue.js` | Lịch sự kiện, tốc độ và hủy |
 | Bộ kiểm tra | `tests/*.test.js` | Kiểm tra synth, recorder và queue |
-| Bằng chứng | `evidence/` (hiện không có trong bản làm việc) | Cần bổ sung ảnh trình duyệt và dữ liệu Profiler khi nộp bằng chứng |
-| Tài liệu | `WBS.md`, `task_decomposition.md` | Phạm vi công việc và cách triển khai |
+| Bằng chứng | `reports/` | Audit trước/sau và Lighthouse; chưa có dữ liệu Profiler |
+| Tài liệu | `WBS.md`, `TASK_DECOMPOSITION.md` | Phạm vi công việc và cách triển khai |
 
 ## 4. Các mốc Git thực tế
 
@@ -93,7 +93,7 @@ Trạng thái phản ánh mã nguồn và bằng chứng hiện có; không ph�
 | Phân tích bản xuất Profiler | Đối chiếu snapshot và danh sách fiber đã render | 87 phím khác không render trong cả hai commit |
 | Chuyển tab khi phát | Kiểm tra thực tế trên Chrome | Quay lại ở trạng thái không phát; chờ thêm 13 giây không tự tiếp tục |
 
-Các số đo Profiler thuộc một lần nhấn/thả A0 trên máy kiểm tra, không đại diện mọi thao tác và mọi thiết bị. Các tệp bằng chứng đã thu không còn trong thư mục hiện tại và không được đính kèm bản đẩy lên GitHub này; cần đo/xuất lại nếu giảng viên yêu cầu minh chứng. Bài kiểm tra âm thanh tự động dùng AudioContext giả lập; người dùng đã xác nhận nghe được âm trầm, nhưng chưa có phép đo âm học hoặc đo rò rỉ bộ nhớ dài hạn.
+Các số đo Profiler trên được giữ như ghi nhận lịch sử từ tài liệu cũ, chưa được xác minh lại trong lần audit này. Chúng thuộc một lần nhấn/thả A0 trên máy kiểm tra, không đại diện mọi thao tác và mọi thiết bị. Các tệp bằng chứng đã thu không còn trong thư mục hiện tại và không được đính kèm bản đẩy lên GitHub này; cần đo/xuất lại nếu giảng viên yêu cầu minh chứng. Bài kiểm tra âm thanh tự động dùng AudioContext giả lập; người dùng đã xác nhận nghe được âm trầm, nhưng chưa có phép đo âm học hoặc đo rò rỉ bộ nhớ dài hạn.
 
 ## 6. Giới hạn và việc cần rà soát
 
@@ -101,4 +101,14 @@ Các số đo Profiler thuộc một lần nhấn/thả A0 trên máy kiểm tra
 - Âm hiện là piano tổng hợp bằng oscillator, không dùng mẫu âm đàn piano thật. Độ lớn vùng trầm phụ thuộc thiết bị phát.
 - Bản ghi chỉ lưu trong bộ nhớ của phiên trang; tải lại sẽ mất. Chưa có lưu file bản ghi người chơi hoặc lưu vào cơ sở dữ liệu.
 - Chuỗi phát dùng timer theo mốc chung; có thể bị trễ khi trình duyệt bận. Không khẳng định độ chính xác từng mẫu âm thanh.
-- Hai ảnh đề chưa quy định cụ thể định dạng báo cáo, cách nộp và số commit bắt buộc. Cần đối chiếu thêm thông báo của giảng viên.
+- Rubric đã được cung cấp bổ sung: project-rules.md, TASK_DECOMPOSITION.md, ít nhất 6–8 atomic commits và AI_FAILURE_AUDIT.md với 3 lỗi được xác minh. Hồ sơ đã bổ sung theo phạm vi đó; cách đóng gói/nộp cuối cùng tùy thông báo của giảng viên.
+
+## Bổ sung sau rà soát ngày 08/11/2026
+
+- Đã sửa responsive 375px, liên kết nhãn bằng useId/htmlFor và ngôn ngữ vi.
+- Đã sửa lỗi thả Enter làm tắt nốt trong khi vẫn giữ Space.
+- Đã có project-rules.md, TASK_DECOMPOSITION.md đúng tên và AI_FAILURE_AUDIT.md.
+- Ba lỗi được xác minh trên snapshot Git thật dd2bc92 và bản sửa, bằng npm run audit:verify.
+- Xem reports/ai-audit/verification.json và ảnh trước/sau; Lighthouse 100/100 nằm trong reports.
+- README đã thay nội dung mẫu bằng hướng dẫn riêng. Các nhận định cũ về tài liệu chưa hoàn thiện được cập nhật bởi mục này.
+- Bằng chứng Profiler vẫn chưa có trong thư mục bài; không tuyên bố audit này thay thế cho yêu cầu đó.

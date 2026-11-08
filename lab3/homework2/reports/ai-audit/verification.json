@@ -1,0 +1,33 @@
+{
+  "baseline": "dd2bc9258fdfb9d4c2832fbba95c2d49add96c86",
+  "fixedSourceCommit": "c61d5d051a15363455a8203e67a7cf0936aa5443",
+  "checkedAt": "2026-11-08T15:53:03.622Z",
+  "browser": "Chrome/157.0.8103.38",
+  "checks": "3 historical bugs reproduced; all 3 corrected; explicit label also checked",
+  "before": {
+    "viewport": 375,
+    "pageWidth": 375,
+    "horizontalOverflow": [
+      {
+        "element": "piano-scroll",
+        "clientWidth": 341,
+        "scrollWidth": 2288
+      }
+    ],
+    "language": "en",
+    "keyCount": 88,
+    "explicitLabels": false,
+    "pressedWhileSpaceHeld": false,
+    "releasedAfterBothUp": true
+  },
+  "after": {
+    "viewport": 375,
+    "pageWidth": 375,
+    "horizontalOverflow": [],
+    "language": "vi",
+    "keyCount": 88,
+    "explicitLabels": true,
+    "pressedWhileSpaceHeld": true,
+    "releasedAfterBothUp": true
+  }
+}
