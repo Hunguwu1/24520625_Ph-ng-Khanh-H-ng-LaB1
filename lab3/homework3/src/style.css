@@ -215,25 +215,24 @@ button:not(:disabled) {
   font: inherit;
 }
 
-.kill-feed-list {
-  max-height: 360px;
-  overflow-y: auto;
-  padding: 0;
-  list-style: none;
-}
-
-.kill-feed-list li {
+.kill-feed-row {
+  box-sizing: border-box;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 12px 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
   border-bottom: 1px solid #e2e8f0;
 }
 
-.kill-feed-list time {
+.kill-feed-row time {
   color: #64748b;
+  font-size: 13px;
 }
 
-.kill-feed-list span {
-  overflow-wrap: anywhere;
+.kill-feed-row span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
