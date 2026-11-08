@@ -1,0 +1,15 @@
+npm notice run homework3@0.0.0 test
+npm notice run tsx --test server/reservations.test.ts server/expiration.test.ts server/checkout.test.ts server/concurrency.test.ts tests/security.test.tsx
+✔ checkout is idempotent, rejects expiry and rolls back (5.3574ms)
+✔ 100 buyers cannot oversell; duplicate checkout creates one order (1083.3708ms)
+✔ expiration respects deadline, releases once and rolls back (2.9037ms)
+✔ reservation validates stock, version and rollback (2.6811ms)
+✔ drop titles and virtual feed text escape hostile HTML (7.6085ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1330.3416

@@ -21,26 +21,41 @@ const money = new Intl.NumberFormat('vi-VN', {
 })
 
 const app = element<HTMLDivElement>('#app')
-app.innerHTML = `
-  <main class="product-card">
-    <p class="badge">FLASH SALE</p>
-    <h1 id="product-name">Đang tải sản phẩm...</h1>
-    <p id="original-price" class="original-price"></p>
-    <p id="sale-price" class="sale-price"></p>
-    <p>Còn lại: <strong id="available-stock">—</strong> sản phẩm</p>
-    <div class="countdown">
-      <p id="sale-status"></p>
-      <p id="sale-timer" class="timer">--:--.---</p>
-    </div>
-    <button id="buy-button" type="button" disabled>Mua ngay — 1 sản phẩm</button>
-    <section id="hold-panel" class="hold-panel" hidden>
-      <p>Thời gian giữ hàng còn lại:</p>
-      <p id="hold-timer" class="timer">--:--.---</p>
-      <button id="checkout-button" type="button" disabled>Thanh toán</button>
-    </section>
-    <p id="purchase-message" class="purchase-message" aria-live="polite"></p>
-  </main>
-`
+// Retained Lab 2 entry: build nodes without parsing HTML strings.
+function node<K extends keyof HTMLElementTagNameMap>(
+  tag: K, text = '', id = '', className = '',
+): HTMLElementTagNameMap[K] {
+  const result = document.createElement(tag)
+  result.textContent = text
+  result.id = id
+  result.className = className
+  return result
+}
+
+const card = node('main', '', '', 'product-card')
+const stockLine = node('p')
+stockLine.append('Còn lại: ', node('strong', '—', 'available-stock'), ' sản phẩm')
+const countdown = node('div', '', '', 'countdown')
+countdown.append(node('p', '', 'sale-status'), node('p', '--:--.---', 'sale-timer', 'timer'))
+const buyButton = node('button', 'Mua ngay — 1 sản phẩm', 'buy-button')
+buyButton.type = 'button'
+buyButton.disabled = true
+const holdPanel = node('section', '', 'hold-panel', 'hold-panel')
+holdPanel.hidden = true
+const checkoutButton = node('button', 'Thanh toán', 'checkout-button')
+checkoutButton.type = 'button'
+checkoutButton.disabled = true
+holdPanel.append(node('p', 'Thời gian giữ hàng còn lại:'), node('p', '--:--.---', 'hold-timer', 'timer'), checkoutButton)
+const purchaseMessage = node('p', '', 'purchase-message', 'purchase-message')
+purchaseMessage.setAttribute('aria-live', 'polite')
+card.append(
+  node('p', 'FLASH SALE', '', 'badge'),
+  node('h1', 'Đang tải sản phẩm...', 'product-name'),
+  node('p', '', 'original-price', 'original-price'),
+  node('p', '', 'sale-price', 'sale-price'),
+  stockLine, countdown, buyButton, holdPanel, purchaseMessage,
+)
+app.replaceChildren(card)
 
 const ui = {
   name: element<HTMLElement>('#product-name'),
