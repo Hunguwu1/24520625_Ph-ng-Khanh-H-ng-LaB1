@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useDrumKeyboard } from "./useDrumKeyboard";
 import { useDrumAudio } from "./useDrumAudio";
 import type { DrumPad } from "./useDrumKeyboard";
@@ -60,6 +60,9 @@ const pads: DrumPad[] = [
 const padMap = new Map(pads.map((pad) => [pad.code, pad]));
 
 export default function App() {
+  const shortcutsId = useId();
+  const noteId = useId();
+  const audioLevelId = useId();
   const [shortcutsEnabled, setShortcutsEnabled] = useState(true);
   const [note, setNote] = useState("");
   const { playSound, levelDb, audioError } = useDrumAudio();
@@ -110,8 +113,9 @@ export default function App() {
       <h1>Production Studio Drum Kit</h1>
       <p>Nhấn W, A, S, D, J, K, L hoặc chọn một nút để đánh trống.</p>
 
-      <label>
+      <label htmlFor={shortcutsId}>
         <input
+          id={shortcutsId}
           type="checkbox"
           checked={shortcutsEnabled}
           onChange={(event) =>
@@ -144,9 +148,9 @@ export default function App() {
 
       <section aria-labelledby="level-heading">
         <h2 id="level-heading">Mức âm thanh</h2>
-        <label htmlFor="audio-level">Mức tín hiệu âm thanh (dBFS)</label>
+        <label htmlFor={audioLevelId}>Mức tín hiệu âm thanh (dBFS)</label>
         <meter
-          id="audio-level"
+          id={audioLevelId}
           min={-60}
           max={0}
           value={levelDb}
@@ -182,9 +186,9 @@ export default function App() {
       </section>
 
       <p>
-        <label htmlFor="beat-note">Ghi chú nhịp trống: </label>
+        <label htmlFor={noteId}>Ghi chú nhịp trống: </label>
         <input
-          id="beat-note"
+          id={noteId}
           type="text"
           value={note}
           onChange={(event) => setNote(event.target.value)}
