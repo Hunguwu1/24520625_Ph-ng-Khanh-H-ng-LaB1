@@ -1,0 +1,49 @@
+{
+  "measuredAt": "2026-11-08T17:01:09.289Z",
+  "mode": "final",
+  "url": "http://127.0.0.1:4173",
+  "baselineRevision": "067e2d3",
+  "results": [
+    {
+      "id": "B1",
+      "name": "Explicit labels and useId contract",
+      "passed": true,
+      "observed": [
+        {
+          "type": "INPUT:checkbox",
+          "id": "_r_0_",
+          "explicit": true
+        },
+        {
+          "type": "METER:",
+          "id": "_r_2_",
+          "explicit": true
+        },
+        {
+          "type": "INPUT:text",
+          "id": "_r_1_",
+          "explicit": true
+        }
+      ],
+      "usesUseId": true
+    },
+    {
+      "id": "B2",
+      "name": "IME composition does not activate shortcuts",
+      "passed": true,
+      "observed": {
+        "before": "Chưa có lần đánh nào.",
+        "after": "Chưa có lần đánh nào."
+      }
+    },
+    {
+      "id": "B3",
+      "name": "Holding Enter on a focused pad produces one hit",
+      "passed": true,
+      "observed": {
+        "first": "Lần 1: Kick",
+        "repeated": "Lần 1: Kick"
+      }
+    }
+  ]
+}

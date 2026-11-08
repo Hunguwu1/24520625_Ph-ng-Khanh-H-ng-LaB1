@@ -1,0 +1,34 @@
+import { chromium } from 'playwright-core';
+import { readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const [url = 'http://127.0.0.1:4173', mode = 'final'] = process.argv.slice(2);
+if (!['baseline', 'final'].includes(mode)) throw new Error('Use baseline or final');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+const results = [];
+try {
+ const page = await browser.newPage();
+ await page.goto(url);
+ const source = await readFile(path.join(root, mode === 'baseline' ? '.audit-baseline/src/App.tsx' : 'src/App.tsx'), 'utf8');
+ const labels = await page.locator('input, meter').evaluateAll(nodes => nodes.map(el => ({type:el.tagName + ':' + (el.type || ''), id:el.id, explicit:[...el.labels].some(l => l.htmlFor === el.id && el.id !== '')})));
+ results.push({id:'B1', name:'Explicit labels and useId contract', passed: labels.every(l => l.explicit) && /\buseId\s*\(/.test(source), observed:labels, usesUseId:/\buseId\s*\(/.test(source)});
+ const output = page.locator('output');
+ const beforeIme = await output.textContent();
+ await page.evaluate(() => window.dispatchEvent(new KeyboardEvent('keydown', {code:'KeyA',key:'a',isComposing:true,bubbles:true,cancelable:true})));
+ await page.waitForTimeout(80);
+ const afterIme = await output.textContent();
+ results.push({id:'B2',name:'IME composition does not activate shortcuts',passed:beforeIme === afterIme,observed:{before:beforeIme,after:afterIme}});
+ await page.reload();
+ await page.locator('[data-pad-id="kick"]').focus();
+ await page.keyboard.down('Enter');
+ const first = await output.textContent();
+ await page.keyboard.down('Enter');
+ const repeated = await output.textContent();
+ await page.keyboard.up('Enter');
+ results.push({id:'B3',name:'Holding Enter on a focused pad produces one hit',passed:first === repeated && first.endsWith('Kick'),observed:{first,repeated}});
+} finally { await browser.close(); }
+const evidence = {measuredAt:new Date().toISOString(),mode,url,baselineRevision:'067e2d3',results};
+await writeFile(path.join(root,`artifacts/ai-audit-${mode}.json`),JSON.stringify(evidence,null,2));
+console.log(JSON.stringify(evidence,null,2));
+if (results.length !== 3 || results.some(r => r.passed !== (mode === 'final'))) process.exitCode = 1;

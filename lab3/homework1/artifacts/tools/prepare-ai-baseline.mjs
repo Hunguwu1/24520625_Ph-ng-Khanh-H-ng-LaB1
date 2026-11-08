@@ -1,0 +1,13 @@
+import { execFileSync } from 'node:child_process';
+import { cp, mkdir, writeFile, symlink, lstat } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const exists = async p => { try { await lstat(p); return true; } catch (e) { if (e.code !== 'ENOENT') throw e; return false; } };
+const repo = process.argv[2] || (await exists(path.join(root,'.publish-checkout/.git')) ? path.join(root,'.publish-checkout') : root);
+const baseline = path.join(root,'.audit-baseline');
+await mkdir(baseline,{recursive:true});
+for (const file of ['package.json','index.html','vite.config.ts','src']) await cp(path.join(root,file),path.join(baseline,file),{recursive:true});
+for (const file of ['src/App.tsx','src/useDrumKeyboard.ts']) await writeFile(path.join(baseline,file),execFileSync('git',['-C',repo,'show',`067e2d3:lab3/homework1/${file}`]));
+for (const folder of ['node_modules','public']) if (!await exists(path.join(baseline,folder))) await symlink(path.join(root,folder),path.join(baseline,folder),process.platform === 'win32' ? 'junction' : 'dir');
+console.log('Prepared original App and keyboard hook from 067e2d3; remaining files are shared harness assets.');

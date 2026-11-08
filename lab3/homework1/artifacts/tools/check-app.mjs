@@ -52,10 +52,10 @@ try {
   });
   await test('Typing in notes does not trigger pads', async () => {
     const before = await hit();
-    await page.locator('#beat-note').fill('');
-    await page.locator('#beat-note').pressSequentially('wasdjkl');
+    await page.getByRole('textbox', { name: 'Ghi chú nhịp trống:' }).fill('');
+    await page.getByRole('textbox', { name: 'Ghi chú nhịp trống:' }).pressSequentially('wasdjkl');
     assert.equal(await hit(), before);
-    await page.locator('#beat-note').fill('');
+    await page.getByRole('textbox', { name: 'Ghi chú nhịp trống:' }).fill('');
   });
   await test('Shortcut toggle disables keys while mouse clicks still play', async () => {
     await page.getByRole('checkbox').uncheck();
@@ -98,7 +98,7 @@ try {
     await page.keyboard.press('Shift+Tab');
     assert.equal(await page.locator(':focus').getAttribute('data-pad-id'), 'tom1');
     for (let i = 0; i < 7; i++) await page.keyboard.press('Tab');
-    assert.equal(await page.locator(':focus').getAttribute('id'), 'beat-note');
+    assert(await page.getByRole('textbox', { name: 'Ghi chú nhịp trống:' }).evaluate(el => el === document.activeElement));
   });
   await test('Physical key code is used even when produced character differs', async () => {
     await page.locator('h1').click();
@@ -111,7 +111,13 @@ try {
   results.push({ name: 'Axe accessibility scan', passed: axe.violations.length === 0, violations: axe.violations.map(v => ({ id: v.id, description: v.description, nodes: v.nodes.map(n => n.target) })) });
   await page.goto('http://127.0.0.1:4173');
   await page.screenshot({ path: path.join(root, 'drum-kit-desktop.png'), fullPage: true });
-  for (const width of [390, 320, 640]) {
+  await test('Every input and meter has an explicit associated label and unique ID', async () => {
+    assert(await page.locator('input, meter').evaluateAll(elements => elements.every(el =>
+      el.id && document.querySelectorAll('[id]').length === new Set([...document.querySelectorAll('[id]')].map(node => node.id)).size &&
+      [...el.labels].some(label => label.htmlFor === el.id)
+    )));
+  });
+  for (const width of [375, 390, 320, 640]) {
     await page.setViewportSize({ width, height: 900 });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
     results.push({ name: `No horizontal overflow at ${width}px${width === 640 ? ' (1280px viewport at 200% equivalent layout width)' : ''}`, passed: !overflow });
