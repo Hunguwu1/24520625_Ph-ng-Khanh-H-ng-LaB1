@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import DropCard from './components/DropCard'
 import Leaderboard from './components/Leaderboard'
+import KillFeed from './components/KillFeed'
 import { createDemoDrops } from './data/pubgDemo'
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         ))}
       </section>
       <Leaderboard />
+      <KillFeed />
     </main>
   )
 }

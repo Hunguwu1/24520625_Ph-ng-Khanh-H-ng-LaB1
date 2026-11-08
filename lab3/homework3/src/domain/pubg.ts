@@ -19,3 +19,12 @@ export interface PubgVnSquadStanding {
   readonly placementPts: number
   readonly killPts: number
 }
+
+export interface PubgKillEvent {
+  readonly id: string
+  readonly occurredAt: number
+  readonly killerName: string
+  readonly victimName: string
+  readonly killerSquadId: string
+  readonly victimSquadId: string
+}
