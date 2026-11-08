@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-11-06T03:20:01.516Z",
+  "timestamp": "2026-11-08T17:01:14.588Z",
   "url": "http://127.0.0.1:4173/",
   "toolOptions": {
     "runOnly": {
@@ -1110,7 +1110,7 @@
             }
           ],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -1390,9 +1390,9 @@
             }
           ],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -1573,7 +1573,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -1699,9 +1699,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -1881,7 +1881,7 @@
             }
           ],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -2007,9 +2007,9 @@
             }
           ],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -2243,7 +2243,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -2467,9 +2467,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -2603,7 +2603,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -2729,9 +2729,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -2824,7 +2824,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -3089,9 +3089,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label><input type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
+          "html": "<label for=\"_r_0_\"><input id=\"_r_0_\" type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
           "target": [
-            "main > label"
+            "label[for=\"_r_0_\"]"
           ]
         },
         {
@@ -3174,16 +3174,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#facc15",
-                "contrastRatio": 11.65,
+                "fgColor": "#ffffff",
+                "bgColor": "#1e293b",
+                "contrastRatio": 14.62,
                 "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 11.65"
+              "message": "Element has sufficient color contrast of 14.62"
             }
           ],
           "all": [],
@@ -3199,16 +3199,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#facc15",
-                "contrastRatio": 11.65,
+                "fgColor": "#ffffff",
+                "bgColor": "#1e293b",
+                "contrastRatio": 14.62,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "bold",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 11.65"
+              "message": "Element has sufficient color contrast of 14.62"
             }
           ],
           "all": [],
@@ -3514,9 +3514,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label for=\"audio-level\">Mức tín hiệu âm thanh (dBFS)</label>",
+          "html": "<label for=\"_r_2_\">Mức tín hiệu âm thanh (dBFS)</label>",
           "target": [
-            "label[for=\"audio-level\"]"
+            "label[for=\"_r_2_\"]"
           ]
         },
         {
@@ -3539,7 +3539,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"audio-level-value\">-11.8 dBFS</p>",
+          "html": "<p class=\"audio-level-value\">-20.0 dBFS</p>",
           "target": [
             ".audio-level-value"
           ]
@@ -3914,9 +3914,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label for=\"beat-note\">Ghi chú nhịp trống: </label>",
+          "html": "<label for=\"_r_1_\">Ghi chú nhịp trống: </label>",
           "target": [
-            "label[for=\"beat-note\"]"
+            "label[for=\"_r_1_\"]"
           ]
         },
         {
@@ -3939,9 +3939,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_1_"
           ]
         },
         {
@@ -4080,6 +4080,24 @@
           "any": [
             {
               "id": "duplicate-id-aria",
+              "data": "_r_0_",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
+          "target": [
+            "#_r_0_"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
               "data": "pads-heading",
               "relatedNodes": [],
               "impact": "critical",
@@ -4116,7 +4134,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "audio-level",
+              "data": "_r_2_",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -4125,9 +4143,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -4170,7 +4188,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "beat-note",
+              "data": "_r_1_",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -4179,9 +4197,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_1_"
           ]
         }
       ]
@@ -4298,9 +4316,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label><input type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
+                  "html": "<label for=\"_r_0_\"><input id=\"_r_0_\" type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
                   "target": [
-                    "main > label"
+                    "label[for=\"_r_0_\"]"
                   ]
                 }
               ],
@@ -4309,9 +4327,9 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"checkbox\" checked=\"\">",
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
           "target": [
-            "input[type=\"checkbox\"]"
+            "#_r_0_"
           ]
         },
         {
@@ -4323,9 +4341,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label for=\"beat-note\">Ghi chú nhịp trống: </label>",
+                  "html": "<label for=\"_r_1_\">Ghi chú nhịp trống: </label>",
                   "target": [
-                    "label[for=\"beat-note\"]"
+                    "label[for=\"_r_1_\"]"
                   ]
                 }
               ],
@@ -4334,9 +4352,9 @@
             }
           ],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_1_"
           ]
         }
       ]
@@ -4555,9 +4573,9 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"checkbox\" checked=\"\">",
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
           "target": [
-            "input[type=\"checkbox\"]"
+            "#_r_0_"
           ]
         },
         {
@@ -4573,9 +4591,9 @@
             }
           ],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_1_"
           ]
         }
       ]
@@ -4610,44 +4628,25 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label><input type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
+                  "html": "<label for=\"_r_0_\"><input id=\"_r_0_\" type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
                   "target": [
-                    "main > label"
+                    "label[for=\"_r_0_\"]"
                   ]
                 }
               ],
               "impact": "critical",
               "message": "Element has an implicit (wrapped) <label>"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input type=\"checkbox\" checked=\"\">",
-          "target": [
-            "input[type=\"checkbox\"]"
-          ]
-        },
-        {
-          "any": [
+            },
             {
               "id": "explicit-label",
               "data": {
-                "explicitLabel": "Ghi chú nhịp trống:"
+                "explicitLabel": "Bật phím tắt"
               },
               "relatedNodes": [
                 {
-                  "html": "<label for=\"beat-note\">Ghi chú nhịp trống: </label>",
+                  "html": "<label for=\"_r_0_\"><input id=\"_r_0_\" type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
                   "target": [
-                    "label[for=\"beat-note\"]"
+                    "label[for=\"_r_0_\"]"
                   ]
                 }
               ],
@@ -4666,9 +4665,44 @@
             }
           ],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_0_"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "explicit-label",
+              "data": {
+                "explicitLabel": "Ghi chú nhịp trống:"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<label for=\"_r_1_\">Ghi chú nhịp trống: </label>",
+                  "target": [
+                    "label[for=\"_r_1_\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Element has an explicit <label>"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "hidden-explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Form element has a visible explicit <label>"
+            }
+          ],
+          "impact": null,
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
+          "target": [
+            "#_r_1_"
           ]
         }
       ]
@@ -5313,9 +5347,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" checked=\"\">",
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
           "target": [
-            "input[type=\"checkbox\"]"
+            "#_r_0_"
           ]
         },
         {
@@ -5349,7 +5383,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -5457,9 +5491,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         }
       ]
@@ -5610,9 +5644,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label><input type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
+          "html": "<label for=\"_r_0_\"><input id=\"_r_0_\" type=\"checkbox\" checked=\"\">Bật phím tắt</label>",
           "target": [
-            "main > label"
+            "label[for=\"_r_0_\"]"
           ]
         },
         {
@@ -5630,9 +5664,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" checked=\"\">",
+          "html": "<input id=\"_r_0_\" type=\"checkbox\" checked=\"\">",
           "target": [
-            "input[type=\"checkbox\"]"
+            "#_r_0_"
           ]
         },
         {
@@ -5770,7 +5804,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]
@@ -6170,9 +6204,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label for=\"audio-level\">Mức tín hiệu âm thanh (dBFS)</label>",
+          "html": "<label for=\"_r_2_\">Mức tín hiệu âm thanh (dBFS)</label>",
           "target": [
-            "label[for=\"audio-level\"]"
+            "label[for=\"_r_2_\"]"
           ]
         },
         {
@@ -6190,9 +6224,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meter id=\"audio-level\" min=\"-60\" max=\"0\" value=\"-11.817259677933336\" aria-describedby=\"level-description\"></meter>",
+          "html": "<meter id=\"_r_2_\" min=\"-60\" max=\"0\" value=\"-20.021060150208733\" aria-describedby=\"level-description\"></meter>",
           "target": [
-            "#audio-level"
+            "#_r_2_"
           ]
         },
         {
@@ -6210,7 +6244,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"audio-level-value\">-11.8 dBFS</p>",
+          "html": "<p class=\"audio-level-value\">-20.0 dBFS</p>",
           "target": [
             ".audio-level-value"
           ]
@@ -6570,7 +6604,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p><label for=\"beat-note\">Ghi chú nhịp trống: </label><input id=\"beat-note\" type=\"text\" value=\"\"></p>",
+          "html": "<p><label for=\"_r_1_\">Ghi chú nhịp trống: </label><input id=\"_r_1_\" type=\"text\" value=\"\"></p>",
           "target": [
             "p:nth-child(7)"
           ]
@@ -6590,9 +6624,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<label for=\"beat-note\">Ghi chú nhịp trống: </label>",
+          "html": "<label for=\"_r_1_\">Ghi chú nhịp trống: </label>",
           "target": [
-            "label[for=\"beat-note\"]"
+            "label[for=\"_r_1_\"]"
           ]
         },
         {
@@ -6610,9 +6644,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input id=\"beat-note\" type=\"text\" value=\"\">",
+          "html": "<input id=\"_r_1_\" type=\"text\" value=\"\">",
           "target": [
-            "#beat-note"
+            "#_r_1_"
           ]
         },
         {
@@ -6770,7 +6804,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"true\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
+          "html": "<button type=\"button\" class=\"drum-pad\" data-pad-id=\"kick\" aria-pressed=\"false\" aria-keyshortcuts=\"A\"><span>Kick</span><kbd>A</kbd></button>",
           "target": [
             "button[data-pad-id=\"kick\"]"
           ]

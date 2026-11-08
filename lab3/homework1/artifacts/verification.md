@@ -1,6 +1,6 @@
 # Báo cáo kiểm tra Drum Kit
 
-Ngày kiểm tra: 06/11/2026 (Asia/Saigon).
+Ngày kiểm tra lại: 09/11/2026 (Asia/Saigon).
 
 ## Môi trường và kết quả
 
@@ -25,7 +25,8 @@ Tất cả các nhóm kiểm tra trong `functional-results.json` đều đạt:
 8. Meter tăng trên -60 dBFS khi phát Crash và trở về -60 khi tín hiệu kết thúc.
 9. Tab/Shift+Tab di chuyển đúng; Enter/Space kích hoạt nút; focus có viền; Tab rời được vùng pad.
 10. Mô phỏng `key: "ă"` cùng `code: "KeyA"` vẫn kích hoạt Kick.
-11. Không tràn ngang ở chiều rộng 320, 390 và 640 CSS px.
+11. Không tràn ngang ở chiều rộng 320, 375, 390 và 640 CSS px.
+12. Tất cả input và meter có ID duy nhất sinh bằng React useId(), được liên kết tường minh với label htmlFor. Kiểm tra tự động xác nhận liên kết nhãn và không trùng ID.
 
 ## Các lỗi đã sửa
 
@@ -57,3 +58,7 @@ Tất cả các nhóm kiểm tra trong `functional-results.json` đều đạt:
 Tại thư mục dự án, chạy `npm run build`, `npm run lint`, rồi `npm run preview -- --host 127.0.0.1 --port 4173 --strictPort`.
 
 Trong terminal thứ hai, chạy `node artifacts/tools/check-app.mjs`, sau đó `node artifacts/tools/run-lighthouse.mjs`. Các công cụ dùng Chrome tại đường dẫn cài mặc định trên máy hiện tại. Các gói kiểm tra được lưu riêng trong artifacts/tools; không thêm vào dependencies của ứng dụng.
+
+## Verified AI audit regression
+
+Three baseline failures were reproduced against original App.tsx and useDrumKeyboard.ts from 067e2d3 and all three pass after correction. See ../AI_FAILURE_AUDIT.md and ai-audit-baseline.json / ai-audit-final.json. Build, lint, all 17 functional result groups and Lighthouse (100 in all four categories) passed after the final keyboard changes. Manual limitations above remain.

@@ -2,6 +2,12 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 32px 20px;
+  overflow-wrap: anywhere;
+}
+
+input[type="text"] {
+  max-width: 100%;
+  min-height: 28px;
 }
 
 .drum-pads {

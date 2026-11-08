@@ -45,6 +45,14 @@
     "violations": []
   },
   {
+    "name": "Every input and meter has an explicit associated label and unique ID",
+    "passed": true
+  },
+  {
+    "name": "No horizontal overflow at 375px",
+    "passed": true
+  },
+  {
     "name": "No horizontal overflow at 390px",
     "passed": true
   },
