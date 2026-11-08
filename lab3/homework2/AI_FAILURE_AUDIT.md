@@ -1,101 +1,101 @@
 # AI Failure Mode Audit — Homework 2 Piano
 
-Ngày xác minh: 08/11/2026. Phạm vi: lab3/homework2.
+Verification date: 8 November 2026. Scope: lab3/homework2.
 
-## Phương pháp và nguồn gốc
+## Method and provenance
 
-Audit ba lỗi trong ứng dụng được rà soát và sửa với trợ giúp AI trong phiên làm việc hiện tại. Baseline là commit thật **dd2bc9258fdfb9d4c2832fbba95c2d49add96c86**, có trước các sửa đổi. Không chèn lỗi vào bản cũ để tạo minh chứng. Git không lưu đầy đủ prompt hoặc nguồn gốc từng dòng; không khẳng định đã chứng minh AI tạo ra cả ba lỗi lịch sử. Các failure mode là phân tích nguyên nhân bỏ sót, không phải prompt được trích từ hồ sơ.
+This audit documents three application defects reviewed and corrected with AI assistance during the current working session. The baseline is the actual historical commit **dd2bc9258fdfb9d4c2832fbba95c2d49add96c86**, which predates the fixes. No defects were inserted into the baseline to manufacture evidence. Git does not preserve complete prompts or the provenance of every line; this audit therefore does not claim to prove that AI originally introduced all three historical defects. The failure modes describe an analysis of the omissions, rather than quotations from recorded prompts.
 
-`npm run audit:verify` xuất các tệp được track tại baseline vào thư mục tạm, phục vụ bản cũ và mã hiện tại qua hai máy chủ cục bộ, rồi so sánh trên cùng Chrome tại 375 × 812. Có assertion cho việc tái hiện lỗi trước và xác minh sửa sau; luôn kiểm tra đủ 88 phím. Không checkout/reset working tree.
+`npm run audit:verify` exports the tracked baseline files into a temporary directory, serves the historical and current versions through two local servers, and compares them using the same Chrome browser at 375 × 812. Assertions verify both reproduction before the fixes and correction afterward, while checking that all 88 keys remain present. The script does not check out or reset the working tree.
 
-Bằng chứng:
+Evidence:
 
-- [Mã xác minh](tests/verify-ai-audit.mjs)
-- [JSON đo thực tế](reports/ai-audit/verification.json): thời gian UTC, phiên bản trình duyệt, baseline và commit mã sửa.
-- [Ảnh trước](reports/ai-audit/before.png) và [ảnh sau](reports/ai-audit/after.png).
-- [Lighthouse Accessibility 100/100](reports/lighthouse-375.report.html), không thay thế kiểm tra từng lỗi dưới đây.
+- [Verification script](tests/verify-ai-audit.mjs)
+- [Measured JSON results](reports/ai-audit/verification.json): UTC timestamp, browser version, baseline, and fixed-source commit.
+- [Before screenshot](reports/ai-audit/before.png) and [after screenshot](reports/ai-audit/after.png).
+- [Lighthouse Accessibility: 100/100](reports/lighthouse-375.report.html). This score does not replace the individual defect checks below.
 
-## BUG-01 — Thả Enter tắt nốt trong khi vẫn giữ Space
+## BUG-01 — Releasing Enter stops a note while Space is still held
 
-**Loại:** tương tác bàn phím/state. **Mức độ:** trung bình.
+**Category:** keyboard interaction and state. **Severity:** medium.
 
-**Vị trí:** src/components/PianoKey.jsx, onKeyDown/onKeyUp.
+**Location:** src/components/PianoKey.jsx, onKeyDown/onKeyUp.
 
-**Bước tái hiện:** focus C4 bằng Tab; giữ Space; nhấn Enter; thả Enter nhưng chưa thả Space.
+**Reproduction:** focus C4 using Tab; hold Space; press Enter; release Enter without releasing Space.
 
-**Mong đợi:** nốt và aria-pressed vẫn bật cho đến khi thả Space. **Thực tế bản cũ:** aria-pressed=false ngay khi thả Enter; JSON `before.pressedWhileSpaceHeld=false`.
+**Expected:** the note and aria-pressed remain active until Space is released. **Historical behavior:** aria-pressed becomes false as soon as Enter is released; the JSON records `before.pressedWhileSpaceHeld=false`.
 
-**Nguyên nhân:** mỗi keyup đều gọi onNoteOff, không theo dõi các nguồn kích hoạt còn giữ. Failure mode: xử lý từng sự kiện độc lập, bỏ sót tổ hợp thao tác.
+**Root cause:** every keyup calls onNoteOff without tracking other activation sources that remain held. Failure mode: handling each event independently while overlooking overlapping interactions.
 
-**Sửa:** dùng Set trong ref để giữ Space/Enter, chỉ tắt khi không còn phím kích hoạt hoặc pointer; xóa khi blur. Commit **189fd0e**.
+**Fix:** track held Space/Enter keys in a Set stored in a ref; stop the note only when no activation key or pointer remains active; clear the tracking state on blur. Commit **189fd0e**.
 
-**Sau sửa:** `after.pressedWhileSpaceHeld=true`, `after.releasedAfterBothUp=true`. Ảnh trước/sau chụp khi Space còn giữ, đối chiếu màu C4. Công cụ xác minh state giao diện, không đo dạng sóng âm thanh.
+**Verification after the fix:** `after.pressedWhileSpaceHeld=true` and `after.releasedAfterBothUp=true`. The screenshots capture the state while Space remains held, allowing comparison of C4's highlight. The script verifies UI state; it does not measure audio waveforms.
 
-**Phòng ngừa:** kiểm tra các nguồn kích hoạt chồng nhau thay vì chỉ nhấn/thả từng nút riêng lẻ.
+**Prevention:** test overlapping activation sources instead of testing only isolated press/release sequences.
 
-## BUG-02 — Bàn phím phải cuộn ngang ở 375px
+## BUG-02 — The keyboard requires horizontal scrolling at 375px
 
-**Loại:** không đáp ứng cách hiểu nghiêm ngặt của rubric “zero horizontal scroll”. **Mức độ:** trung bình.
+**Category:** failure to meet the strict interpretation of the rubric's “zero horizontal scroll” requirement. **Severity:** medium.
 
-**Vị trí:** src/App.css (.piano-scroll, .piano-keyboard), src/App.jsx.
+**Location:** src/App.css (.piano-scroll, .piano-keyboard), src/App.jsx.
 
-**Bước tái hiện:** mở trang tại 375 × 812; đo clientWidth và scrollWidth của toàn trang và các vùng con.
+**Reproduction:** open the page at 375 × 812; measure clientWidth and scrollWidth for the document and its child regions.
 
-**Mong đợi:** không có vùng cuộn ngang, vẫn truy cập đủ 88 phím. **Thực tế:** `.piano-scroll` có clientWidth=341px, scrollWidth=2288px. Chiều rộng toàn tài liệu vẫn là 375px; không báo nhầm đây là tràn toàn trang. Nếu người chấm cho phép cuộn riêng bàn phím, đây chỉ là khác biệt với cách hiểu rubric nghiêm ngặt được chọn cho bài.
+**Expected:** no region requires horizontal scrolling, and all 88 keys remain accessible. **Historical behavior:** .piano-scroll has clientWidth=341px and scrollWidth=2288px. The document itself remains 375px wide; this is not reported as page-level overflow. If the grader permits scrolling within the keyboard, this defect represents a difference from the stricter interpretation adopted for this project.
 
-**Nguyên nhân:** 52 phím trắng × 44px cùng overflow-x:auto. Failure mode: chọn bố cục dễ triển khai nhưng không đối chiếu ràng buộc đầu ra tại 375px.
+**Root cause:** 52 white keys × 44px combined with overflow-x:auto. Failure mode: choosing a convenient layout without validating the required output at 375px.
 
-**Sửa:** fieldset/legend theo quãng tám, CSS grid tự xuống hàng, tính rộng phím theo nhóm; bảng ghi fixed layout và wrap. Không giấu nội dung bằng overflow-x:hidden. Commit **578eb67**.
+**Fix:** group octaves using fieldset/legend, allow CSS grid to wrap, and calculate key widths relative to each group; use fixed table layout and text wrapping for the recording table. Content is not concealed using overflow-x:hidden. Commit **578eb67**.
 
-**Sau sửa:** `after.pageWidth=375`, `after.horizontalOverflow=[]`, `after.keyCount=88`. Xem ảnh toàn trang trước/sau.
+**Verification after the fix:** `after.pageWidth=375`, `after.horizontalOverflow=[]`, and `after.keyCount=88`. See the full-page before/after screenshots.
 
-**Phòng ngừa:** đo cả document và các vùng con; đếm đủ phím; kiểm tra thêm bảng ghi khi mở.
+**Prevention:** measure both the document and child regions, count all keys, and also check the expanded recording table.
 
-## BUG-03 — Trang tiếng Việt khai báo ngôn ngữ tiếng Anh
+## BUG-03 — Vietnamese content declares English as the document language
 
-**Loại:** ngôn ngữ tài liệu không khớp nội dung, ảnh hưởng lựa chọn cách đọc của công nghệ hỗ trợ. **Mức độ:** trung bình.
+**Category:** document language mismatch, affecting language selection by assistive technology. **Severity:** medium.
 
-**Vị trí:** index.html, thuộc tính lang của html.
+**Location:** index.html, the html element's lang attribute.
 
-**Bước tái hiện:** mở trang, đọc document.documentElement.lang, đối chiếu heading và hướng dẫn tiếng Việt.
+**Reproduction:** open the page, read document.documentElement.lang, and compare it with the Vietnamese heading and instructions.
 
-**Mong đợi:** vi. **Thực tế bản cũ:** en; JSON `before.language=en`.
+**Expected:** vi. **Historical behavior:** en; the JSON records `before.language=en`.
 
-**Nguyên nhân:** giữ metadata từ mẫu khởi tạo khi đã thay nội dung. Failure mode: chỉ kiểm tra lang tồn tại, bỏ sót tính đúng của giá trị.
+**Root cause:** retaining template metadata after replacing the content. Failure mode: checking only that lang exists while overlooking whether its value is correct.
 
-**Sửa:** lang="vi", đồng thời đặt title mô tả ứng dụng. Commit **1be8491**.
+**Fix:** set lang="vi" and give the document a descriptive application title. Commit **1be8491**.
 
-**Sau sửa:** `after.language=vi`, assertion đạt. Chưa thực hiện thử nghe bằng trình đọc màn hình thật.
+**Verification after the fix:** `after.language=vi`; the assertion passes. Listening tests with an actual screen reader have not been performed.
 
-**Phòng ngừa:** kiểm tra ngôn ngữ/title khi thay mẫu; không dùng điểm Lighthouse làm bằng chứng duy nhất cho độ đúng ngôn ngữ.
+**Prevention:** review language and title when adapting a template; do not use Lighthouse scores as the sole evidence of language correctness.
 
-## Thay đổi liên quan
+## Related changes
 
-Ô chọn tốc độ trước đây có label bọc ngoài hợp lệ nhưng chưa đúng rubric htmlFor + useId(). Đã sửa trong 578eb67; JSON explicitLabels chuyển false → true. Không gọi đây là lỗi mất accessible name và không tính thành lỗi thứ tư.
+The playback-speed selector previously had a valid wrapping label but did not satisfy the rubric's htmlFor + useId() requirement. This was corrected in 578eb67; explicitLabels changes from false to true in the JSON. It is not described as a missing accessible name and is not counted as a fourth defect.
 
-Quy tắc mới trong [project-rules.md](project-rules.md), phân rã trong [TASK_DECOMPOSITION.md](TASK_DECOMPOSITION.md) và [WBS.md](WBS.md). Tài liệu được bổ sung sau rà soát, không ghi lùi thời gian. Lighthouse 100 không phải chứng nhận toàn bộ WCAG. Bằng chứng React Profiler vẫn chưa có trong thư mục bài.
+Updated rules are in [project-rules.md](project-rules.md), with task breakdowns in [TASK_DECOMPOSITION.md](TASK_DECOMPOSITION.md) and [WBS.md](WBS.md). These documents were added or updated after the review and were not backdated. Lighthouse 100 does not certify full WCAG conformance. React Profiler evidence is still absent from the project directory.
 
 ## Atomic commits
 
-Đối chiếu bằng `git log --oneline -- .` từ thư mục bài và `git show --stat <hash>`. Mỗi commit có một mục đích gắn với đầu ra; một tính năng có thể cần nhiều tệp và kiểm thử đi kèm.
+Inspect the history using `git log --oneline -- .` from the project directory and `git show --stat <hash>`. Each commit has a purpose tied to a concrete result; one feature may require changes to several files and accompanying tests.
 
-| Commit | Mục đích |
+| Commit | Purpose |
 | --- | --- |
-| ed2f731 | Khởi tạo React + Vite |
-| c79b42b | Sinh dữ liệu 88 phím |
-| c9e8f39 | Bàn phím, âm thanh và FIFO |
-| fb623f7 | Ghi nốt với thời gian/thời lượng |
-| d6ab211 | Phát lại, tốc độ và hủy |
-| d77b18e | Âm sắc và decay |
-| dd2bc92 | WBS và task decomposition |
-| 189fd0e | Sửa phím kích hoạt chồng nhau |
-| 1be8491 | Sửa ngôn ngữ và title |
-| 578eb67 | Responsive và nhãn tốc độ |
-| c61d5d0 | Quy tắc dự án và xác minh AI |
+| ed2f731 | Initialize React + Vite |
+| c79b42b | Generate data for 88 keys |
+| c9e8f39 | Implement the keyboard, audio, and FIFO voice stealing |
+| fb623f7 | Record notes with onset timing and duration |
+| d6ab211 | Implement playback, speed control, and cancellation |
+| d77b18e | Shape the timbre and decay |
+| dd2bc92 | Add the WBS and task decomposition |
+| 189fd0e | Fix overlapping activation keys |
+| 1be8491 | Correct the document language and title |
+| 578eb67 | Implement responsive reflow and the speed-selector label |
+| c61d5d0 | Define project rules and AI verification requirements |
 
-Đã có trên 8 commit liên quan bài; không tạo commit rỗng hoặc viết lại lịch sử. Commit bổ sung audit chứa mã xác minh, kết quả và tài liệu; xem hash mới trong git log. Chỉ stage đường dẫn homework2; không gom thay đổi của bài khác.
+More than eight commits concern this project; no empty commits or history rewriting were needed. The subsequent audit commit contains the verification script, results, and documentation; its hash can be inspected in git log. Only homework2 paths were staged, without including changes from other assignments.
 
-## Chạy lại
+## Reproduction commands
 
 ```powershell
 npm ci
@@ -105,4 +105,4 @@ npm run lint
 npm run audit:verify
 ```
 
-Audit cần Git với baseline và Chrome/Edge; đặt CHROME_PATH nếu trình duyệt ở đường dẫn khác. Lệnh audit cập nhật ảnh/JSON, giữ baseline cố định và ghi HEAD hiện tại vào kết quả. Cần giữ lịch sử baseline khi chuyển repository.
+The audit requires Git history containing the baseline and an installed Chrome/Edge browser; set CHROME_PATH if the browser is located elsewhere. Running the audit updates the screenshots and JSON, keeps the baseline fixed, and records the current HEAD in the results. Preserve the baseline history when transferring the repository.
