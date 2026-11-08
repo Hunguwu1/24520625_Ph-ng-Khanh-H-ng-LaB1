@@ -18,7 +18,7 @@ export function useDrumKeyboard(
 
         function onKeyDown(event: KeyboardEvent) {
             // Giữ phím chỉ phát một lần.
-            if (event.repeat) return;
+            if (event.repeat || event.isComposing) return;
 
             // Không chiếm các tổ hợp phím.
             if (event.ctrlKey || event.altKey || event.metaKey) return;
