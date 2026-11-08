@@ -6,7 +6,9 @@ This report records **3 actual Lab 3 issues**, discovered during interface testi
 
 ## Lab 3 — Issue 1: Horizontal Page Overflow on Narrow Screens
 
-**AI code provenance.** During the Lab 3 implementation conversation, Codex generated the React interface, leaderboard, and CSS without constraining the width of the root `#app` element. The issue was discovered during browser testing after commit `d4eb24f`. The relevant interface code and the discovery of this issue are recorded in the current conversation, unlike the historical Lab 2 incidents below.
+**Fix commit:** `8ce2b37` — `fix: prevent mobile overflow and document AI failure`.
+
+**AI code provenance.** During the Lab 3 implementation conversation, Codex generated the React interface, leaderboard, and CSS without constraining the width of the root `#app` element. The issue was discovered during browser testing after commit `d4eb24f`. The relevant interface code and the discovery of this issue are recorded in the implementation conversation. This report covers Lab 3 incidents only.
 
 **Reproduction before the fix.** Run `npm.cmd run dev` and open the application in Chrome with a 375px-wide viewport. Open the Console and measure `window.innerWidth` and `document.documentElement.scrollWidth`.
 
@@ -92,7 +94,7 @@ Evidence: [before-fix JSON](docs/audit/ai-bugs-before.json), [after-fix JSON](do
 
 ## Lab 3 Verification Summary
 
-On November 8, 2026, `npm.cmd test` passed **4 tests with 0 failures**, and `npm.cmd run build` succeeded after both fixes. These existing tests cover the inherited backend; the new UI issues are covered separately by the Chrome reproduction script [verify-ai-bugs.mjs](docs/audit/verify-ai-bugs.mjs).
+At the original verification on November 8, 2026, `npm.cmd test` passed **4 tests with 0 failures**, and `npm.cmd run build` succeeded after both fixes. Those four tests cover the inherited backend; the UI issues are covered separately by the Chrome reproduction script [verify-ai-bugs.mjs](docs/audit/verify-ai-bugs.mjs). A later security update added a fifth test for HTML escaping; the count of four here records the original verification rather than the current suite size.
 
 To rerun the fixed UI checks, install or locate Playwright outside application dependencies, set `PLAYWRIGHT_MODULE` to its absolute `index.mjs` file URL, then run:
 
