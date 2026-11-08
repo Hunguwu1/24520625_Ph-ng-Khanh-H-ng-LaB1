@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import DropCard from './components/DropCard'
+import Leaderboard from './components/Leaderboard'
 import { createDemoDrops } from './data/pubgDemo'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <DropCard key={drop.id} drop={drop} />
         ))}
       </section>
+      <Leaderboard />
     </main>
   )
 }
