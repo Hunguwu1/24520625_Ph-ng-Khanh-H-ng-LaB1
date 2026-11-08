@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useId, useRef, useState } from 'react'
 import type { PubgCrateDrop } from '../domain/pubg'
 import { claimDrop, ClaimError, type ClaimDemoMode } from '../api/pubgClaim'
 import { usePubgAirdropTimer } from '../hooks/usePubgAirdropTimer'
@@ -16,6 +16,7 @@ function formatTime(remainingMs: number) {
 }
 
 export default function DropCard({ drop }: { drop: PubgCrateDrop }) {
+  const modeId = useId()
   const { remainingMs, isLive } = usePubgAirdropTimer(drop.dropEpochMs)
   const [stock, setStock] = useState(drop.remainingStock)
   const [pending, setPending] = useState(false)
@@ -69,9 +70,10 @@ export default function DropCard({ drop }: { drop: PubgCrateDrop }) {
         <p role="status">{pending ? 'Đang xác nhận lượt nhận' : statusText}</p>
         <p className="timer">{formatTime(remainingMs)}</p>
       </div>
-      <label>
+      <label htmlFor={modeId}>
         Kịch bản kiểm tra:
         <select
+          id={modeId}
           value={mode}
           disabled={pending}
           onChange={(event) => setMode(event.target.value as ClaimDemoMode)}

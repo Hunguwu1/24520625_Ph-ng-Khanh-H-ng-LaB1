@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { demoStandings } from '../data/pubgDemo'
 
 type SortKey = 'wwcdCount' | 'placementPts' | 'killPts'
 
 export default function Leaderboard() {
+  const searchId = useId()
+  const sortId = useId()
   const [search, setSearch] = useState('')
   const [sortKey, setSortKey] = useState<SortKey>('wwcdCount')
   const keyword = search.trim().toLowerCase()
@@ -21,18 +23,20 @@ export default function Leaderboard() {
       <p className="note">Điểm số mô phỏng cho bài tập.</p>
 
       <div className="leaderboard-controls">
-        <label>
+        <label htmlFor={searchId}>
           Tìm đội
           <input
+            id={searchId}
             type="search"
             placeholder="Nhập tên đội..."
             value={search}
             onChange={(event) => setSearch(event.target.value)}
           />
         </label>
-        <label>
+        <label htmlFor={sortId}>
           Sắp xếp giảm dần theo
           <select
+            id={sortId}
             value={sortKey}
             onChange={(event) => setSortKey(event.target.value as SortKey)}
           >
@@ -43,7 +47,7 @@ export default function Leaderboard() {
         </label>
       </div>
 
-      <div className="table-scroll">
+      <div className="table-scroll" role="region" aria-label="Bảng điểm có thể cuộn ngang" tabIndex={0}>
         <table>
           <caption>Các đội phù hợp, sắp xếp theo tiêu chí đã chọn</caption>
           <thead>

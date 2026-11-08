@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { createDemoKillFeed } from '../data/killFeedDemo'
 import { demoStandings } from '../data/pubgDemo'
 import VirtualList from './VirtualList'
@@ -11,6 +11,7 @@ const timeFormat = new Intl.DateTimeFormat('vi-VN', {
 })
 
 export default function KillFeed() {
+  const squadFilterId = useId()
   const [events] = useState(() => createDemoKillFeed(100))
   const [squadId, setSquadId] = useState('')
   const filteredEvents = events.filter((event) =>
@@ -24,9 +25,10 @@ export default function KillFeed() {
       <h2 id="kill-feed-title">Kill-feed</h2>
       <p className="note">Sự kiện mô phỏng cho bài tập.</p>
 
-      <label>
+      <label htmlFor={squadFilterId}>
         Lọc theo đội
         <select
+          id={squadFilterId}
           value={squadId}
           onChange={(event) => setSquadId(event.target.value)}
         >

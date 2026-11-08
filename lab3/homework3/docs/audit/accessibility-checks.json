@@ -1,0 +1,112 @@
+{
+  "widths": [
+    {
+      "viewport": 320,
+      "scrollWidth": 320
+    },
+    {
+      "viewport": 375,
+      "scrollWidth": 375
+    },
+    {
+      "viewport": 768,
+      "scrollWidth": 768
+    },
+    {
+      "viewport": 1280,
+      "scrollWidth": 1280
+    }
+  ],
+  "controls": [
+    {
+      "id": "_r_0_",
+      "tag": "SELECT",
+      "explicitLabels": 1
+    },
+    {
+      "id": "_r_1_",
+      "tag": "SELECT",
+      "explicitLabels": 1
+    },
+    {
+      "id": "_r_2_",
+      "tag": "INPUT",
+      "explicitLabels": 1
+    },
+    {
+      "id": "_r_3_",
+      "tag": "SELECT",
+      "explicitLabels": 1
+    },
+    {
+      "id": "_r_4_",
+      "tag": "SELECT",
+      "explicitLabels": 1
+    }
+  ],
+  "reached": [
+    {
+      "id": "",
+      "tag": "BODY",
+      "outline": "none"
+    },
+    {
+      "id": "_r_0_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_1_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_2_",
+      "tag": "INPUT",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_3_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "",
+      "tag": "DIV",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_4_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "",
+      "tag": "DIV",
+      "outline": "solid"
+    },
+    {
+      "id": "",
+      "tag": "BODY",
+      "outline": "none"
+    },
+    {
+      "id": "_r_0_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_1_",
+      "tag": "SELECT",
+      "outline": "solid"
+    },
+    {
+      "id": "_r_2_",
+      "tag": "INPUT",
+      "outline": "solid"
+    }
+  ],
+  "tableScrollLeft": 2,
+  "feedScrollTop": 1,
+  "passed": true
+}
