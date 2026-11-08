@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import PianoKey from './components/PianoKey';
 import { PolyphonicSynth } from './audio/PolyphonicSynth';
 import { NoteRecorder } from './audio/NoteRecorder';
@@ -11,15 +11,18 @@ const whiteCount = pianoKeys.filter((key) => !key.isBlack).length;
 const blackCount = pianoKeys.length - whiteCount;
 const frequencyByMidi = new Map(pianoKeys.map((key) => [key.midi, key.freqHz]));
 const nameByMidi = new Map(pianoKeys.map((key) => [key.midi, key.noteName]));
-let whiteIndex = 0;
-
-const positionedKeys = pianoKeys.map((key) => ({
-  ...key,
-  // Phím đen nằm ở ranh giới sau phím trắng trước đó.
-  position: key.isBlack ? whiteIndex : whiteIndex++,
-}));
+// Mỗi quãng tám là một nhóm tự xuống hàng, giữ đủ 88 phím ở mọi kích thước.
+const keyboardGroups = Array.from({ length: 9 }, (_, octave) => {
+  let whiteIndex = 0;
+  return {
+    octave,
+    keys: pianoKeys.filter((key) => Math.floor(key.midi / 12) - 1 === octave)
+      .map((key) => ({ ...key, position: key.isBlack ? whiteIndex : whiteIndex++ })),
+  };
+});
 
 export default function App() {
+  const speedId = useId();
   const synthRef = useRef(null);
   const recorderRef = useRef(null);
   const playbackRef = useRef(null);
@@ -155,7 +158,7 @@ export default function App() {
       <p>
         {pianoKeys.length} phím từ A0 đến C8 · {whiteCount} phím trắng · {blackCount} phím đen
       </p>
-      <p>Cuộn ngang để xem toàn bộ bàn phím.</p>
+      <p>Bàn phím chia theo quãng tám và tự xuống hàng theo màn hình.</p>
       <p>Âm piano tổng hợp: tiếng gõ ngắn và âm ngân nhỏ dần khi giữ phím.</p>
       <p>Nhấn giữ phím để phát âm, thả để dừng. Có thể dùng nhiều ngón tay trên màn hình cảm ứng.</p>
       <p>Dùng Tab để chọn phím, rồi giữ Space hoặc Enter để chơi.</p>
@@ -181,14 +184,12 @@ export default function App() {
         </p>
         <p>Bắt đầu ghi sẽ thay bản ghi cũ. Bản ghi được giữ trong phiên hiện tại, tải lại trang sẽ xóa.</p>
         <div className="recorder-controls">
-          <label>
-            Tốc độ phát{' '}
-            <select value={speed} disabled={isPlaying} onChange={(event) => setSpeed(Number(event.target.value))}>
-              <option value={0.5}>0.5×</option>
-              <option value={1}>1×</option>
-              <option value={2}>2×</option>
-            </select>
-          </label>
+          <label htmlFor={speedId}>Tốc độ phát</label>
+          <select id={speedId} value={speed} disabled={isPlaying} onChange={(event) => setSpeed(Number(event.target.value))}>
+            <option value={0.5}>0.5×</option>
+            <option value={1}>1×</option>
+            <option value={2}>2×</option>
+          </select>
           <button type="button" onClick={playRecording} disabled={isRecording || isPlaying || recordedNotes.length === 0}>
             Phát bản ghi
           </button>
@@ -199,59 +200,57 @@ export default function App() {
         {recordedNotes.length > 0 && (
           <details>
             <summary>Xem dữ liệu bản ghi</summary>
-            <div className="recording-table-wrapper">
-              <table className="recording-table">
-                <caption>Các nốt theo thứ tự nhấn</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Nốt</th>
-                    <th scope="col">MIDI</th>
-                    <th scope="col">Tần số (Hz)</th>
-                    <th scope="col">Thời lượng (ms)</th>
-                    <th scope="col">Cách nốt trước (ms)</th>
+            <table className="recording-table">
+              <caption>Các nốt theo thứ tự nhấn</caption>
+              <thead>
+                <tr>
+                  <th scope="col">STT</th>
+                  <th scope="col">Nốt</th>
+                  <th scope="col">MIDI</th>
+                  <th scope="col">Tần số (Hz)</th>
+                  <th scope="col">Thời lượng (ms)</th>
+                  <th scope="col">Cách nốt trước (ms)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recordedNotes.map((note, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{nameByMidi.get(note.midi)}</td>
+                    <td>{note.midi}</td>
+                    <td>{note.freqHz.toFixed(2)}</td>
+                    <td>{note.durationMs.toFixed(1)}</td>
+                    <td>{note.deltaMs.toFixed(1)}</td>
                   </tr>
-                </thead>
-                <tbody>
-                  {recordedNotes.map((note, index) => (
-                    <tr key={index}>
-                      <td>{index + 1}</td>
-                      <td>{nameByMidi.get(note.midi)}</td>
-                      <td>{note.midi}</td>
-                      <td>{note.freqHz.toFixed(2)}</td>
-                      <td>{note.durationMs.toFixed(1)}</td>
-                      <td>{note.deltaMs.toFixed(1)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </details>
         )}
       </section>
 
-      <div
-        className="piano-scroll"
-        role="region"
-        aria-label="Bàn phím piano"
-        tabIndex={0}
-      >
-        <div className="piano-keyboard">
-          {positionedKeys.map((key) => (
-            <PianoKey
-              key={key.midi}
-              midi={key.midi}
-              noteName={key.noteName}
-              isBlack={key.isBlack}
-              position={key.position}
-              isPressed={pressedKeys.has(key.midi)}
-              disabled={isPlaying}
-              onNoteOn={onNoteOn}
-              onNoteOff={onNoteOff}
-            />
-          ))}
-        </div>
-      </div>
+      <section className="piano-groups" aria-label="Bàn phím piano">
+        {keyboardGroups.map((group) => (
+          <fieldset className="piano-group" key={group.octave}>
+            <legend>Quãng tám {group.octave}</legend>
+            <div className="piano-keyboard">
+              {group.keys.map((key) => (
+                <PianoKey
+                  key={key.midi}
+                  midi={key.midi}
+                  noteName={key.noteName}
+                  isBlack={key.isBlack}
+                  position={key.position}
+                  isPressed={pressedKeys.has(key.midi)}
+                  disabled={isPlaying}
+                  onNoteOn={onNoteOn}
+                  onNoteOff={onNoteOff}
+                />
+              ))}
+            </div>
+          </fieldset>
+        ))}
+      </section>
     </main>
   );
 }

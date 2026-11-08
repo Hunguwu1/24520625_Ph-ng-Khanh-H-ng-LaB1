@@ -7,16 +7,30 @@
   margin-bottom: 12px;
 }
 
-.piano-scroll {
+.piano-groups {
   margin-top: 24px;
-  overflow-x: auto;
-  padding-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 308px), 1fr));
+  gap: 20px;
+}
+
+.piano-group {
+  min-width: 0;
+  margin: 0;
+  padding: 12px 0;
+  border: 0;
+}
+
+.piano-group legend {
+  margin: 0 auto;
+  padding: 4px;
+  font-weight: 600;
 }
 
 .piano-keyboard {
-  --white-width: 44px;
+  --white-width: calc(100% / 7);
   position: relative;
-  width: calc(var(--white-width) * 52);
+  width: 100%;
   height: 220px;
   text-align: left;
 }
@@ -53,7 +67,7 @@
 
 .key-black {
   z-index: 2;
-  width: 28px;
+  width: max(24px, calc(var(--white-width) * 0.6));
   height: 140px;
   transform: translateX(-50%);
   border: 1px solid #111;
@@ -69,9 +83,11 @@
   background: #3769a8;
 }
 
+/* Hai vòng tương phản trên cả phím trắng và phím đen. */
 .piano-key:focus-visible {
-  outline: 3px solid #ff9800;
+  outline: 3px solid #005fcc;
   outline-offset: -3px;
+  box-shadow: inset 0 0 0 6px #fff;
 }
 
 .stop-audio {
@@ -92,6 +108,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+  align-items: center;
   margin: 16px 0;
 }
 
@@ -115,13 +132,10 @@
   opacity: 1;
 }
 
-.recording-table-wrapper {
-  overflow-x: auto;
-  margin-top: 12px;
-}
-
 .recording-table {
+  margin-top: 12px;
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-variant-numeric: tabular-nums;
 }
@@ -130,4 +144,31 @@
 .recording-table td {
   padding: 8px;
   border: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+
+button, select, summary {
+  min-height: 44px;
+}
+
+button, select {
+  max-width: 100%;
+}
+
+summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .recording-table th,
+  .recording-table td {
+    padding: 6px 2px;
+    font-size: 0.8125rem;
+  }
 }
