@@ -1,0 +1,77 @@
+{
+  "stage": "before",
+  "browser": "157.0.8103.38",
+  "transport": "Chrome DevTools Protocol: Runtime.evaluate and Runtime.consoleAPICalled",
+  "clock": "Playwright controlled clock; no real-time wait or backend request",
+  "timer": {
+    "beforeReload": "00:25",
+    "afterReload": "00:30"
+  },
+  "pendingState": {
+    "stock": "Còn lại: 0",
+    "status": "Đã hết hàng",
+    "button": "Đang nhận..."
+  },
+  "rollback": "PVS Finals VIP Pass\n\n500.000 ₫\n\nCòn lại: 1\n\nĐã mở nhận\n\n00:00\n\nKịch bản kiểm tra:\nThành công\nLỗi 409 — hết hàng\nLỗi kết nối\nNhận vật phẩm\n\nServer báo hết hàng (409). Đã hoàn tác lượt nhận.",
+  "consoleEvents": [
+    {
+      "type": "debug",
+      "values": [
+        "[vite] connecting..."
+      ]
+    },
+    {
+      "type": "info",
+      "values": [
+        "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools",
+        "font-weight:bold"
+      ]
+    },
+    {
+      "type": "debug",
+      "values": [
+        "[vite] connected."
+      ]
+    },
+    {
+      "type": "debug",
+      "values": [
+        "[vite] connecting..."
+      ]
+    },
+    {
+      "type": "debug",
+      "values": [
+        "[vite] connected."
+      ]
+    },
+    {
+      "type": "info",
+      "values": [
+        "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools",
+        "font-weight:bold"
+      ]
+    },
+    {
+      "type": "log",
+      "values": [
+        "AUDIT timer reload",
+        "{\"beforeReload\":\"00:25\",\"afterReload\":\"00:30\"}"
+      ]
+    },
+    {
+      "type": "log",
+      "values": [
+        "AUDIT last-unit pending",
+        "{\"stock\":\"Còn lại: 0\",\"status\":\"Đã hết hàng\",\"button\":\"Đang nhận...\"}"
+      ]
+    },
+    {
+      "type": "log",
+      "values": [
+        "AUDIT rollback",
+        "PVS Finals VIP Pass\n\n500.000 ₫\n\nCòn lại: 1\n\nĐã mở nhận\n\n00:00\n\nKịch bản kiểm tra:\nThành công\nLỗi 409 — hết hàng\nLỗi kết nối\nNhận vật phẩm\n\nServer báo hết hàng (409). Đã hoàn tác lượt nhận."
+      ]
+    }
+  ]
+}
