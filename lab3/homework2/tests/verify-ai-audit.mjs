@@ -11,8 +11,17 @@ import react from '@vitejs/plugin-react';
 import puppeteer from 'puppeteer-core';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const baseline = 'dd2bc9258fdfb9d4c2832fbba95c2d49add96c86';
 const git = (...args) => execFileSync('git', args, { cwd: root });
+const originalBaseline = 'dd2bc9258fdfb9d4c2832fbba95c2d49add96c86';
+const publishedBaseline = '082f03419c209c5dc8370a010957a5bdbf496a6d';
+let baseline = originalBaseline;
+try {
+  execFileSync('git', ['cat-file', '-e', `${baseline}^{commit}`], { cwd: root, stdio: 'ignore' });
+} catch {
+  // The published repository contains the original baseline as a cherry-pick.
+  baseline = publishedBaseline;
+  execFileSync('git', ['cat-file', '-e', `${baseline}^{commit}`], { cwd: root, stdio: 'ignore' });
+}
 const prefix = git('rev-parse', '--show-prefix').toString().trim();
 const reportDir = path.join(root, 'reports', 'ai-audit');
 const candidates = [process.env.CHROME_PATH,

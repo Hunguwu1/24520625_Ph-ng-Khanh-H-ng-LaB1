@@ -10,6 +10,8 @@ This audit documents three application defects reviewed and corrected with AI as
 
 Evidence:
 
+The published repository contains the same baseline project tree in cherry-picked commit **082f03419c209c5dc8370a010957a5bdbf496a6d**. The verification script uses that commit when the original baseline is unavailable in a fresh clone. Both baseline project trees were compared before publication.
+
 - [Verification script](tests/verify-ai-audit.mjs)
 - [Measured JSON results](reports/ai-audit/verification.json): UTC timestamp, browser version, baseline, and fixed-source commit.
 - [Before screenshot](reports/ai-audit/before.png) and [after screenshot](reports/ai-audit/after.png).
