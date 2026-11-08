@@ -10,11 +10,18 @@ class FakeAudioContext {
     this.currentTime = 1;
     this.state = 'running';
     this.destination = {};
+    this.waveCount = 0;
+  }
+
+  createPeriodicWave(real, imag) {
+    this.waveCount++;
+    return { real, imag };
   }
 
   createOscillator() {
     return {
-      frequency: { setValueAtTime() {} },
+      frequency: { setValueAtTime(value) { this.value = value; } },
+      setPeriodicWave(wave) { this.wave = wave; },
       connect() {},
       disconnect() { this.disconnected = true; },
       start() {},
@@ -25,9 +32,10 @@ class FakeAudioContext {
   createGain() {
     return {
       gain: {
+        ramps: [],
         setValueAtTime() {},
         cancelAndHoldAtTime() {},
-        exponentialRampToValueAtTime() {},
+        exponentialRampToValueAtTime(value, time) { this.ramps.push({ value, time }); },
       },
       connect() {},
       disconnect() {},
@@ -101,6 +109,28 @@ test('invalid voice limits are rejected', () => {
   for (const limit of [0, -1, 1.5, NaN]) {
     assert.throws(() => new PolyphonicSynth(limit), RangeError);
   }
+});
+
+test('piano timbre preserves pitch and uses one shared harmonic wave', () => {
+  const synth = new PolyphonicSynth();
+  for (const midi of [55, 57, 59]) play(synth, midi);
+  const voices = [...synth.voices.values()];
+  assert.equal(synth.ctx.waveCount, 1);
+  assert.equal(synth.allVoices.size, 3);
+  for (let index = 0; index < voices.length; index++) {
+    const voice = voices[index];
+    const midi = [55, 57, 59][index];
+    assert.equal(voice.osc.frequency.value, 440 * 2 ** ((midi - 69) / 12));
+    assert.equal(voice.osc.wave, synth.pianoWave);
+    assert.ok(voice.osc.wave.imag[2] > 0, 'harmonics enrich the pure sine');
+    const ramps = voice.gain.gain.ramps;
+    assert.equal(ramps[0].value, 0.08);
+    assert.equal(ramps.at(-1).value, 0.0001);
+    assert.ok(ramps.every((ramp, i) => ramp.value > 0 && (i === 0 ||
+      (ramp.time > ramps[i - 1].time && ramp.value < ramps[i - 1].value))));
+  }
+  assert.ok(voices[0].gain.gain.ramps.at(-1).time > voices[2].gain.gain.ramps.at(-1).time);
+  synth.dispose();
 });
 
 test('recording closes FIFO-stolen notes and ignores their later release', () => {

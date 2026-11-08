@@ -156,6 +156,7 @@ export default function App() {
         {pianoKeys.length} phím từ A0 đến C8 · {whiteCount} phím trắng · {blackCount} phím đen
       </p>
       <p>Cuộn ngang để xem toàn bộ bàn phím.</p>
+      <p>Âm piano tổng hợp: tiếng gõ ngắn và âm ngân nhỏ dần khi giữ phím.</p>
       <p>Nhấn giữ phím để phát âm, thả để dừng. Có thể dùng nhiều ngón tay trên màn hình cảm ứng.</p>
       <p>Dùng Tab để chọn phím, rồi giữ Space hoặc Enter để chơi.</p>
       <p>Tối đa 8 nốt cùng lúc. Nốt thứ 9 thay thế nốt đang giữ lâu nhất.</p>

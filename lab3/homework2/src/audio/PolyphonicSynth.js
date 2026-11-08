@@ -6,6 +6,7 @@ export class PolyphonicSynth {
     }
     this.maxVoices = maxVoices;
     this.ctx = null;
+    this.pianoWave = null;
     this.voices = new Map();
     this.allVoices = new Set();
     this.disposed = false;
@@ -16,6 +17,11 @@ export class PolyphonicSynth {
     const AudioContextClass = globalThis.AudioContext || globalThis.webkitAudioContext;
     if (!AudioContextClass) throw new Error('Trình duyệt chưa hỗ trợ Web Audio API.');
     this.ctx ??= new AudioContextClass();
+    // Thêm các hài vào cùng một oscillator để âm có thân tiếng hơn sóng sin.
+    this.pianoWave ??= this.ctx.createPeriodicWave(
+      new Float32Array(9),
+      new Float32Array([0, 1, 0.32, 0.14, 0.08, 0.045, 0.025, 0.012, 0.006]),
+    );
     return this.ctx.state === 'suspended' ? this.ctx.resume() : Promise.resolve();
   }
 
@@ -39,10 +45,16 @@ export class PolyphonicSynth {
     const gain = ctx.createGain();
     const voice = { osc, gain };
 
-    osc.type = 'sine';
+    osc.setPeriodicWave(this.pianoWave);
     osc.frequency.setValueAtTime(freqHz, ctx.currentTime);
+    // Mô phỏng cú gõ búa: lên âm nhanh rồi nhỏ dần ngay cả khi vẫn giữ phím.
+    // Nốt cao tắt nhanh hơn nốt trầm; vẫn chỉ một oscillator cho mỗi voice.
+    const decaySeconds = Math.min(8, Math.max(1.8, 4 * (220 / freqHz) ** 0.35));
     gain.gain.setValueAtTime(0.0001, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.08, ctx.currentTime + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.08, ctx.currentTime + 0.006);
+    gain.gain.exponentialRampToValueAtTime(0.035, ctx.currentTime + 0.16);
+    gain.gain.exponentialRampToValueAtTime(0.012, ctx.currentTime + decaySeconds * 0.45);
+    gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + decaySeconds);
     osc.connect(gain);
     gain.connect(ctx.destination);
     osc.onended = () => {
