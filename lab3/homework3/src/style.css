@@ -11,6 +11,11 @@ body {
   place-items: center;
 }
 
+#app {
+  width: 100%;
+  min-width: 0;
+}
+
 .product-card {
   width: min(360px, calc(100vw - 64px));
   padding: 24px;
@@ -103,6 +108,7 @@ button:not(:disabled) {
 .arena {
   box-sizing: border-box;
   width: min(900px, 100%);
+  margin-inline: auto;
   padding: 24px 16px;
 }
 

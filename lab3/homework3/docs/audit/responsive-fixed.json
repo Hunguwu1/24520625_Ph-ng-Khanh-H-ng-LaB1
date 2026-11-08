@@ -1,0 +1,42 @@
+[
+  {
+    "width": 320,
+    "scrollWidth": 320,
+    "appWidth": 320,
+    "arenaWidth": 320,
+    "tableWidth": 240,
+    "tableScrollWidth": 407
+  },
+  {
+    "width": 375,
+    "scrollWidth": 375,
+    "appWidth": 375,
+    "arenaWidth": 375,
+    "tableWidth": 295,
+    "tableScrollWidth": 407
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "appWidth": 390,
+    "arenaWidth": 390,
+    "tableWidth": 310,
+    "tableScrollWidth": 407
+  },
+  {
+    "width": 768,
+    "scrollWidth": 768,
+    "appWidth": 768,
+    "arenaWidth": 768,
+    "tableWidth": 688,
+    "tableScrollWidth": 688
+  },
+  {
+    "width": 1280,
+    "scrollWidth": 1280,
+    "appWidth": 1280,
+    "arenaWidth": 900,
+    "tableWidth": 820,
+    "tableScrollWidth": 820
+  }
+]

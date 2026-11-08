@@ -1,4 +1,44 @@
-# AI Audit — Flash Sale E-Commerce Engine
+# AI_FAILURE_AUDIT — PUBG Vietnam Arena (Lab 3)
+
+## Phạm vi Lab 3
+
+Hiện ghi nhận **1 lỗi thực tế của Lab 3** được phát hiện khi kiểm tra giao diện bằng Chrome, ngày 08/11/2026. Phần lịch sử Lab 2 phía dưới được giữ để tham khảo, **không tính là ba lỗi mới của Lab 3**. Cần ghi nhận thêm các lỗi thực sự phát hiện để đáp ứng yêu cầu ít nhất ba lỗi của đề.
+
+## Lab 3 — Lỗi 1: Giao diện tràn ngang trên màn hình hẹp
+
+**Nguồn gốc mã AI.** Trong cuộc trò chuyện triển khai Lab 3, Codex tạo giao diện React, bảng xếp hạng và CSS, nhưng chưa ràng buộc chiều rộng phần tử gốc `#app`. Lỗi được phát hiện trong lần kiểm tra trình duyệt sau commit `d4eb24f`. Khác với các sự cố lịch sử Lab 2 bên dưới, mã giao diện liên quan và lần phát hiện lỗi này có trong cuộc trò chuyện hiện tại.
+
+**Cách tái hiện trước khi sửa.** Chạy `npm.cmd run dev`, mở ứng dụng trong Chrome ở viewport rộng 375px. Mở Console và đo `window.innerWidth` cùng `document.documentElement.scrollWidth`.
+
+**Mong đợi.** Toàn trang vừa chiều rộng viewport; bảng điểm rộng hơn vùng chứa sẽ cuộn ngang riêng bên trong `.table-scroll`.
+
+**Thực tế.** Viewport rộng **375px**, nhưng chiều rộng cuộn của trang là **487px**. `#app` và `.arena` rộng khoảng **487,17px**, khiến toàn trang tràn ngang. Ảnh trước khi sửa: [mobile-before.png](docs/audit/mobile-before.png).
+
+**Nguyên nhân.** `body` dùng CSS Grid và căn giữa phần tử con. `#app` chưa có giới hạn chiều rộng nên kích thước nội tại của nội dung, gồm bảng xếp hạng, làm phần tử gốc rộng hơn viewport. `.arena` dùng chiều rộng phần trăm theo phần tử gốc này nên cũng bị kéo rộng. Chỉ thêm `overflow-x: auto` cho bảng chưa đủ để giới hạn chiều rộng toàn trang.
+
+**Cách sửa.** Trong `src/style.css`, đặt `#app { width: 100%; min-width: 0; }` để phần tử gốc vừa vùng hiển thị và được phép thu nhỏ. Thêm `margin-inline: auto` cho `.arena` để giữ nội dung ở giữa trên màn hình lớn. Giữ cuộn ngang bên trong `.table-scroll`, không che lỗi bằng cách ẩn phần nội dung tràn của toàn trang.
+
+**Kiểm chứng sau sửa.** Kiểm tra trên Chrome với Playwright, đo trực tiếp DOM thay vì chỉ đánh giá ảnh chụp:
+
+| Chiều rộng viewport | Chiều rộng cuộn toàn trang sau sửa | Kết quả |
+| --- | --- | --- |
+| 320px | 320px | Đạt |
+| 375px | 375px | Đạt |
+| 390px | 390px | Đạt |
+| 768px | 768px | Đạt |
+| 1280px | 1280px | Đạt |
+
+Ở viewport 375px, vùng chứa bảng rộng 295px, nội dung bảng rộng 407px và có thể cuộn ngang bên trong. Kiểm tra thêm bộ lọc kill-feed vẫn trả về 50 sự kiện khi chọn The Expendables; Virtual List tạo không quá 12 hàng, mỗi hàng cao 72px ở cả năm kích thước. `npm.cmd run build` thành công sau sửa. Đây là kiểm tra trên trình duyệt desktop với viewport thay đổi, chưa phải kiểm tra trên thiết bị di động thật.
+
+Bằng chứng: [ảnh sau sửa](docs/audit/mobile-after.png), [số đo sau sửa](docs/audit/responsive-fixed.json).
+
+**Bài học.** Khi dùng Grid/Flex và bảng dữ liệu, phải kiểm tra chiều rộng phần tử gốc cùng chuỗi phần tử chứa. Build thành công và kiểm tra logic component không chứng minh giao diện vừa màn hình; cần đo DOM và kiểm tra nhiều kích thước viewport.
+
+---
+
+## Lịch sử Lab 2 — Flash Sale E-Commerce Engine
+
+Nội dung dưới đây được sao chép từ bài Lab 2; các mốc thời gian, lệnh và commit trong phần này thuộc Lab 2, không phải kết quả kiểm tra mới của Lab 3.
 
 ## Scope and Evidence
 
