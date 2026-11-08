@@ -174,3 +174,12 @@ T-03 đến T-08 → T-09 → T-10 → T-11 → T-12 → chốt T-13
 ```
 
 Các bước trên mô tả thứ tự logic, không phải xác nhận công việc được làm song song hay thời gian đã sử dụng.
+
+## T-14 — Verified AI failure audit and commit delivery
+
+- Preserve baseline commit 067e2d3; reproduce faults against its real App and keyboard hook before applying corrections.
+- Verify three cases: explicit labels and useId contract, IME composition isolation, and held Enter on a focused pad.
+- Correct each concern independently; run the same regression assertions against the final application.
+- Save baseline and final JSON evidence, exact commands, root causes and limitations in AI_FAILURE_AUDIT.md.
+- Deliver at least eight focused follow-up commits on codex/drumkit-verified-audit. These are present-day improvements, not a reconstruction of the original implementation history.
+- Run build, lint, functional browser checks and Lighthouse after the final code changes.
