@@ -66,7 +66,7 @@ export default function DropCard({ drop }: { drop: PubgCrateDrop }) {
       <p className="sale-price">{money.format(drop.priceVnd)}</p>
       <p>Còn lại: {stock}</p>
       <div className="countdown">
-        <p role="status">{statusText}</p>
+        <p role="status">{pending ? 'Đang xác nhận lượt nhận' : statusText}</p>
         <p className="timer">{formatTime(remainingMs)}</p>
       </div>
       <label>
