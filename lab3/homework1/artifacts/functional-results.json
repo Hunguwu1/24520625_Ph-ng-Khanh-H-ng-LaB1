@@ -1,0 +1,64 @@
+[
+  {
+    "name": "All seven audio files decode as real audio",
+    "passed": true
+  },
+  {
+    "name": "Seven physical shortcut keys hit the matching pad",
+    "passed": true
+  },
+  {
+    "name": "Holding a key does not repeat a hit",
+    "passed": true
+  },
+  {
+    "name": "Typing in notes does not trigger pads",
+    "passed": true
+  },
+  {
+    "name": "Shortcut toggle disables keys while mouse clicks still play",
+    "passed": true
+  },
+  {
+    "name": "Pad activation turns off after feedback interval",
+    "passed": true
+  },
+  {
+    "name": "Rapid repeated hits keep only ten newest history entries",
+    "passed": true
+  },
+  {
+    "name": "Meter reacts to decoded sound and returns to silence",
+    "passed": true
+  },
+  {
+    "name": "Tab, Shift+Tab, Enter and Space work with visible focus and allow exit",
+    "passed": true
+  },
+  {
+    "name": "Physical key code is used even when produced character differs",
+    "passed": true
+  },
+  {
+    "name": "Axe accessibility scan",
+    "passed": true,
+    "violations": []
+  },
+  {
+    "name": "No horizontal overflow at 390px",
+    "passed": true
+  },
+  {
+    "name": "No horizontal overflow at 320px",
+    "passed": true
+  },
+  {
+    "name": "No horizontal overflow at 640px (1280px viewport at 200% equivalent layout width)",
+    "passed": true
+  },
+  {
+    "name": "No browser runtime or audio errors",
+    "passed": true,
+    "errors": []
+  }
+]

@@ -1,0 +1,29 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #f8fafc;
+  background: #0f172a;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #93c5fd;
+  text-underline-offset: 3px;
+}
+
+a:visited {
+  color: #c4b5fd;
+}
+
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 4px;
+}

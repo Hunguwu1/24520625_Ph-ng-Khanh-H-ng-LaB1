@@ -1,0 +1,30 @@
+[
+  {
+    "file": "tom1.mp3",
+    "duration": 0.6866439909297052
+  },
+  {
+    "file": "kick.wav",
+    "duration": 0.6
+  },
+  {
+    "file": "snare.wav",
+    "duration": 0.34997732426303857
+  },
+  {
+    "file": "hihat.wav",
+    "duration": 0.15
+  },
+  {
+    "file": "tom2.mp3",
+    "duration": 0.7493424036281179
+  },
+  {
+    "file": "crash.mp3",
+    "duration": 3.6
+  },
+  {
+    "file": "ride.mp3",
+    "duration": 0.7844897959183673
+  }
+]
