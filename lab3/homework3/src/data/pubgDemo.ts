@@ -23,6 +23,24 @@ export function createDemoDrops(now = Date.now()): PubgCrateDrop[] {
   ]
 }
 
+// Persist the demo schedule, not a ticking countdown. Reloads must not postpone it.
+export function loadDemoDrops(): PubgCrateDrop[] {
+  const key = 'pubg-arena-demo-start-v1'
+  const now = Date.now()
+  try {
+    const saved = localStorage.getItem(key)
+    const startsAt = saved === null ? now : Number(saved)
+    if (Number.isSafeInteger(startsAt) && startsAt > 0 && startsAt <= now) {
+      if (saved === null) localStorage.setItem(key, String(startsAt))
+      return createDemoDrops(startsAt)
+    }
+    localStorage.setItem(key, String(now))
+  } catch {
+    // Storage may be unavailable; the in-memory demo must still render.
+  }
+  return createDemoDrops(now)
+}
+
 export const demoStandings: PubgVnSquadStanding[] = [
   {
     squadId: 'te',

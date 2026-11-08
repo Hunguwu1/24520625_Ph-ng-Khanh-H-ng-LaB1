@@ -2,10 +2,10 @@ import { useState } from 'react'
 import DropCard from './components/DropCard'
 import Leaderboard from './components/Leaderboard'
 import KillFeed from './components/KillFeed'
-import { createDemoDrops } from './data/pubgDemo'
+import { loadDemoDrops } from './data/pubgDemo'
 
 export default function App() {
-  const [drops] = useState(() => createDemoDrops())
+  const [drops] = useState(loadDemoDrops)
 
   return (
     <main className="arena">
