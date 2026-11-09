@@ -1,4 +1,4 @@
-# Drum Kit project rules
+# Drum Kit Project Rules
 
 - Use React function components, hooks and TypeScript. Do not use class components, ReactDOM.render, defaultProps, keyCode or alert().
 - Update state immutably using functional updates when the next value depends on the previous value.

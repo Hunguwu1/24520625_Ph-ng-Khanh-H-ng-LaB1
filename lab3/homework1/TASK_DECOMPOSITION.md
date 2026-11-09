@@ -1,28 +1,28 @@
 # Task Decomposition — Lab 3 HW 1: Production Studio Drum Kit
 
-Ngày cập nhật: 08/11/2026. Kết quả kiểm thử chính được ghi nhận ngày 06/11/2026; build/lint được chạy lại trước khi publish ngày 08/11/2026.
+Translation updated: 9 November 2026. Initial test results were recorded on 6 November 2026; build and lint were rerun before publication on 8 November 2026. The final automated checks and AI audit were completed on 9 November 2026.
 
-Tài liệu phân rã nhiệm vụ theo đầu vào, bước thực hiện, đầu ra, phụ thuộc và tiêu chí kiểm tra. Cấu trúc công việc tổng thể nằm trong [WBS.md](./WBS.md). Trạng thái dưới đây phản ánh mã nguồn và bằng chứng hiện có, không phải chứng nhận WCAG.
+This document breaks down tasks by inputs, implementation steps, outputs, dependencies, and verification criteria. The overall work structure is in [WBS.md](./WBS.md). Status statements describe the available source code and evidence; they do not certify WCAG conformance.
 
-## T-01 — Khảo sát và khởi tạo
+## T-01 — Investigation and initialization
 
 - **WBS:** 1.1–1.2.
-- **Mục tiêu:** tạo dự án mới dựa trên chức năng Drum Kit cũ và kỹ thuật hỗ trợ tiếp cận của Lab 2.
-- **Đầu vào:** ảnh đề bài, Drum Kit Lab 1 và DataGrid Lab 2 HW 1.
-- **Thực hiện:** khảo sát hai bài; xác định phạm vi; tạo React + TypeScript bằng Vite; cài dependencies; cấu hình CSS và các lệnh phát triển.
-- **Đầu ra:** dự án có `src/main.tsx`, `src/App.tsx`, `package.json`, các cấu hình Vite/TypeScript.
-- **Kiểm tra:** `npm run dev` mở được ứng dụng; không đưa logic điều hướng bảng nhân viên vào vùng pad.
-- **Phụ thuộc:** không có.
-- **Trạng thái:** hoàn thành.
+- **Objective:** create a new project based on the previous Drum Kit functionality and the accessibility techniques from Lab 2.
+- **Inputs:** the assignment screenshot, Lab 1 Drum Kit, and Lab 2 HW 1 DataGrid.
+- **Implementation:** inspect both assignments; define scope; scaffold React and TypeScript with Vite; install dependencies; configure CSS and development commands.
+- **Outputs:** a project containing `src/main.tsx`, `src/App.tsx`, `package.json`, and Vite/TypeScript configuration files.
+- **Verification:** `npm run dev` opens the application; employee-table navigation logic is not carried into the pad region.
+- **Dependencies:** none.
+- **Status:** complete.
 
-## T-02 — Định nghĩa dữ liệu và chuẩn bị âm thanh
+## T-02 — Data definitions and audio preparation
 
 - **WBS:** 2.1–2.2.
-- **Mục tiêu:** dùng một cấu trúc dữ liệu thống nhất để tạo nút và ánh xạ phím.
-- **Hợp đồng:** `DrumPad` gồm `id`, `name`, `key`, `code`, `src`; id và code duy nhất; src trỏ đến file thật trong `public/sounds`.
-- **Thực hiện:** giữ ba WAV cũ; bổ sung bốn MP3; ghi nguồn và nội dung attribution; tạo Map theo code ở ngoài component.
+- **Objective:** use one consistent data structure to render buttons and map keyboard shortcuts.
+- **Contract:** `DrumPad` contains `id`, `name`, `key`, `code`, and `src`; IDs and codes are unique; each source points to a real file in `public/sounds`.
+- **Implementation:** retain the three existing WAV files; add four MP3 files; record sources and attribution; create the code-to-pad Map outside the component.
 
-| Phím | event.code | Pad | File |
+| Key | event.code | Pad | File |
 |---|---|---|---|
 | W | KeyW | Tom 1 | `/sounds/tom1.mp3` |
 | A | KeyA | Kick | `/sounds/kick.wav` |
@@ -32,154 +32,155 @@ Tài liệu phân rã nhiệm vụ theo đầu vào, bước thực hiện, đ�
 | K | KeyK | Crash | `/sounds/crash.mp3` |
 | L | KeyL | Ride | `/sounds/ride.mp3` |
 
-- **Đầu ra:** kiểu dữ liệu trong `useDrumKeyboard.ts`, mảng pads trong `App.tsx`, bảy file âm thanh, `CREDITS.md`, `UPSTREAM-README.md`.
-- **Kiểm tra:** bảy file tải và giải mã được; thời lượng lớn hơn 0; giữ đúng đuôi WAV/MP3.
-- **Phụ thuộc:** T-01.
-- **Trạng thái:** đủ bảy âm thanh; `CREDITS.md` và `UPSTREAM-README.md` đã được bổ sung lại ngày 08/11/2026. Nguồn của các WAV cũ không được xác lập lại trong tài liệu này.
+- **Outputs:** the type in `useDrumKeyboard.ts`, the pads array in `App.tsx`, seven audio files, `CREDITS.md`, and `UPSTREAM-README.md`.
+- **Verification:** all seven files load and decode; their durations exceed zero; WAV/MP3 extensions remain correct.
+- **Dependencies:** T-01.
+- **Status:** all seven samples are present. `CREDITS.md` and `UPSTREAM-README.md` were restored on 8 November 2026. This document does not independently establish the provenance of the original WAV files.
 
-## T-03 — Giao diện và thao tác bằng nút
+## T-03 — Interface and button interaction
 
-- **WBS:** 2.3, một phần 6.1.
-- **Mục tiêu:** thao tác trực tiếp được bằng chuột, Tab, Enter và Space.
-- **Thực hiện:** render pads bằng map; dùng `button type="button"`; hiển thị tên và phím; gọi chung `triggerPad(pad)`; đặt heading và nhãn cho các vùng giao diện.
-- **Đầu ra:** giao diện trong `App.tsx` và CSS.
-- **Kiểm tra:** đủ bảy pad; mỗi nút có tên truy cập lấy từ nội dung; không cần tự viết lại hành vi Enter/Space của button.
-- **Phụ thuộc:** T-02.
-- **Trạng thái:** hoàn thành.
+- **WBS:** 2.3 and part of 6.1.
+- **Objective:** support mouse, Tab, Enter, and Space interaction.
+- **Implementation:** render pads with map; use `button type="button"`; display names and shortcut keys; share `triggerPad(pad)`; provide headings and labels for interface regions.
+- **Outputs:** the interface in `App.tsx` and its CSS.
+- **Verification:** seven pads are present; each button obtains its accessible name from its content; native Enter/Space activation is retained. T-14 adds a guard against repeated native activation while a key is held.
+- **Dependencies:** T-02.
+- **Status:** complete.
 
-## T-04 — Hook bàn phím và cách ly nhập liệu
+## T-04 — Keyboard hook and input isolation
 
 - **WBS:** 3.1–3.4.
-- **Mục tiêu:** dùng phím vật lý và tránh đánh trống ngoài ý muốn.
-- **Hợp đồng:** `useDrumKeyboard(padMap, onTriggerPad, isEnabled)` đăng ký keydown khi bật, gọi callback bằng pad tìm được và gỡ listener khi cleanup.
-- **Thực hiện theo thứ tự:**
-  1. Bỏ qua `event.repeat` và tổ hợp Ctrl/Alt/Meta.
-  2. Bỏ qua target trong input, textarea, select hoặc vùng contenteditable.
-  3. Tra pad bằng `event.code`.
-  4. Chỉ preventDefault khi có pad phù hợp.
-  5. Gọi callback kích hoạt; cung cấp công tắc bật/tắt và aria-keyshortcuts tương ứng.
-- **Đầu ra:** `src/useDrumKeyboard.ts`, state công tắc và ô ghi chú trong `App.tsx`.
-- **Kiểm tra:** bảy phím đúng; giữ phím không lặp; nhập liệu không kích hoạt; khi tắt phím tắt, nút vẫn dùng được.
-- **Phụ thuộc:** T-02, T-03.
-- **Trạng thái:** đã qua kiểm tra tự động; thử UniKey trực tiếp thuộc T-12.
+- **Objective:** use physical key codes and prevent unintended drum hits.
+- **Contract:** `useDrumKeyboard(padMap, onTriggerPad, isEnabled)` registers keydown when enabled, passes the matching pad to the callback, and removes the listener during cleanup.
+- **Implementation sequence:**
+  1. Ignore `event.repeat`, IME composition, and Ctrl/Alt/Meta combinations.
+  2. Ignore targets in input, textarea, select, or contenteditable regions.
+  3. Look up the pad using `event.code`.
+  4. Call preventDefault only for a matching pad.
+  5. Invoke the activation callback; provide an enable/disable switch and matching aria-keyshortcuts.
+- **Outputs:** `src/useDrumKeyboard.ts`, shortcut toggle state, and the note field in `App.tsx`.
+- **Verification:** all seven keys map correctly; holding a shortcut does not repeat hits; text entry does not activate pads; buttons remain usable when shortcuts are disabled.
+- **Dependencies:** T-02, T-03.
+- **Status:** automated checks pass. The composition guard is verified in T-14; testing with a real UniKey session remains part of T-12.
 
-## T-05 — Engine âm thanh và cache
+## T-05 — Audio engine and caching
 
 - **WBS:** 4.1–4.3.
-- **Mục tiêu:** phát tín hiệu dùng chung cho loa và meter, hỗ trợ âm thanh chồng nhau.
-- **Hợp đồng:** `useDrumAudio()` trả về `playSound(src)`, `levelDb`, `audioError`. `playSound` xử lý lỗi nội bộ; không trả boolean như engine của bài cũ.
-- **Thực hiện:** tạo AudioContext khi tương tác; resume; fetch và decodeAudioData; cache Promise theo src; tạo AudioBufferSourceNode riêng mỗi lần; kết nối source → analyser → destination.
-- **Xử lý vòng đời:** xóa cache entry khi giải mã thất bại để thử lại; bỏ qua kết quả tải nếu engine đã đổi; disconnect source khi kết thúc; đóng context và hủy interval khi cleanup.
-- **Đầu ra:** `src/useDrumAudio.ts`; App gọi `void playSound(pad.src)`.
-- **Kiểm tra:** các file giải mã được, meter nhận tín hiệu, không có lỗi console trong luồng thành công.
-- **Phụ thuộc:** T-02, T-03.
-- **Trạng thái:** hoàn thành triển khai; chưa kiểm tra riêng mọi nhánh lỗi hoặc nghe trực tiếp chất lượng chồng âm.
+- **Objective:** share the playback signal between the speakers and meter while allowing overlapping sounds.
+- **Contract:** `useDrumAudio()` returns `playSound(src)`, `levelDb`, and `audioError`. `playSound` handles errors internally; it does not return a boolean as the previous assignment's engine did.
+- **Implementation:** create AudioContext on interaction; resume it; fetch and decodeAudioData; cache Promises by source; create a separate AudioBufferSourceNode for each hit; connect source → analyser → destination.
+- **Lifecycle management:** remove rejected cache entries to allow retry; ignore completed loads if the engine has changed; disconnect ended sources; close the context and clear the interval during cleanup.
+- **Outputs:** `src/useDrumAudio.ts`; App invokes `void playSound(pad.src)`.
+- **Verification:** samples decode, the meter receives a signal, and the successful playback flow produces no console errors.
+- **Dependencies:** T-02, T-03.
+- **Status:** implementation complete. Not every failure branch has been tested individually, and overlapping playback has not been assessed by listening on physical hardware.
 
-## T-06 — Trạng thái pad và phản hồi trực quan
+## T-06 — Pad state and visual feedback
 
 - **WBS:** 5.1.
-- **Mục tiêu:** nhận biết pad vừa được kích hoạt bằng hình ảnh.
-- **Thực hiện:** lưu activePads; thêm id khi đánh; cập nhật aria-pressed; dùng CSS chọn trạng thái true; đặt timer 150 ms riêng từng pad; hủy timer cũ nếu đánh lại; dọn timer khi unmount.
-- **Đầu ra:** state, ref timer và triggerPad trong `App.tsx`; CSS trạng thái trong `App.css`.
-- **Kiểm tra:** pad bật rồi tắt; một pad không tắt trạng thái pad khác; đánh lại cùng pad tính lại thời gian hiệu ứng.
-- **Phụ thuộc:** T-03, T-04.
-- **Trạng thái:** đã triển khai; kiểm tra tự động xác nhận bật/tắt cơ bản.
+- **Objective:** visually identify a recently activated pad.
+- **Implementation:** store activePads; add the pad ID on a hit; update aria-pressed; style the true state; assign each pad a separate 150 ms timer; cancel its previous timer on another hit; clear timers on unmount.
+- **Outputs:** state, timer refs, and triggerPad in `App.tsx`; state styling in `App.css`.
+- **Verification:** pads activate and deactivate; one pad does not clear another pad's state; hitting the same pad resets its feedback interval.
+- **Dependencies:** T-03, T-04.
+- **Status:** implemented; automated checks confirm basic activation and deactivation.
 
-## T-07 — Lịch sử và live output
+## T-07 — Hit history and live output
 
 - **WBS:** 5.2.
-- **Mục tiêu:** cung cấp lịch sử bằng chữ và thông báo cập nhật cho công nghệ hỗ trợ.
-- **Thực hiện:** tăng bộ đếm; lưu id và name cho mỗi lần đánh; đưa lần mới lên đầu; slice giữ mười mục; output hiển thị lần mới nhất với aria-live polite và aria-atomic true.
-- **Đầu ra:** output và danh sách lịch sử trong `App.tsx`.
-- **Kiểm tra:** mười mục mới nhất theo thứ tự; đánh cùng pad vẫn tăng số; gõ vào ghi chú không thay đổi lịch sử.
-- **Phụ thuộc:** T-06.
-- **Trạng thái:** cập nhật dữ liệu đã qua kiểm tra; cách NVDA thông báo thực tế còn chờ T-12.
+- **Objective:** provide a text history and announce updates to assistive technology.
+- **Implementation:** increment a counter; store each hit's ID and name; prepend the latest hit; use slice to retain ten entries; show the latest hit in output with aria-live polite and aria-atomic true.
+- **Outputs:** output and the history list in `App.tsx`.
+- **Verification:** retain the ten newest hits in order; repeated hits on the same pad still increment the counter; typing notes does not change history.
+- **Dependencies:** T-06.
+- **Status:** data updates pass automated checks; actual NVDA announcements remain part of T-12.
 
-## T-08 — Meter mức tín hiệu thực
+## T-08 — Real signal-level meter
 
 - **WBS:** 5.3.
-- **Mục tiêu:** hiển thị cường độ tín hiệu được phát, không dùng giá trị giả lập.
-- **Thực hiện:** đọc dữ liệu thời gian từ analyser mỗi 50 ms; tính RMS; đổi sang dBFS bằng `20 * log10(RMS)`; giới hạn từ -60 đến 0; cập nhật meter và dòng số.
-- **Đầu ra:** levelDb trong hook, meter có nhãn và mô tả trong App.
-- **Quy ước:** -60 là sàn hiển thị; không phải đo độ ồn môi trường; các mức trên 0 bị giới hạn ở 0. Khi context không chạy, đưa meter về sàn.
-- **Kiểm tra:** phát Crash làm meter vượt -60; hết tín hiệu trở lại -60; không thêm aria-live cho giá trị thay đổi liên tục.
-- **Phụ thuộc:** T-05.
-- **Trạng thái:** hoàn thành và đã qua kiểm tra tự động.
+- **Objective:** display the level of the actual playback signal rather than simulated values.
+- **Implementation:** sample analyser time-domain data every 50 ms; calculate RMS; convert to dBFS with `20 * log10(RMS)`; clamp to -60 through 0; update the meter and numeric text.
+- **Outputs:** levelDb in the hook and a labeled, described meter in App.
+- **Convention:** -60 is the display floor; this is not an environmental noise measurement; values above zero are capped at zero. Return to the floor when the context is not running.
+- **Verification:** playing Crash raises the meter above -60; the meter returns to -60 after the signal ends; continuously changing values do not receive aria-live announcements.
+- **Dependencies:** T-05.
+- **Status:** complete and verified automatically.
 
-## T-09 — Focus, màu, bố cục và metadata
+## T-09 — Focus, colors, layout, and metadata
 
 - **WBS:** 6.1–6.4.
-- **Mục tiêu:** giao diện rõ, điều hướng được và thông tin trang đúng.
-- **Thực hiện:** viền focus pad/input/link; màu link đủ rõ trên nền tối; flex-wrap cho pad; meter co theo chiều rộng; lang vi; title và description phù hợp; robots.txt hợp lệ.
-- **Đầu ra:** `App.css`, `index.css`, `index.html`, `public/robots.txt`.
-- **Kiểm tra:** Tab/Shift+Tab, Enter/Space và rời vùng pad; axe contrast; không tràn ngang ở 320/390/640 px; xem ảnh desktop/mobile.
-- **Phụ thuộc:** T-03, T-06–T-08.
-- **Trạng thái:** hoàn thành trong phạm vi tự động và xem ảnh; zoom thật chưa thử.
+- **Objective:** provide a clear, navigable interface and accurate page metadata.
+- **Implementation:** visible focus outlines for pads, inputs, and links; readable link colors on the dark background; flex-wrap for pads; a responsive meter; lang vi; a suitable title and description; valid robots.txt. Explicit control labels and useId are covered by T-14.
+- **Outputs:** `App.css`, `index.css`, `index.html`, and `public/robots.txt`.
+- **Verification:** Tab/Shift+Tab, Enter/Space, and leaving the pad region; axe contrast checks; no horizontal overflow at 320/375/390/640 px; desktop/mobile screenshot review.
+- **Dependencies:** T-03, T-06–T-08.
+- **Status:** complete within automated checks and screenshot review; actual browser zoom remains untested.
 
-## T-10 — Kiểm thử chức năng và lưu ảnh
+## T-10 — Functional checks and screenshots
 
-- **WBS:** 7.1–7.2, một phần 8.1.
-- **Mục tiêu:** có kiểm tra lặp lại được cho chức năng quan trọng.
-- **Thực hiện:** chạy bản production trên preview; dùng Playwright với Chrome; giải mã các file; thử phím, repeat, nhập liệu, công tắc, pad, lịch sử, meter và focus; ghi nhận lỗi console; chạy axe; chụp ảnh ba chiều rộng.
-- **Đầu ra:** `artifacts/tools/check-app.mjs`, JSON kết quả và ảnh trong artifacts.
-- **Kiểm tra:** tất cả nhóm có passed true; không có pageerror hoặc lỗi audio trong luồng thành công.
-- **Phụ thuộc:** T-04–T-09.
-- **Trạng thái:** đạt ngày 06/11/2026. Mô phỏng key/code không được ghi là thử UniKey thật.
+- **WBS:** 7.1–7.2 and part of 8.1.
+- **Objective:** provide repeatable checks for important functionality.
+- **Implementation:** run the production build on preview; use Playwright with Chrome; decode samples; exercise shortcuts, repeat handling, input isolation, the toggle, pads, history, meter, and focus; record console errors; run axe; capture desktop, mobile, and reflow screenshots.
+- **Outputs:** `artifacts/tools/check-app.mjs`, result JSON files, and screenshots in artifacts.
+- **Verification:** every result group has passed=true; no pageerror or audio errors occur during successful playback flows.
+- **Dependencies:** T-04–T-09.
+- **Status:** initially passed on 6 November 2026 and rerun successfully on 9 November 2026. Simulated key/code events are not reported as real UniKey testing.
 
-## T-11 — Build, lint và Lighthouse
+## T-11 — Build, lint, and Lighthouse
 
 - **WBS:** 7.3–7.4.
-- **Mục tiêu:** xác nhận ứng dụng build được, mã không có lỗi lint và lưu phép đo Lighthouse.
-- **Thực hiện:** chạy build và lint; chạy Lighthouse mobile trên preview; sửa lỗi phát hiện; đo lại sau khi sửa; giữ báo cáo của bản cuối.
-- **Đầu ra:** `artifacts/tools/run-lighthouse.mjs`, `lighthouse-report.html`, `lighthouse-report.json`.
-- **Kết quả hiện có:** Performance 100, Accessibility 100, Best Practices 100, SEO 100; build/lint thành công.
-- **Phụ thuộc:** T-09, T-10.
-- **Trạng thái:** đạt ngày 06/11/2026; vẫn có khuyến nghị hiệu năng trong báo cáo gốc.
+- **Objective:** confirm that the application builds, passes lint, and has a recorded Lighthouse measurement.
+- **Implementation:** run build and lint; run mobile Lighthouse against preview; correct detected issues; rerun after fixes; retain reports for the final version.
+- **Outputs:** `artifacts/tools/run-lighthouse.mjs`, `lighthouse-report.html`, and `lighthouse-report.json`.
+- **Recorded results:** Performance 100, Accessibility 100, Best Practices 100, SEO 100; build and lint succeed.
+- **Dependencies:** T-09, T-10.
+- **Status:** initially passed on 6 November 2026 and rerun successfully on 9 November 2026. Performance recommendations remain in the report.
 
-## T-12 — Kiểm thử thủ công và đối chiếu WCAG
+## T-12 — Manual testing and WCAG review
 
-- **WBS:** 7.5–7.8, 8.3.
-- **Mục tiêu:** bổ sung kiểm tra mà Lighthouse và mô phỏng chưa xác nhận được.
-- **Phụ thuộc:** T-10, T-11.
-- **Trạng thái:** chưa thực hiện trực tiếp.
+- **WBS:** 7.5–7.8 and 8.3.
+- **Objective:** cover checks that Lighthouse and simulations cannot establish.
+- **Dependencies:** T-10, T-11.
+- **Status:** direct manual testing has not been completed.
 
-| Nhóm | Thực hiện | Kết quả mong đợi | Bằng chứng dự kiến |
+| Group | Procedure | Expected result | Planned evidence |
 |---|---|---|---|
-| UniKey | Bật tiếng Việt/Telex; đánh bảy phím khi ngoài ô nhập; gõ tiếng Việt trong ghi chú; tắt phím tắt | Mã phím vẫn chọn đúng pad; gõ ghi chú không phát tiếng | `artifacts/unikey-test.mp4` và biên bản |
-| NVDA | Tab qua công tắc, pad, ghi chú và link; Enter/Space; đánh một lần rồi chờ live output | Tên và trạng thái rõ; thao tác được; cập nhật lịch sử có thông báo phù hợp | `artifacts/nvda-speech-viewer.png` và biên bản |
-| Phím tắt với NVDA | Thử trong chế độ tương tác, phân biệt phím chữ do chế độ duyệt sử dụng | Không nhầm điều hướng NVDA với lỗi phím tắt của ứng dụng | Ghi chế độ NVDA trong biên bản |
-| Zoom 200% thật | Đổi zoom trong trình duyệt, dùng hết các chức năng và quan sát focus | Không mất nội dung hoặc điều khiển, không chồng chữ | `artifacts/zoom-200-percent.png` |
-| Nghe trực tiếp | Nghe từng pad; đánh nhanh cùng pad và nhiều pad | Đúng tiếng, hoạt động chồng âm, không bị ngắt bất thường | Ghi kết quả và thiết bị nghe |
-| WCAG A/AA | Lập danh sách toàn bộ tiêu chí áp dụng; đánh giá trang và trạng thái; nêu lý do cho mục không áp dụng | Mỗi tiêu chí có kết quả, bằng chứng hoặc lỗi cần sửa | Bảng đánh giá WCAG trong báo cáo thủ công |
+| UniKey | Enable Vietnamese/Telex; play all seven shortcuts outside text fields; type Vietnamese notes; disable shortcuts | Physical codes select the correct pads; typing notes does not play sounds | `artifacts/unikey-test.mp4` and test notes |
+| NVDA | Tab through the toggle, pads, notes, and links; use Enter/Space; hit a pad and wait for live output | Clear names and states; usable controls; appropriate history announcements | `artifacts/nvda-speech-viewer.png` and test notes |
+| Shortcuts with NVDA | Test in interaction mode; distinguish letter keys used by browse mode | NVDA navigation is not mistaken for application shortcut failures | Record the NVDA mode in test notes |
+| Actual 200% zoom | Change browser zoom, use all features, and inspect focus | No lost content or controls; no overlapping text | `artifacts/zoom-200-percent.png` |
+| Listening test | Listen to every pad; hit the same pad and different pads rapidly | Correct samples, overlapping playback, no unexpected interruption | Results and playback device details |
+| WCAG A/AA | List every applicable criterion; assess page states; explain non-applicable criteria | Each criterion has a result, evidence, or an issue to fix | WCAG evaluation table in the manual report |
 
-Các tên file ở bảng này là kế hoạch, chưa phải bằng chứng đã có. Ghi môi trường, phiên bản công cụ, thao tác, mong đợi và kết quả thực tế vào `artifacts/manual-test-results.md` sau khi thử. Nếu có lỗi, sửa và kiểm tra lại phần bị ảnh hưởng.
+The filenames in this table are planned outputs, not existing evidence. After testing, record the environment, tool versions, steps, expected behavior, and actual results in `artifacts/manual-test-results.md`. Fix any discovered issues and retest affected behavior.
 
-## T-13 — Tổng hợp tài liệu và bàn giao
+## T-13 — Documentation and handoff
 
 - **WBS:** 8.1–8.3.
-- **Mục tiêu:** người nhận bài hiểu cách chạy, chức năng, kết quả và phần chưa xác nhận.
-- **Thực hiện:** lưu báo cáo/ảnh; lập WBS và task decomposition; dẫn tới credits; cập nhật trạng thái sau kiểm thử thủ công.
-- **Đầu ra hiện có:** README.md, WBS.md, TASK_DECOMPOSITION.md, artifacts/verification.md, các JSON/HTML/PNG và hai file credits âm thanh trong `public/sounds`.
-- **Điều kiện đóng:** bằng chứng khớp mã nguồn cuối; không đánh dấu thử thủ công đã đạt trước khi thực hiện; nếu tuyên bố WCAG 2.2 AA thì phải có đánh giá đầy đủ tiêu chí áp dụng.
-- **Phụ thuộc:** T-11; hoàn tất nghiệm thu đầy đủ phụ thuộc thêm T-12.
-- **Trạng thái:** hoàn thành tài liệu, thông tin nguồn và bằng chứng tự động; chờ bổ sung kết quả thủ công.
+- **Objective:** let the recipient understand setup, features, results, and remaining verification gaps.
+- **Implementation:** retain reports and screenshots; prepare the WBS and task decomposition; link audio credits; update status after manual testing.
+- **Available outputs:** README.md, WBS.md, TASK_DECOMPOSITION.md, artifacts/verification.md, JSON/HTML/PNG evidence, and two audio attribution files in `public/sounds`. T-14 adds project rules and the AI failure audit.
+- **Completion criteria:** evidence matches the final code; manual tests are not marked passed before execution; any claim of WCAG 2.2 AA conformance requires a complete assessment of applicable criteria.
+- **Dependencies:** T-11; full acceptance also depends on T-12.
+- **Status:** documentation, source attribution information, and automated evidence are complete; manual results remain pending.
 
-## Luồng phụ thuộc
+## Dependency flow
 
 ```text
 T-01 → T-02 → T-03 → T-04
                   ├→ T-05 → T-08
                   └→ T-06 → T-07
-T-03 đến T-08 → T-09 → T-10 → T-11 → T-12 → chốt T-13
+T-03 through T-08 → T-09 → T-10 → T-11 → T-12 → finalize T-13
 ```
 
-Các bước trên mô tả thứ tự logic, không phải xác nhận công việc được làm song song hay thời gian đã sử dụng.
+These steps describe logical dependencies, not a claim about parallel execution or time spent.
 
 ## T-14 — Verified AI failure audit and commit delivery
 
-- Preserve baseline commit 067e2d3; reproduce faults against its real App and keyboard hook before applying corrections.
-- Verify three cases: explicit labels and useId contract, IME composition isolation, and held Enter on a focused pad.
+- Preserve baseline commit 067e2d3; reproduce faults against its original App and keyboard hook before applying corrections.
+- Verify three cases: the explicit-label/useId contract, IME composition isolation, and held Enter on a focused pad.
 - Correct each concern independently; run the same regression assertions against the final application.
-- Save baseline and final JSON evidence, exact commands, root causes and limitations in AI_FAILURE_AUDIT.md.
+- Save baseline and final JSON evidence, exact commands, root causes, and limitations in AI_FAILURE_AUDIT.md.
 - Deliver at least eight focused follow-up commits on codex/drumkit-verified-audit. These are present-day improvements, not a reconstruction of the original implementation history.
-- Run build, lint, functional browser checks and Lighthouse after the final code changes.
+- Run build, lint, functional browser checks, and Lighthouse after the final code changes.
+- **Status:** the three baseline failures were reproduced, all three pass after correction, and the eight original audit follow-up commits were created. Subsequent documentation translations preserve that history.
