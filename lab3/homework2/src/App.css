@@ -1,0 +1,174 @@
+.piano-app {
+  padding: 24px 16px;
+  min-width: 0;
+}
+
+.piano-app p {
+  margin-bottom: 12px;
+}
+
+.piano-groups {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 308px), 1fr));
+  gap: 20px;
+}
+
+.piano-group {
+  min-width: 0;
+  margin: 0;
+  padding: 12px 0;
+  border: 0;
+}
+
+.piano-group legend {
+  margin: 0 auto;
+  padding: 4px;
+  font-weight: 600;
+}
+
+.piano-keyboard {
+  --white-width: calc(100% / 7);
+  position: relative;
+  width: 100%;
+  height: 220px;
+  text-align: left;
+}
+
+.piano-key {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 0 0 6px 6px;
+  cursor: pointer;
+  user-select: none;
+  font-family: inherit;
+  touch-action: none;
+}
+
+.piano-key span {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+
+.key-white {
+  z-index: 1;
+  width: var(--white-width);
+  height: 220px;
+  border: 1px solid #777;
+  background: #fff;
+  color: #222;
+}
+
+.key-black {
+  z-index: 2;
+  width: max(24px, calc(var(--white-width) * 0.6));
+  height: 140px;
+  transform: translateX(-50%);
+  border: 1px solid #111;
+  background: #222;
+  color: #fff;
+}
+
+.key-white.is-pressed {
+  background: #b9d8ff;
+}
+
+.key-black.is-pressed {
+  background: #3769a8;
+}
+
+/* Hai vòng tương phản trên cả phím trắng và phím đen. */
+.piano-key:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 6px #fff;
+}
+
+.stop-audio {
+  padding: 8px 16px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.recorder {
+  margin-top: 24px;
+  padding: 20px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.recorder-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.recorder-controls button {
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.recorder-controls button:disabled {
+  cursor: default;
+}
+
+.recorder-controls select {
+  padding: 8px;
+  font: inherit;
+}
+
+.piano-key:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.recording-table {
+  margin-top: 12px;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.recording-table th,
+.recording-table td {
+  padding: 8px;
+  border: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+
+button, select, summary {
+  min-height: 44px;
+}
+
+button, select {
+  max-width: 100%;
+}
+
+summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .recording-table th,
+  .recording-table td {
+    padding: 6px 2px;
+    font-size: 0.8125rem;
+  }
+}

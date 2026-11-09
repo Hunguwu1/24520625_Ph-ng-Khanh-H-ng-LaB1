@@ -1,0 +1,30 @@
+{
+  "name": "homework3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "check:server": "tsc -p tsconfig.server.json",
+    "test:reservation": "tsx --test server/reservations.test.ts",
+    "test:expiration": "tsx --test server/expiration.test.ts",
+    "test:checkout": "tsx --test server/checkout.test.ts",
+    "test": "tsx --test server/reservations.test.ts server/expiration.test.ts server/checkout.test.ts server/concurrency.test.ts tests/security.test.tsx",
+    "test:concurrency": "tsx --test server/concurrency.test.ts",
+    "build": "tsc && npm run check:server && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
