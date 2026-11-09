@@ -53,7 +53,7 @@ Các script kiểm tra hiện dùng Chrome tại C:/Program Files/Google/Chrome/
 
 ## Git delivery
 
-The verified delivery is in `.publish-checkout`, branch `codex/drumkit-verified-audit`, project path `lab3/homework1`. Eight focused follow-up commits preserve baseline `067e2d3`; no remote push was performed. The outer workspace belongs to a different parent repository. Submit the delivery branch with its history, not just a ZIP.
+The verified delivery is in `.publish-checkout`, branch `codex/drumkit-verified-audit`, project path `lab3/homework1`. Eight original audit follow-up commits preserve baseline `067e2d3`; later documentation and publication commits retain that history. The completed project is published under `lab3/homework1` on the remote main branch. The outer workspace belongs to a different parent repository. Submit the delivery branch with its history, not just a ZIP.
 
 ```powershell
 git -C .publish-checkout log --reverse --oneline 067e2d3..HEAD -- lab3/homework1
